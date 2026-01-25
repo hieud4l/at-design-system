@@ -30,4 +30,12 @@ object StyleDictionaryColor {
   val colorPrimary700 = Color(0xff0369a1)
   val colorPrimary800 = Color(0xff075985)
   val colorPrimary900 = Color(0xff0c4a6e)
+  val textColorBrandPrimary = Color(0xff075985)
+  val textColorDisabled = Color(0xffa3a3a3)
+  val textColorErrorPrimary = Color(0xffef4444)
+  val textColorPrimary = Color(0xff171717)
+  val textColorSecondary = Color(0xff404040)
+  val textColorSuccessPrimary = Color(0xff22c55e)
+  val textColorTertiary = Color(0xff737373)
+  val textColorWarningPrimary = Color(0xffeab308)
 }

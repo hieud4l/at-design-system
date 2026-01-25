@@ -49,8 +49,6 @@
 #define TypographyFontWeightMedium 500
 #define TypographyFontWeightSemibold 600
 #define TypographyFontWeightBold 700
-#define TypographyFontFamilySans -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
-#define TypographyFontFamilyMono 'Courier New', monospace
 #define BorderRadiusNone 0.00f
 #define BorderRadiusSm 64.00f
 #define BorderRadiusMd 128.00f
@@ -61,3 +59,27 @@
 #define ShadowMd 0 4px 6px -1px rgba(0, 0, 0, 0.1)
 #define ShadowLg 0 10px 15px -3px rgba(0, 0, 0, 0.1)
 #define ShadowXl 0 20px 25px -5px rgba(0, 0, 0, 0.1)
+#define TextXs 192.00f
+#define TextXslineHeight 384.00f
+#define TextSm 224.00f
+#define TextSmlineHeight 512.00f
+#define TextMd 256.00f
+#define TextMdlineHeight 768.00f
+#define TextLg 288.00f
+#define TextLglineHeight 1024.00f
+#define TextXl 320.00f
+#define TextXllineHeight 480.00f
+#define TextDisplayXs 384.00f
+#define TextDisplaySm 480.00f
+#define TextDisplayMd 576.00f
+#define TextDisplayLg 768.00f
+#define TextDisplayXl 960.00f
+#define TextDisplay2xl 1152.00f
+#define TextColorPrimary [UIColor colorWithRed:0.090f green:0.090f blue:0.090f alpha:1.000f]
+#define TextColorSecondary [UIColor colorWithRed:0.251f green:0.251f blue:0.251f alpha:1.000f]
+#define TextColorTertiary [UIColor colorWithRed:0.451f green:0.451f blue:0.451f alpha:1.000f]
+#define TextColorDisabled [UIColor colorWithRed:0.639f green:0.639f blue:0.639f alpha:1.000f]
+#define TextColorBrandPrimary [UIColor colorWithRed:0.027f green:0.349f blue:0.522f alpha:1.000f]
+#define TextColorErrorPrimary [UIColor colorWithRed:0.937f green:0.267f blue:0.267f alpha:1.000f]
+#define TextColorSuccessPrimary [UIColor colorWithRed:0.133f green:0.773f blue:0.369f alpha:1.000f]
+#define TextColorWarningPrimary [UIColor colorWithRed:0.918f green:0.702f blue:0.031f alpha:1.000f]

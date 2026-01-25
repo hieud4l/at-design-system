@@ -266,10 +266,6 @@
 <string>600</string>
   <key>TypographyFontWeightBold</key>
 <string>700</string>
-  <key>TypographyFontFamilySans</key>
-<string>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</string>
-  <key>TypographyFontFamilyMono</key>
-<string>'Courier New', monospace</string>
   <key>BorderRadiusNone</key>
 <integer>0.00f</integer>
   <key>BorderRadiusSm</key>
@@ -282,5 +278,125 @@
 <integer>256.00f</integer>
   <key>BorderRadiusFull</key>
 <integer>159984.00f</integer>
+  <key>TextXs</key>
+<integer>192.00f</integer>
+  <key>TextXslineHeight</key>
+<integer>384.00f</integer>
+  <key>TextSm</key>
+<integer>224.00f</integer>
+  <key>TextSmlineHeight</key>
+<integer>512.00f</integer>
+  <key>TextMd</key>
+<integer>256.00f</integer>
+  <key>TextMdlineHeight</key>
+<integer>768.00f</integer>
+  <key>TextLg</key>
+<integer>288.00f</integer>
+  <key>TextLglineHeight</key>
+<integer>1024.00f</integer>
+  <key>TextXl</key>
+<integer>320.00f</integer>
+  <key>TextXllineHeight</key>
+<integer>480.00f</integer>
+  <key>TextDisplayXs</key>
+<integer>384.00f</integer>
+  <key>TextDisplaySm</key>
+<integer>480.00f</integer>
+  <key>TextDisplayMd</key>
+<integer>576.00f</integer>
+  <key>TextDisplayLg</key>
+<integer>768.00f</integer>
+  <key>TextDisplayXl</key>
+<integer>960.00f</integer>
+  <key>TextDisplay2xl</key>
+<integer>1152.00f</integer>
+  <key>TextColorPrimary</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>TextColorSecondary</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>TextColorTertiary</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>TextColorDisabled</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>TextColorBrandPrimary</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>TextColorErrorPrimary</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>TextColorSuccessPrimary</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>TextColorWarningPrimary</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
   </dict>
 </plist>

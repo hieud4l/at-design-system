@@ -72,14 +72,16 @@ export default {
           format: 'ios/macros',
           options: {
             className: 'StyleDictionary'
-          }
+          },
+          filter: (token) => token.type !== 'fontFamily' // Exclude web font stacks
         },
         {
           destination: 'StyleDictionary.plist',
           format: 'ios/plist',
           options: {
             className: 'StyleDictionary'
-          }
+          },
+          filter: (token) => token.type !== 'fontFamily'
         }
       ]
     },
@@ -94,7 +96,8 @@ export default {
           format: 'ios-swift/class.swift',
           options: {
             className: 'StyleDictionary'
-          }
+          },
+          filter: (token) => token.type !== 'fontFamily' // Exclude web font stacks
         }
       ]
     },

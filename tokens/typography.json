@@ -1,266 +1,134 @@
 {
   "font": {
     "body": {
-      "value": "var(--font-inter, \"Inter\"), -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "value": "{typography.fontFamily.sans}",
       "type": "fontFamily"
     },
     "display": {
-      "value": "var(--font-inter, \"Inter\"), -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "value": "{typography.fontFamily.sans}",
       "type": "fontFamily"
     },
     "mono": {
-      "value": "ui-monospace, \"Roboto Mono\", SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+      "value": "{typography.fontFamily.mono}",
       "type": "fontFamily"
     }
   },
   "text": {
     "xs": {
-      "value": "calc(var(--spacing) * 3)",
-      "type": "fontSize"
+      "value": "{typography.fontSize.xs}",
+      "type": "dimension"
     },
     "xsline": {
       "height": {
-        "value": "calc(var(--spacing) * 4.5)",
-        "type": "lineHeight"
+        "value": "{spacing.lg}",
+        "type": "dimension"
       }
     },
     "sm": {
-      "value": "calc(var(--spacing) * 3.5)",
-      "type": "fontSize"
+      "value": "{typography.fontSize.sm}",
+      "type": "dimension"
     },
     "smline": {
       "height": {
-        "value": "calc(var(--spacing) * 5)",
-        "type": "lineHeight"
+        "value": "{spacing.xl}",
+        "type": "dimension"
       }
     },
     "md": {
-      "value": "calc(var(--spacing) * 4)",
-      "type": "fontSize"
+      "value": "{typography.fontSize.base}",
+      "type": "dimension"
     },
     "mdline": {
       "height": {
-        "value": "calc(var(--spacing) * 6)",
-        "type": "lineHeight"
+        "value": "{spacing.2xl}",
+        "type": "dimension"
       }
     },
     "lg": {
-      "value": "calc(var(--spacing) * 4.5)",
-      "type": "fontSize"
+      "value": "{typography.fontSize.lg}",
+      "type": "dimension"
     },
     "lgline": {
       "height": {
-        "value": "calc(var(--spacing) * 7)",
-        "type": "lineHeight"
+        "value": "{spacing.3xl}",
+        "type": "dimension"
       }
     },
     "xl": {
-      "value": "calc(var(--spacing) * 5)",
-      "type": "fontSize"
+      "value": "{typography.fontSize.xl}",
+      "type": "dimension"
     },
     "xlline": {
       "height": {
-        "value": "calc(var(--spacing) * 7.5)",
-        "type": "lineHeight"
+        "value": "30",
+        "type": "dimension"
       }
     },
     "display": {
       "xs": {
-        "value": "calc(var(--spacing) * 6)",
-        "type": "fontSize"
-      },
-      "xsline": {
-        "height": {
-          "value": "calc(var(--spacing) * 8)",
-          "type": "lineHeight"
-        }
+        "value": "{typography.fontSize.2xl}",
+        "type": "dimension"
       },
       "sm": {
-        "value": "calc(var(--spacing) * 7.5)",
-        "type": "fontSize"
-      },
-      "smline": {
-        "height": {
-          "value": "calc(var(--spacing) * 9.5)",
-          "type": "lineHeight"
-        }
+        "value": "{typography.fontSize.3xl}",
+        "type": "dimension"
       },
       "md": {
-        "value": "calc(var(--spacing) * 9)",
-        "type": "fontSize"
-      },
-      "mdline": {
-        "height": {
-          "value": "calc(var(--spacing) * 11)",
-          "type": "lineHeight"
-        }
-      },
-      "mdletter": {
-        "spacing": {
-          "value": "-0.72px",
-          "type": "letterSpacing"
-        }
+        "value": "{typography.fontSize.4xl}",
+        "type": "dimension"
       },
       "lg": {
-        "value": "calc(var(--spacing) * 12)",
-        "type": "fontSize"
-      },
-      "lgline": {
-        "height": {
-          "value": "calc(var(--spacing) * 15)",
-          "type": "lineHeight"
-        }
-      },
-      "lgletter": {
-        "spacing": {
-          "value": "-0.96px",
-          "type": "letterSpacing"
-        }
+        "value": "48",
+        "type": "dimension"
       },
       "xl": {
-        "value": "calc(var(--spacing) * 15)",
-        "type": "fontSize"
-      },
-      "xlline": {
-        "height": {
-          "value": "calc(var(--spacing) * 18)",
-          "type": "lineHeight"
-        }
-      },
-      "xlletter": {
-        "spacing": {
-          "value": "-1.2px",
-          "type": "letterSpacing"
-        }
+        "value": "60",
+        "type": "dimension"
       },
       "2xl": {
-        "value": "calc(var(--spacing) * 18)",
-        "type": "fontSize"
-      },
-      "2xlline": {
-        "height": {
-          "value": "calc(var(--spacing) * 22.5)",
-          "type": "lineHeight"
-        }
-      },
-      "2xlletter": {
-        "spacing": {
-          "value": "-1.44px",
-          "type": "letterSpacing"
-        }
+        "value": "72",
+        "type": "dimension"
       }
     },
     "color": {
       "primary": {
-        "value": "var(--color-text-primary)",
+        "value": "{color.neutral.900}",
         "type": "color"
-      },
-      "primary_on": {
-        "brand": {
-          "value": "var(--color-text-primary_on-brand)",
-          "type": "color"
-        }
       },
       "secondary": {
-        "value": "var(--color-text-secondary)",
+        "value": "{color.neutral.700}",
         "type": "color"
-      },
-      "secondary_hover": {
-        "value": "var(--color-text-secondary_hover)",
-        "type": "color"
-      },
-      "secondary_on": {
-        "brand": {
-          "value": "var(--color-text-secondary_on-brand)",
-          "type": "color"
-        }
       },
       "tertiary": {
-        "value": "var(--color-text-tertiary)",
+        "value": "{color.neutral.500}",
         "type": "color"
-      },
-      "tertiary_hover": {
-        "value": "var(--color-text-tertiary_hover)",
-        "type": "color"
-      },
-      "tertiary_on": {
-        "brand": {
-          "value": "var(--color-text-tertiary_on-brand)",
-          "type": "color"
-        }
-      },
-      "quaternary": {
-        "value": "var(--color-text-quaternary)",
-        "type": "color"
-      },
-      "quaternary_on": {
-        "brand": {
-          "value": "var(--color-text-quaternary_on-brand)",
-          "type": "color"
-        }
       },
       "disabled": {
-        "value": "var(--color-text-disabled)",
-        "type": "color"
-      },
-      "placeholder": {
-        "value": "var(--color-text-placeholder)",
-        "type": "color"
-      },
-      "placeholder_subtle": {
-        "value": "var(--color-text-placeholder_subtle)",
+        "value": "{color.neutral.400}",
         "type": "color"
       },
       "brand": {
         "primary": {
-          "value": "var(--color-text-brand-primary)",
-          "type": "color"
-        },
-        "secondary": {
-          "value": "var(--color-text-brand-secondary)",
-          "type": "color"
-        },
-        "secondary_hover": {
-          "value": "var(--color-text-brand-secondary_hover)",
-          "type": "color"
-        },
-        "tertiary": {
-          "value": "var(--color-text-brand-tertiary)",
-          "type": "color"
-        },
-        "tertiary_alt": {
-          "value": "var(--color-text-brand-tertiary_alt)",
+          "value": "{color.primary.800}",
           "type": "color"
         }
       },
       "error": {
         "primary": {
-          "value": "var(--color-text-error-primary)",
-          "type": "color"
-        },
-        "primary_hover": {
-          "value": "var(--color-text-error-primary_hover)",
-          "type": "color"
-        }
-      },
-      "warning": {
-        "primary": {
-          "value": "var(--color-text-warning-primary)",
+          "value": "#ef4444",
           "type": "color"
         }
       },
       "success": {
         "primary": {
-          "value": "var(--color-text-success-primary)",
+          "value": "#22c55e",
           "type": "color"
         }
       },
-      "tooltip": {
-        "supporting": {
-          "text": {
-            "value": "var(--color-tooltip-supporting-text)",
-            "type": "color"
-          }
+      "warning": {
+        "primary": {
+          "value": "#eab308",
+          "type": "color"
         }
       }
     }

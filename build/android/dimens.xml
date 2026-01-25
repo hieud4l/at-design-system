@@ -25,4 +25,20 @@
   <dimen name="border_radius_lg">192.00dp</dimen>
   <dimen name="border_radius_xl">256.00dp</dimen>
   <dimen name="border_radius_full">159984.00dp</dimen>
+  <dimen name="text_xs">192.00dp</dimen>
+  <dimen name="text_xsline_height">384.00dp</dimen>
+  <dimen name="text_sm">224.00dp</dimen>
+  <dimen name="text_smline_height">512.00dp</dimen>
+  <dimen name="text_md">256.00dp</dimen>
+  <dimen name="text_mdline_height">768.00dp</dimen>
+  <dimen name="text_lg">288.00dp</dimen>
+  <dimen name="text_lgline_height">1024.00dp</dimen>
+  <dimen name="text_xl">320.00dp</dimen>
+  <dimen name="text_xlline_height">480.00dp</dimen>
+  <dimen name="text_display_xs">384.00dp</dimen>
+  <dimen name="text_display_sm">480.00dp</dimen>
+  <dimen name="text_display_md">576.00dp</dimen>
+  <dimen name="text_display_lg">768.00dp</dimen>
+  <dimen name="text_display_xl">960.00dp</dimen>
+  <dimen name="text_display_2xl">1152.00dp</dimen>
 </resources>
