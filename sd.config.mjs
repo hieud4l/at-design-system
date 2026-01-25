@@ -7,7 +7,59 @@ export default {
   source: ['tokens/**/*.json'],
 
   // Preprocessors (v5 feature)
+  // Preprocessors (v5 feature)
   preprocessors: ['tokens-studio'],
+
+  // Custom configuration
+  hooks: {
+    transforms: {
+      'size/float': {
+        type: 'value',
+        transitive: true,
+        matcher: (token) => ['dimension', 'fontSize', 'spacing', 'borderRadius', 'borderWidth'].includes(token.type) || token.path.includes('spacing'),
+        transformer: (token) => {
+          const val = parseFloat(token.value);
+          if (isNaN(val)) return token.value;
+          return `${val.toFixed(2)}f`;
+        }
+      }
+    },
+    formats: {
+      'ios/custom-plist': ({ dictionary, options }) => {
+        const header = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Do not edit directly, this file was auto-generated. -->
+<plist version="1.0">
+  <dict>`;
+        const footer = `  </dict>\n</plist>`;
+
+        const content = dictionary.allTokens.map(token => {
+          let value = token.value;
+          // Handle Colors
+          if (token.type === 'color' || token.path.includes('color')) {
+            // Remove spaces from color/hex8android output if any
+            value = value.replace(/\s/g, '');
+            const hexMatch = value.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i);
+            if (hexMatch) {
+              const r = parseInt(hexMatch[1], 16) / 255;
+              const g = parseInt(hexMatch[2], 16) / 255;
+              const b = parseInt(hexMatch[3], 16) / 255;
+              const a = hexMatch[4] ? parseInt(hexMatch[4], 16) / 255 : 1;
+              return `    <key>${token.name}</key>\n    <dict>\n      <key>r</key> <real>${r}</real>\n      <key>g</key> <real>${g}</real>\n      <key>b</key> <real>${b}</real>\n      <key>a</key> <real>${a}</real>\n    </dict>`;
+            }
+          }
+          // Handle Numbers
+          const num = parseFloat(value);
+          if (!isNaN(num) && (token.type === 'dimension' || token.path.includes('spacing') || token.type === 'fontSize' || token.type === 'borderRadius')) {
+            return `    <key>${token.name}</key>\n    <integer>${num}</integer>`;
+          }
+          // Default
+          return `    <key>${token.name}</key>\n    <string>${value}</string>`;
+        }).join('\n');
+        return header + '\n' + content + '\n' + footer;
+      }
+    }
+  },
 
   // Platform-specific outputs
   platforms: {
@@ -62,10 +114,10 @@ export default {
       ]
     },
 
-    // iOS Platform
-    ios: {
-      transformGroup: 'ios',
+    // iOS Objective-C Header
+    'ios-objc': {
       buildPath: 'build/ios/',
+      transforms: ['attribute/cti', 'name/pascal', 'color/UIColor', 'size/float'],
       files: [
         {
           destination: 'StyleDictionary.h',
@@ -73,11 +125,19 @@ export default {
           options: {
             className: 'StyleDictionary'
           },
-          filter: (token) => token.type !== 'fontFamily' // Exclude web font stacks
-        },
+          filter: (token) => token.type !== 'fontFamily'
+        }
+      ]
+    },
+
+    // iOS Plist
+    'ios-plist': {
+      buildPath: 'build/ios/',
+      transforms: ['attribute/cti', 'name/camel', 'color/hex'], // Ensure hex for parsing
+      files: [
         {
           destination: 'StyleDictionary.plist',
-          format: 'ios/plist',
+          format: 'ios/custom-plist', // Use custom formatter
           options: {
             className: 'StyleDictionary'
           },
