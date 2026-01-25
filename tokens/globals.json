@@ -1,90 +1,4 @@
 {
-    "color": {
-        "primary": {
-            "50": {
-                "value": "#f0f9ff",
-                "type": "color"
-            },
-            "100": {
-                "value": "#e0f2fe",
-                "type": "color"
-            },
-            "200": {
-                "value": "#bae6fd",
-                "type": "color"
-            },
-            "300": {
-                "value": "#7dd3fc",
-                "type": "color"
-            },
-            "400": {
-                "value": "#38bdf8",
-                "type": "color"
-            },
-            "500": {
-                "value": "#0ea5e9",
-                "type": "color"
-            },
-            "600": {
-                "value": "#0284c7",
-                "type": "color"
-            },
-            "700": {
-                "value": "#0369a1",
-                "type": "color"
-            },
-            "800": {
-                "value": "#075985",
-                "type": "color"
-            },
-            "900": {
-                "value": "#0c4a6e",
-                "type": "color"
-            }
-        },
-        "neutral": {
-            "50": {
-                "value": "#fafafa",
-                "type": "color"
-            },
-            "100": {
-                "value": "#f5f5f5",
-                "type": "color"
-            },
-            "200": {
-                "value": "#e5e5e5",
-                "type": "color"
-            },
-            "300": {
-                "value": "#d4d4d4",
-                "type": "color"
-            },
-            "400": {
-                "value": "#a3a3a3",
-                "type": "color"
-            },
-            "500": {
-                "value": "#737373",
-                "type": "color"
-            },
-            "600": {
-                "value": "#525252",
-                "type": "color"
-            },
-            "700": {
-                "value": "#404040",
-                "type": "color"
-            },
-            "800": {
-                "value": "#262626",
-                "type": "color"
-            },
-            "900": {
-                "value": "#171717",
-                "type": "color"
-            }
-        }
-    },
     "spacing": {
         "xs": {
             "value": "4",
@@ -246,6 +160,68 @@
         "xl": {
             "value": "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
             "type": "shadow"
+        }
+    },
+    "color": {
+        "primary": {
+            "50": {
+                "value": "{color.brand.50}",
+                "type": "color"
+            },
+            "100": {
+                "value": "{color.brand.100}",
+                "type": "color"
+            },
+            "200": {
+                "value": "{color.brand.200}",
+                "type": "color"
+            },
+            "300": {
+                "value": "{color.brand.300}",
+                "type": "color"
+            },
+            "400": {
+                "value": "{color.brand.400}",
+                "type": "color"
+            },
+            "500": {
+                "value": "{color.brand.500}",
+                "type": "color"
+            },
+            "600": {
+                "value": "{color.brand.600}",
+                "type": "color"
+            },
+            "700": {
+                "value": "{color.brand.700}",
+                "type": "color"
+            },
+            "800": {
+                "value": "{color.brand.800}",
+                "type": "color"
+            },
+            "900": {
+                "value": "{color.brand.900}",
+                "type": "color"
+            }
+        },
+        "neutral": {
+            "900": {
+                "value": "{color.gray.neutral.900}",
+                "type": "color"
+            },
+            "700": {
+                "value": "{color.gray.neutral.700}",
+                "type": "color"
+            },
+            "500": {
+                "value": "{color.gray.neutral.500}",
+                "type": "color"
+            },
+            "400": {
+                "value": "{color.gray.neutral.400}",
+                "type": "color"
+            }
         }
     }
 }
