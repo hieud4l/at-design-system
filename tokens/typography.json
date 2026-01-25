@@ -1,0 +1,268 @@
+{
+  "font": {
+    "body": {
+      "value": "var(--font-inter, \"Inter\"), -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "type": "fontFamily"
+    },
+    "display": {
+      "value": "var(--font-inter, \"Inter\"), -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "type": "fontFamily"
+    },
+    "mono": {
+      "value": "ui-monospace, \"Roboto Mono\", SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+      "type": "fontFamily"
+    }
+  },
+  "text": {
+    "xs": {
+      "value": "calc(var(--spacing) * 3)",
+      "type": "fontSize"
+    },
+    "xsline": {
+      "height": {
+        "value": "calc(var(--spacing) * 4.5)",
+        "type": "lineHeight"
+      }
+    },
+    "sm": {
+      "value": "calc(var(--spacing) * 3.5)",
+      "type": "fontSize"
+    },
+    "smline": {
+      "height": {
+        "value": "calc(var(--spacing) * 5)",
+        "type": "lineHeight"
+      }
+    },
+    "md": {
+      "value": "calc(var(--spacing) * 4)",
+      "type": "fontSize"
+    },
+    "mdline": {
+      "height": {
+        "value": "calc(var(--spacing) * 6)",
+        "type": "lineHeight"
+      }
+    },
+    "lg": {
+      "value": "calc(var(--spacing) * 4.5)",
+      "type": "fontSize"
+    },
+    "lgline": {
+      "height": {
+        "value": "calc(var(--spacing) * 7)",
+        "type": "lineHeight"
+      }
+    },
+    "xl": {
+      "value": "calc(var(--spacing) * 5)",
+      "type": "fontSize"
+    },
+    "xlline": {
+      "height": {
+        "value": "calc(var(--spacing) * 7.5)",
+        "type": "lineHeight"
+      }
+    },
+    "display": {
+      "xs": {
+        "value": "calc(var(--spacing) * 6)",
+        "type": "fontSize"
+      },
+      "xsline": {
+        "height": {
+          "value": "calc(var(--spacing) * 8)",
+          "type": "lineHeight"
+        }
+      },
+      "sm": {
+        "value": "calc(var(--spacing) * 7.5)",
+        "type": "fontSize"
+      },
+      "smline": {
+        "height": {
+          "value": "calc(var(--spacing) * 9.5)",
+          "type": "lineHeight"
+        }
+      },
+      "md": {
+        "value": "calc(var(--spacing) * 9)",
+        "type": "fontSize"
+      },
+      "mdline": {
+        "height": {
+          "value": "calc(var(--spacing) * 11)",
+          "type": "lineHeight"
+        }
+      },
+      "mdletter": {
+        "spacing": {
+          "value": "-0.72px",
+          "type": "letterSpacing"
+        }
+      },
+      "lg": {
+        "value": "calc(var(--spacing) * 12)",
+        "type": "fontSize"
+      },
+      "lgline": {
+        "height": {
+          "value": "calc(var(--spacing) * 15)",
+          "type": "lineHeight"
+        }
+      },
+      "lgletter": {
+        "spacing": {
+          "value": "-0.96px",
+          "type": "letterSpacing"
+        }
+      },
+      "xl": {
+        "value": "calc(var(--spacing) * 15)",
+        "type": "fontSize"
+      },
+      "xlline": {
+        "height": {
+          "value": "calc(var(--spacing) * 18)",
+          "type": "lineHeight"
+        }
+      },
+      "xlletter": {
+        "spacing": {
+          "value": "-1.2px",
+          "type": "letterSpacing"
+        }
+      },
+      "2xl": {
+        "value": "calc(var(--spacing) * 18)",
+        "type": "fontSize"
+      },
+      "2xlline": {
+        "height": {
+          "value": "calc(var(--spacing) * 22.5)",
+          "type": "lineHeight"
+        }
+      },
+      "2xlletter": {
+        "spacing": {
+          "value": "-1.44px",
+          "type": "letterSpacing"
+        }
+      }
+    },
+    "color": {
+      "primary": {
+        "value": "var(--color-text-primary)",
+        "type": "color"
+      },
+      "primary_on": {
+        "brand": {
+          "value": "var(--color-text-primary_on-brand)",
+          "type": "color"
+        }
+      },
+      "secondary": {
+        "value": "var(--color-text-secondary)",
+        "type": "color"
+      },
+      "secondary_hover": {
+        "value": "var(--color-text-secondary_hover)",
+        "type": "color"
+      },
+      "secondary_on": {
+        "brand": {
+          "value": "var(--color-text-secondary_on-brand)",
+          "type": "color"
+        }
+      },
+      "tertiary": {
+        "value": "var(--color-text-tertiary)",
+        "type": "color"
+      },
+      "tertiary_hover": {
+        "value": "var(--color-text-tertiary_hover)",
+        "type": "color"
+      },
+      "tertiary_on": {
+        "brand": {
+          "value": "var(--color-text-tertiary_on-brand)",
+          "type": "color"
+        }
+      },
+      "quaternary": {
+        "value": "var(--color-text-quaternary)",
+        "type": "color"
+      },
+      "quaternary_on": {
+        "brand": {
+          "value": "var(--color-text-quaternary_on-brand)",
+          "type": "color"
+        }
+      },
+      "disabled": {
+        "value": "var(--color-text-disabled)",
+        "type": "color"
+      },
+      "placeholder": {
+        "value": "var(--color-text-placeholder)",
+        "type": "color"
+      },
+      "placeholder_subtle": {
+        "value": "var(--color-text-placeholder_subtle)",
+        "type": "color"
+      },
+      "brand": {
+        "primary": {
+          "value": "var(--color-text-brand-primary)",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "var(--color-text-brand-secondary)",
+          "type": "color"
+        },
+        "secondary_hover": {
+          "value": "var(--color-text-brand-secondary_hover)",
+          "type": "color"
+        },
+        "tertiary": {
+          "value": "var(--color-text-brand-tertiary)",
+          "type": "color"
+        },
+        "tertiary_alt": {
+          "value": "var(--color-text-brand-tertiary_alt)",
+          "type": "color"
+        }
+      },
+      "error": {
+        "primary": {
+          "value": "var(--color-text-error-primary)",
+          "type": "color"
+        },
+        "primary_hover": {
+          "value": "var(--color-text-error-primary_hover)",
+          "type": "color"
+        }
+      },
+      "warning": {
+        "primary": {
+          "value": "var(--color-text-warning-primary)",
+          "type": "color"
+        }
+      },
+      "success": {
+        "primary": {
+          "value": "var(--color-text-success-primary)",
+          "type": "color"
+        }
+      },
+      "tooltip": {
+        "supporting": {
+          "text": {
+            "value": "var(--color-tooltip-supporting-text)",
+            "type": "color"
+          }
+        }
+      }
+    }
+  }
+}
