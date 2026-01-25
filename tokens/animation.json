@@ -1,0 +1,14 @@
+{
+  "animate": {
+    "marquee": {
+      "value": "marquee 60s linear infinite",
+      "type": "animation"
+    },
+    "caret": {
+      "blink": {
+        "value": "caret-blink 1s infinite",
+        "type": "animation"
+      }
+    }
+  }
+}

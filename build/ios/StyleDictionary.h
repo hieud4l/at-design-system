@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define AnimateMarquee marquee 60s linear infinite
+#define AnimateCaretBlink caret-blink 1s infinite
 #define ColorTransparent [UIColor colorWithRed:0.000f green:0.000f blue:0.000f alpha:1.000f]
 #define ColorWhite [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
 #define ColorBlack [UIColor colorWithRed:0.000f green:0.000f blue:0.000f alpha:1.000f]
@@ -362,357 +364,365 @@
 #define ColorYellow800 [UIColor colorWithRed:0.522f green:0.290f blue:0.055f alpha:1.000f]
 #define ColorYellow900 [UIColor colorWithRed:0.443f green:0.231f blue:0.071f alpha:1.000f]
 #define ColorYellow950 [UIColor colorWithRed:0.329f green:0.173f blue:0.051f alpha:1.000f]
-#define ColorUtilityBlue50 var(--color-blue-950)
-#define ColorUtilityBlue100 var(--color-blue-900)
-#define ColorUtilityBlue200 var(--color-blue-800)
-#define ColorUtilityBlue300 var(--color-blue-700)
-#define ColorUtilityBlue400 var(--color-blue-600)
-#define ColorUtilityBlue500 var(--color-blue-500)
-#define ColorUtilityBlue600 var(--color-blue-400)
-#define ColorUtilityBlue700 var(--color-blue-300)
-#define ColorUtilityBlueDark50 var(--color-blue-dark-950)
-#define ColorUtilityBlueDark100 var(--color-blue-dark-900)
-#define ColorUtilityBlueDark200 var(--color-blue-dark-800)
-#define ColorUtilityBlueDark300 var(--color-blue-dark-700)
-#define ColorUtilityBlueDark400 var(--color-blue-dark-600)
-#define ColorUtilityBlueDark500 var(--color-blue-dark-500)
-#define ColorUtilityBlueDark600 var(--color-blue-dark-400)
-#define ColorUtilityBlueDark700 var(--color-blue-dark-300)
-#define ColorUtilityBlueLight50 var(--color-blue-light-950)
-#define ColorUtilityBlueLight100 var(--color-blue-light-900)
-#define ColorUtilityBlueLight200 var(--color-blue-light-800)
-#define ColorUtilityBlueLight300 var(--color-blue-light-700)
-#define ColorUtilityBlueLight400 var(--color-blue-light-600)
-#define ColorUtilityBlueLight500 var(--color-blue-light-500)
-#define ColorUtilityBlueLight600 var(--color-blue-light-400)
-#define ColorUtilityBlueLight700 var(--color-blue-light-300)
-#define ColorUtilityBrand50 var(--color-brand-950)
-#define ColorUtilityBrand100 var(--color-brand-900)
-#define ColorUtilityBrand200 var(--color-brand-800)
-#define ColorUtilityBrand300 var(--color-brand-700)
-#define ColorUtilityBrand400 var(--color-brand-600)
-#define ColorUtilityBrand500 var(--color-brand-500)
-#define ColorUtilityBrand600 var(--color-brand-400)
-#define ColorUtilityBrand700 var(--color-brand-300)
-#define ColorUtilityBrand800 var(--color-brand-200)
-#define ColorUtilityBrand900 var(--color-brand-100)
-#define ColorUtilityBrand50Alt var(--color-utility-gray-50)
-#define ColorUtilityBrand100Alt var(--color-utility-gray-100)
-#define ColorUtilityBrand200Alt var(--color-utility-gray-200)
-#define ColorUtilityBrand300Alt var(--color-utility-gray-300)
-#define ColorUtilityBrand400Alt var(--color-utility-gray-400)
-#define ColorUtilityBrand500Alt var(--color-utility-gray-500)
-#define ColorUtilityBrand600Alt var(--color-utility-gray-600)
-#define ColorUtilityBrand700Alt var(--color-utility-gray-700)
-#define ColorUtilityBrand800Alt var(--color-utility-gray-800)
-#define ColorUtilityBrand900Alt var(--color-utility-gray-900)
-#define ColorUtilityGray50 var(--color-gray-900)
-#define ColorUtilityGray100 var(--color-gray-800)
-#define ColorUtilityGray200 var(--color-gray-700)
-#define ColorUtilityGray300 var(--color-gray-700)
-#define ColorUtilityGray400 var(--color-gray-600)
-#define ColorUtilityGray500 var(--color-gray-500)
-#define ColorUtilityGray600 var(--color-gray-400)
-#define ColorUtilityGray700 var(--color-gray-300)
-#define ColorUtilityGray800 var(--color-gray-200)
-#define ColorUtilityGray900 var(--color-gray-100)
-#define ColorUtilityGrayBlue50 var(--color-gray-blue-950)
-#define ColorUtilityGrayBlue100 var(--color-gray-blue-900)
-#define ColorUtilityGrayBlue200 var(--color-gray-blue-800)
-#define ColorUtilityGrayBlue300 var(--color-gray-blue-700)
-#define ColorUtilityGrayBlue400 var(--color-gray-blue-600)
-#define ColorUtilityGrayBlue500 var(--color-gray-blue-500)
-#define ColorUtilityGrayBlue600 var(--color-gray-blue-400)
-#define ColorUtilityGrayBlue700 var(--color-gray-blue-300)
-#define ColorUtilityError50 var(--color-error-950)
-#define ColorUtilityError100 var(--color-error-900)
-#define ColorUtilityError200 var(--color-error-800)
-#define ColorUtilityError300 var(--color-error-700)
-#define ColorUtilityError400 var(--color-error-600)
-#define ColorUtilityError500 var(--color-error-500)
-#define ColorUtilityError600 var(--color-error-400)
-#define ColorUtilityError700 var(--color-error-300)
-#define ColorUtilityWarning50 var(--color-warning-950)
-#define ColorUtilityWarning100 var(--color-warning-900)
-#define ColorUtilityWarning200 var(--color-warning-800)
-#define ColorUtilityWarning300 var(--color-warning-700)
-#define ColorUtilityWarning400 var(--color-warning-600)
-#define ColorUtilityWarning500 var(--color-warning-500)
-#define ColorUtilityWarning600 var(--color-warning-400)
-#define ColorUtilityWarning700 var(--color-warning-300)
-#define ColorUtilitySuccess50 var(--color-success-950)
-#define ColorUtilitySuccess100 var(--color-success-900)
-#define ColorUtilitySuccess200 var(--color-success-800)
-#define ColorUtilitySuccess300 var(--color-success-700)
-#define ColorUtilitySuccess400 var(--color-success-600)
-#define ColorUtilitySuccess500 var(--color-success-500)
-#define ColorUtilitySuccess600 var(--color-success-400)
-#define ColorUtilitySuccess700 var(--color-success-300)
-#define ColorUtilityOrange50 var(--color-orange-950)
-#define ColorUtilityOrange100 var(--color-orange-900)
-#define ColorUtilityOrange200 var(--color-orange-800)
-#define ColorUtilityOrange300 var(--color-orange-700)
-#define ColorUtilityOrange400 var(--color-orange-600)
-#define ColorUtilityOrange500 var(--color-orange-500)
-#define ColorUtilityOrange600 var(--color-orange-400)
-#define ColorUtilityOrange700 var(--color-orange-300)
-#define ColorUtilityOrangeDark50 var(--color-orange-dark-950)
-#define ColorUtilityOrangeDark100 var(--color-orange-dark-900)
-#define ColorUtilityOrangeDark200 var(--color-orange-dark-800)
-#define ColorUtilityOrangeDark300 var(--color-orange-dark-700)
-#define ColorUtilityOrangeDark400 var(--color-orange-dark-600)
-#define ColorUtilityOrangeDark500 var(--color-orange-dark-500)
-#define ColorUtilityOrangeDark600 var(--color-orange-dark-400)
-#define ColorUtilityOrangeDark700 var(--color-orange-dark-300)
-#define ColorUtilityIndigo50 var(--color-indigo-950)
-#define ColorUtilityIndigo100 var(--color-indigo-900)
-#define ColorUtilityIndigo200 var(--color-indigo-800)
-#define ColorUtilityIndigo300 var(--color-indigo-700)
-#define ColorUtilityIndigo400 var(--color-indigo-600)
-#define ColorUtilityIndigo500 var(--color-indigo-500)
-#define ColorUtilityIndigo600 var(--color-indigo-400)
-#define ColorUtilityIndigo700 var(--color-indigo-300)
-#define ColorUtilityFuchsia50 var(--color-fuchsia-950)
-#define ColorUtilityFuchsia100 var(--color-fuchsia-900)
-#define ColorUtilityFuchsia200 var(--color-fuchsia-800)
-#define ColorUtilityFuchsia300 var(--color-fuchsia-700)
-#define ColorUtilityFuchsia400 var(--color-fuchsia-600)
-#define ColorUtilityFuchsia500 var(--color-fuchsia-500)
-#define ColorUtilityFuchsia600 var(--color-fuchsia-400)
-#define ColorUtilityFuchsia700 var(--color-fuchsia-300)
-#define ColorUtilityPink50 var(--color-pink-950)
-#define ColorUtilityPink100 var(--color-pink-900)
-#define ColorUtilityPink200 var(--color-pink-800)
-#define ColorUtilityPink300 var(--color-pink-700)
-#define ColorUtilityPink400 var(--color-pink-600)
-#define ColorUtilityPink500 var(--color-pink-500)
-#define ColorUtilityPink600 var(--color-pink-400)
-#define ColorUtilityPink700 var(--color-pink-300)
-#define ColorUtilityPurple50 var(--color-purple-950)
-#define ColorUtilityPurple100 var(--color-purple-900)
-#define ColorUtilityPurple200 var(--color-purple-800)
-#define ColorUtilityPurple300 var(--color-purple-700)
-#define ColorUtilityPurple400 var(--color-purple-600)
-#define ColorUtilityPurple500 var(--color-purple-500)
-#define ColorUtilityPurple600 var(--color-purple-400)
-#define ColorUtilityPurple700 var(--color-purple-300)
-#define ColorUtilityGreen50 var(--color-green-950)
-#define ColorUtilityGreen100 var(--color-green-900)
-#define ColorUtilityGreen200 var(--color-green-800)
-#define ColorUtilityGreen300 var(--color-green-700)
-#define ColorUtilityGreen400 var(--color-green-600)
-#define ColorUtilityGreen500 var(--color-green-500)
-#define ColorUtilityGreen600 var(--color-green-400)
-#define ColorUtilityGreen700 var(--color-green-300)
-#define ColorUtilityYellow50 var(--color-yellow-950)
-#define ColorUtilityYellow100 var(--color-yellow-900)
-#define ColorUtilityYellow200 var(--color-yellow-800)
-#define ColorUtilityYellow300 var(--color-yellow-700)
-#define ColorUtilityYellow400 var(--color-yellow-600)
-#define ColorUtilityYellow500 var(--color-yellow-500)
-#define ColorUtilityYellow600 var(--color-yellow-400)
-#define ColorUtilityYellow700 var(--color-yellow-300)
-#define ColorTextWhite var(--color-white)
-#define ColorTextPrimary var(--color-gray-50)
-#define ColorTextSecondary var(--color-gray-300)
-#define ColorTextSecondaryHover var(--color-gray-200)
-#define ColorTextTertiary var(--color-gray-400)
-#define ColorTextTertiaryHover var(--color-gray-300)
-#define ColorTextQuaternary var(--color-gray-400)
-#define ColorTextErrorPrimary var(--color-error-400)
-#define ColorTextErrorPrimaryHover var(--color-error-300)
-#define ColorTextWarningPrimary var(--color-warning-400)
-#define ColorTextSuccessPrimary var(--color-success-400)
-#define ColorTextDisabled var(--color-gray-500)
-#define ColorTextPlaceholder var(--color-gray-500)
-#define ColorTextPlaceholderSubtle var(--color-gray-700)
-#define ColorTextEditorIconFg var(--color-gray-400)
-#define ColorTextEditorIconFgActive var(--color-white)
-#define ColorTextPrimaryOnBrand var(--color-gray-50)
-#define ColorTextSecondaryOnBrand var(--color-gray-300)
-#define ColorTextTertiaryOnBrand var(--color-gray-400)
-#define ColorTextQuaternaryOnBrand var(--color-gray-400)
-#define ColorTextBrandPrimary var(--color-gray-50)
-#define ColorTextBrandSecondary var(--color-gray-300)
-#define ColorTextBrandSecondaryHover var(--color-gray-200)
-#define ColorTextBrandTertiary var(--color-gray-400)
-#define ColorTextBrandTertiaryAlt var(--color-gray-50)
-#define ColorBorderPrimary var(--color-gray-700)
-#define ColorBorderSecondary var(--color-gray-800)
-#define ColorBorderSecondaryAlt var(--color-gray-800)
-#define ColorBorderTertiary var(--color-gray-800)
-#define ColorBorderError var(--color-error-400)
-#define ColorBorderErrorSubtle var(--color-error-500)
-#define ColorBorderDisabled var(--color-gray-700)
-#define ColorBorderDisabledSubtle var(--color-gray-800)
-#define ColorBorderBrand var(--color-brand-400)
-#define ColorBorderBrandAlt var(--color-gray-700)
-#define ColorFgWhite var(--color-white)
-#define ColorFgPrimary var(--color-white)
-#define ColorFgSecondary var(--color-gray-300)
-#define ColorFgSecondaryHover var(--color-gray-200)
-#define ColorFgTertiary var(--color-gray-400)
-#define ColorFgTertiaryHover var(--color-gray-300)
-#define ColorFgQuaternary var(--color-gray-600)
-#define ColorFgQuaternaryHover var(--color-gray-500)
-#define ColorFgWarningPrimary var(--color-warning-500)
-#define ColorFgWarningSecondary var(--color-warning-400)
-#define ColorFgSuccessPrimary var(--color-success-500)
-#define ColorFgSuccessSecondary var(--color-success-400)
-#define ColorFgErrorPrimary var(--color-error-500)
-#define ColorFgErrorSecondary var(--color-error-400)
-#define ColorFgDisabled var(--color-gray-500)
-#define ColorFgDisabledSubtle var(--color-gray-600)
-#define ColorFgBrandPrimary var(--color-brand-500)
-#define ColorFgBrandPrimaryAlt var(--color-gray-300)
-#define ColorFgBrandSecondary var(--color-brand-500)
-#define ColorFgBrandSecondaryAlt var(--color-gray-600)
-#define ColorFgBrandSecondaryHover var(--color-gray-500)
-#define ColorBgPrimary var(--color-gray-950)
-#define ColorBgPrimaryAlt var(--color-bg-secondary)
-#define ColorBgPrimaryHover var(--color-gray-800)
-#define ColorBgSecondary var(--color-gray-900)
-#define ColorBgSecondarySubtle var(--color-gray-900)
-#define ColorBgSecondaryHover var(--color-gray-800)
-#define ColorBgSecondaryAlt var(--color-bg-primary)
-#define ColorBgTertiary var(--color-gray-800)
-#define ColorBgQuaternary var(--color-gray-700)
-#define ColorBgErrorPrimary var(--color-error-950)
-#define ColorBgErrorSecondary var(--color-error-600)
-#define ColorBgErrorSolid var(--color-error-600)
-#define ColorBgErrorSolidHover var(--color-error-500)
-#define ColorBgWarningPrimary var(--color-warning-950)
-#define ColorBgWarningSecondary var(--color-warning-600)
-#define ColorBgWarningSolid var(--color-warning-600)
-#define ColorBgSuccessPrimary var(--color-success-950)
-#define ColorBgSuccessSecondary var(--color-success-600)
-#define ColorBgSuccessSolid var(--color-success-600)
-#define ColorBgDisabled var(--color-gray-800)
-#define ColorBgDisabledSubtle var(--color-gray-900)
-#define ColorBgActive var(--color-gray-800)
-#define ColorBgOverlay var(--color-gray-800)
-#define ColorBgBrandPrimary var(--color-brand-500)
-#define ColorBgBrandPrimaryAlt var(--color-bg-secondary)
-#define ColorBgBrandSecondary var(--color-brand-600)
-#define ColorBgBrandSolid var(--color-brand-600)
-#define ColorBgBrandSolidHover var(--color-brand-500)
-#define ColorBgBrandSection var(--color-bg-secondary)
-#define ColorBgBrandSectionSubtle var(--color-bg-primary)
-#define ColorAppStoreBadgeBorder var(--color-white)
-#define ColorAvatarBg var(--color-gray-800)
+#define ColorUtilityBlue50 [UIColor colorWithRed:0.063f green:0.165f blue:0.337f alpha:1.000f]
+#define ColorUtilityBlue100 [UIColor colorWithRed:0.098f green:0.255f blue:0.522f alpha:1.000f]
+#define ColorUtilityBlue200 [UIColor colorWithRed:0.094f green:0.286f blue:0.663f alpha:1.000f]
+#define ColorUtilityBlue300 [UIColor colorWithRed:0.090f green:0.361f blue:0.827f alpha:1.000f]
+#define ColorUtilityBlue400 [UIColor colorWithRed:0.082f green:0.439f blue:0.937f alpha:1.000f]
+#define ColorUtilityBlue500 [UIColor colorWithRed:0.180f green:0.565f blue:0.980f alpha:1.000f]
+#define ColorUtilityBlue600 [UIColor colorWithRed:0.325f green:0.694f blue:0.992f alpha:1.000f]
+#define ColorUtilityBlue700 [UIColor colorWithRed:0.518f green:0.792f blue:1.000f alpha:1.000f]
+#define ColorUtilityBlueDark50 [UIColor colorWithRed:0.000f green:0.133f blue:0.400f alpha:1.000f]
+#define ColorUtilityBlueDark100 [UIColor colorWithRed:0.000f green:0.208f blue:0.620f alpha:1.000f]
+#define ColorUtilityBlueDark200 [UIColor colorWithRed:0.000f green:0.251f blue:0.757f alpha:1.000f]
+#define ColorUtilityBlueDark300 [UIColor colorWithRed:0.000f green:0.306f blue:0.922f alpha:1.000f]
+#define ColorUtilityBlueDark400 [UIColor colorWithRed:0.082f green:0.369f blue:0.937f alpha:1.000f]
+#define ColorUtilityBlueDark500 [UIColor colorWithRed:0.161f green:0.439f blue:1.000f alpha:1.000f]
+#define ColorUtilityBlueDark600 [UIColor colorWithRed:0.322f green:0.545f blue:1.000f alpha:1.000f]
+#define ColorUtilityBlueDark700 [UIColor colorWithRed:0.518f green:0.678f blue:1.000f alpha:1.000f]
+#define ColorUtilityBlueLight50 [UIColor colorWithRed:0.024f green:0.173f blue:0.255f alpha:1.000f]
+#define ColorUtilityBlueLight100 [UIColor colorWithRed:0.043f green:0.290f blue:0.435f alpha:1.000f]
+#define ColorUtilityBlueLight200 [UIColor colorWithRed:0.024f green:0.349f blue:0.525f alpha:1.000f]
+#define ColorUtilityBlueLight300 [UIColor colorWithRed:0.008f green:0.416f blue:0.635f alpha:1.000f]
+#define ColorUtilityBlueLight400 [UIColor colorWithRed:0.000f green:0.525f blue:0.788f alpha:1.000f]
+#define ColorUtilityBlueLight500 [UIColor colorWithRed:0.043f green:0.647f blue:0.925f alpha:1.000f]
+#define ColorUtilityBlueLight600 [UIColor colorWithRed:0.212f green:0.749f blue:0.980f alpha:1.000f]
+#define ColorUtilityBlueLight700 [UIColor colorWithRed:0.486f green:0.831f blue:0.992f alpha:1.000f]
+#define ColorUtilityBrand50 [UIColor colorWithRed:0.173f green:0.110f blue:0.373f alpha:1.000f]
+#define ColorUtilityBrand100 [UIColor colorWithRed:0.259f green:0.188f blue:0.490f alpha:1.000f]
+#define ColorUtilityBrand200 [UIColor colorWithRed:0.325f green:0.220f blue:0.620f alpha:1.000f]
+#define ColorUtilityBrand300 [UIColor colorWithRed:0.412f green:0.255f blue:0.776f alpha:1.000f]
+#define ColorUtilityBrand400 [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define ColorUtilityBrand500 [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorUtilityBrand600 [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define ColorUtilityBrand700 [UIColor colorWithRed:0.839f green:0.733f blue:0.984f alpha:1.000f]
+#define ColorUtilityBrand800 [UIColor colorWithRed:0.914f green:0.843f blue:0.996f alpha:1.000f]
+#define ColorUtilityBrand900 [UIColor colorWithRed:0.957f green:0.922f blue:1.000f alpha:1.000f]
+#define ColorUtilityBrand50Alt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorUtilityBrand100Alt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorUtilityBrand200Alt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorUtilityBrand300Alt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorUtilityBrand400Alt [UIColor colorWithRed:0.380f green:0.396f blue:0.424f alpha:1.000f]
+#define ColorUtilityBrand500Alt [UIColor colorWithRed:0.522f green:0.533f blue:0.557f alpha:1.000f]
+#define ColorUtilityBrand600Alt [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorUtilityBrand700Alt [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorUtilityBrand800Alt [UIColor colorWithRed:0.925f green:0.925f blue:0.929f alpha:1.000f]
+#define ColorUtilityBrand900Alt [UIColor colorWithRed:0.941f green:0.941f blue:0.945f alpha:1.000f]
+#define ColorUtilityGray50 [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorUtilityGray100 [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorUtilityGray200 [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorUtilityGray300 [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorUtilityGray400 [UIColor colorWithRed:0.380f green:0.396f blue:0.424f alpha:1.000f]
+#define ColorUtilityGray500 [UIColor colorWithRed:0.522f green:0.533f blue:0.557f alpha:1.000f]
+#define ColorUtilityGray600 [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorUtilityGray700 [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorUtilityGray800 [UIColor colorWithRed:0.925f green:0.925f blue:0.929f alpha:1.000f]
+#define ColorUtilityGray900 [UIColor colorWithRed:0.941f green:0.941f blue:0.945f alpha:1.000f]
+#define ColorUtilityGrayBlue50 [UIColor colorWithRed:0.051f green:0.059f blue:0.110f alpha:1.000f]
+#define ColorUtilityGrayBlue100 [UIColor colorWithRed:0.063f green:0.075f blue:0.137f alpha:1.000f]
+#define ColorUtilityGrayBlue200 [UIColor colorWithRed:0.161f green:0.188f blue:0.337f alpha:1.000f]
+#define ColorUtilityGrayBlue300 [UIColor colorWithRed:0.212f green:0.247f blue:0.447f alpha:1.000f]
+#define ColorUtilityGrayBlue400 [UIColor colorWithRed:0.243f green:0.278f blue:0.518f alpha:1.000f]
+#define ColorUtilityGrayBlue500 [UIColor colorWithRed:0.306f green:0.357f blue:0.651f alpha:1.000f]
+#define ColorUtilityGrayBlue600 [UIColor colorWithRed:0.443f green:0.482f blue:0.737f alpha:1.000f]
+#define ColorUtilityGrayBlue700 [UIColor colorWithRed:0.702f green:0.722f blue:0.859f alpha:1.000f]
+#define ColorUtilityError50 [UIColor colorWithRed:0.333f green:0.086f blue:0.047f alpha:1.000f]
+#define ColorUtilityError100 [UIColor colorWithRed:0.478f green:0.153f blue:0.102f alpha:1.000f]
+#define ColorUtilityError200 [UIColor colorWithRed:0.569f green:0.125f blue:0.094f alpha:1.000f]
+#define ColorUtilityError300 [UIColor colorWithRed:0.706f green:0.137f blue:0.094f alpha:1.000f]
+#define ColorUtilityError400 [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
+#define ColorUtilityError500 [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorUtilityError600 [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define ColorUtilityError700 [UIColor colorWithRed:0.992f green:0.635f blue:0.608f alpha:1.000f]
+#define ColorUtilityWarning50 [UIColor colorWithRed:0.306f green:0.114f blue:0.035f alpha:1.000f]
+#define ColorUtilityWarning100 [UIColor colorWithRed:0.478f green:0.180f blue:0.055f alpha:1.000f]
+#define ColorUtilityWarning200 [UIColor colorWithRed:0.576f green:0.216f blue:0.051f alpha:1.000f]
+#define ColorUtilityWarning300 [UIColor colorWithRed:0.710f green:0.278f blue:0.031f alpha:1.000f]
+#define ColorUtilityWarning400 [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
+#define ColorUtilityWarning500 [UIColor colorWithRed:0.969f green:0.565f blue:0.035f alpha:1.000f]
+#define ColorUtilityWarning600 [UIColor colorWithRed:0.992f green:0.690f blue:0.133f alpha:1.000f]
+#define ColorUtilityWarning700 [UIColor colorWithRed:0.996f green:0.784f blue:0.294f alpha:1.000f]
+#define ColorUtilitySuccess50 [UIColor colorWithRed:0.020f green:0.200f blue:0.129f alpha:1.000f]
+#define ColorUtilitySuccess100 [UIColor colorWithRed:0.027f green:0.302f blue:0.192f alpha:1.000f]
+#define ColorUtilitySuccess200 [UIColor colorWithRed:0.031f green:0.365f blue:0.227f alpha:1.000f]
+#define ColorUtilitySuccess300 [UIColor colorWithRed:0.024f green:0.463f blue:0.278f alpha:1.000f]
+#define ColorUtilitySuccess400 [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
+#define ColorUtilitySuccess500 [UIColor colorWithRed:0.090f green:0.698f blue:0.416f alpha:1.000f]
+#define ColorUtilitySuccess600 [UIColor colorWithRed:0.278f green:0.804f blue:0.537f alpha:1.000f]
+#define ColorUtilitySuccess700 [UIColor colorWithRed:0.459f green:0.878f blue:0.655f alpha:1.000f]
+#define ColorUtilityOrange50 [UIColor colorWithRed:0.318f green:0.110f blue:0.063f alpha:1.000f]
+#define ColorUtilityOrange100 [UIColor colorWithRed:0.467f green:0.161f blue:0.090f alpha:1.000f]
+#define ColorUtilityOrange200 [UIColor colorWithRed:0.576f green:0.184f blue:0.098f alpha:1.000f]
+#define ColorUtilityOrange300 [UIColor colorWithRed:0.725f green:0.220f blue:0.082f alpha:1.000f]
+#define ColorUtilityOrange400 [UIColor colorWithRed:0.878f green:0.310f blue:0.086f alpha:1.000f]
+#define ColorUtilityOrange500 [UIColor colorWithRed:0.937f green:0.408f blue:0.125f alpha:1.000f]
+#define ColorUtilityOrange600 [UIColor colorWithRed:0.953f green:0.529f blue:0.267f alpha:1.000f]
+#define ColorUtilityOrange700 [UIColor colorWithRed:0.969f green:0.698f blue:0.478f alpha:1.000f]
+#define ColorUtilityOrangeDark50 [UIColor colorWithRed:0.341f green:0.075f blue:0.039f alpha:1.000f]
+#define ColorUtilityOrangeDark100 [UIColor colorWithRed:0.467f green:0.102f blue:0.051f alpha:1.000f]
+#define ColorUtilityOrangeDark200 [UIColor colorWithRed:0.592f green:0.094f blue:0.047f alpha:1.000f]
+#define ColorUtilityOrangeDark300 [UIColor colorWithRed:0.737f green:0.106f blue:0.024f alpha:1.000f]
+#define ColorUtilityOrangeDark400 [UIColor colorWithRed:0.902f green:0.180f blue:0.020f alpha:1.000f]
+#define ColorUtilityOrangeDark500 [UIColor colorWithRed:1.000f green:0.267f blue:0.020f alpha:1.000f]
+#define ColorUtilityOrangeDark600 [UIColor colorWithRed:1.000f green:0.412f blue:0.180f alpha:1.000f]
+#define ColorUtilityOrangeDark700 [UIColor colorWithRed:1.000f green:0.612f blue:0.400f alpha:1.000f]
+#define ColorUtilityIndigo50 [UIColor colorWithRed:0.122f green:0.137f blue:0.357f alpha:1.000f]
+#define ColorUtilityIndigo100 [UIColor colorWithRed:0.176f green:0.196f blue:0.510f alpha:1.000f]
+#define ColorUtilityIndigo200 [UIColor colorWithRed:0.176f green:0.192f blue:0.651f alpha:1.000f]
+#define ColorUtilityIndigo300 [UIColor colorWithRed:0.208f green:0.220f blue:0.804f alpha:1.000f]
+#define ColorUtilityIndigo400 [UIColor colorWithRed:0.267f green:0.298f blue:0.906f alpha:1.000f]
+#define ColorUtilityIndigo500 [UIColor colorWithRed:0.380f green:0.447f blue:0.953f alpha:1.000f]
+#define ColorUtilityIndigo600 [UIColor colorWithRed:0.502f green:0.596f blue:0.976f alpha:1.000f]
+#define ColorUtilityIndigo700 [UIColor colorWithRed:0.643f green:0.737f blue:0.992f alpha:1.000f]
+#define ColorUtilityFuchsia50 [UIColor colorWithRed:0.278f green:0.063f blue:0.298f alpha:1.000f]
+#define ColorUtilityFuchsia100 [UIColor colorWithRed:0.435f green:0.094f blue:0.467f alpha:1.000f]
+#define ColorUtilityFuchsia200 [UIColor colorWithRed:0.510f green:0.094f blue:0.565f alpha:1.000f]
+#define ColorUtilityFuchsia300 [UIColor colorWithRed:0.624f green:0.102f blue:0.694f alpha:1.000f]
+#define ColorUtilityFuchsia400 [UIColor colorWithRed:0.729f green:0.141f blue:0.835f alpha:1.000f]
+#define ColorUtilityFuchsia500 [UIColor colorWithRed:0.831f green:0.267f blue:0.945f alpha:1.000f]
+#define ColorUtilityFuchsia600 [UIColor colorWithRed:0.894f green:0.471f blue:0.980f alpha:1.000f]
+#define ColorUtilityFuchsia700 [UIColor colorWithRed:0.933f green:0.667f blue:0.992f alpha:1.000f]
+#define ColorUtilityPink50 [UIColor colorWithRed:0.306f green:0.051f blue:0.188f alpha:1.000f]
+#define ColorUtilityPink100 [UIColor colorWithRed:0.522f green:0.086f blue:0.318f alpha:1.000f]
+#define ColorUtilityPink200 [UIColor colorWithRed:0.620f green:0.086f blue:0.373f alpha:1.000f]
+#define ColorUtilityPink300 [UIColor colorWithRed:0.757f green:0.082f blue:0.455f alpha:1.000f]
+#define ColorUtilityPink400 [UIColor colorWithRed:0.867f green:0.145f blue:0.565f alpha:1.000f]
+#define ColorUtilityPink500 [UIColor colorWithRed:0.933f green:0.275f blue:0.737f alpha:1.000f]
+#define ColorUtilityPink600 [UIColor colorWithRed:0.965f green:0.439f blue:0.780f alpha:1.000f]
+#define ColorUtilityPink700 [UIColor colorWithRed:0.980f green:0.655f blue:0.878f alpha:1.000f]
+#define ColorUtilityPurple50 [UIColor colorWithRed:0.153f green:0.067f blue:0.373f alpha:1.000f]
+#define ColorUtilityPurple100 [UIColor colorWithRed:0.243f green:0.110f blue:0.588f alpha:1.000f]
+#define ColorUtilityPurple200 [UIColor colorWithRed:0.290f green:0.122f blue:0.722f alpha:1.000f]
+#define ColorUtilityPurple300 [UIColor colorWithRed:0.349f green:0.145f blue:0.863f alpha:1.000f]
+#define ColorUtilityPurple400 [UIColor colorWithRed:0.412f green:0.220f blue:0.937f alpha:1.000f]
+#define ColorUtilityPurple500 [UIColor colorWithRed:0.478f green:0.353f blue:0.973f alpha:1.000f]
+#define ColorUtilityPurple600 [UIColor colorWithRed:0.608f green:0.541f blue:0.984f alpha:1.000f]
+#define ColorUtilityPurple700 [UIColor colorWithRed:0.741f green:0.706f blue:0.996f alpha:1.000f]
+#define ColorUtilityGreen50 [UIColor colorWithRed:0.020f green:0.180f blue:0.110f alpha:1.000f]
+#define ColorUtilityGreen100 [UIColor colorWithRed:0.031f green:0.298f blue:0.180f alpha:1.000f]
+#define ColorUtilityGreen200 [UIColor colorWithRed:0.035f green:0.361f blue:0.216f alpha:1.000f]
+#define ColorUtilityGreen300 [UIColor colorWithRed:0.031f green:0.455f blue:0.263f alpha:1.000f]
+#define ColorUtilityGreen400 [UIColor colorWithRed:0.035f green:0.573f blue:0.314f alpha:1.000f]
+#define ColorUtilityGreen500 [UIColor colorWithRed:0.086f green:0.702f blue:0.392f alpha:1.000f]
+#define ColorUtilityGreen600 [UIColor colorWithRed:0.235f green:0.796f blue:0.498f alpha:1.000f]
+#define ColorUtilityGreen700 [UIColor colorWithRed:0.451f green:0.886f blue:0.639f alpha:1.000f]
+#define ColorUtilityYellow50 [UIColor colorWithRed:0.329f green:0.173f blue:0.051f alpha:1.000f]
+#define ColorUtilityYellow100 [UIColor colorWithRed:0.443f green:0.231f blue:0.071f alpha:1.000f]
+#define ColorUtilityYellow200 [UIColor colorWithRed:0.522f green:0.290f blue:0.055f alpha:1.000f]
+#define ColorUtilityYellow300 [UIColor colorWithRed:0.631f green:0.361f blue:0.027f alpha:1.000f]
+#define ColorUtilityYellow400 [UIColor colorWithRed:0.792f green:0.522f blue:0.016f alpha:1.000f]
+#define ColorUtilityYellow500 [UIColor colorWithRed:0.918f green:0.667f blue:0.031f alpha:1.000f]
+#define ColorUtilityYellow600 [UIColor colorWithRed:0.980f green:0.773f blue:0.082f alpha:1.000f]
+#define ColorUtilityYellow700 [UIColor colorWithRed:0.992f green:0.886f blue:0.447f alpha:1.000f]
+#define ColorTextWhite [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
+#define ColorTextPrimary [UIColor colorWithRed:0.969f green:0.969f blue:0.969f alpha:1.000f]
+#define ColorTextSecondary [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorTextSecondaryHover [UIColor colorWithRed:0.925f green:0.925f blue:0.929f alpha:1.000f]
+#define ColorTextTertiary [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorTextTertiaryHover [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorTextQuaternary [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorTextErrorPrimary [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define ColorTextErrorPrimaryHover [UIColor colorWithRed:0.992f green:0.635f blue:0.608f alpha:1.000f]
+#define ColorTextWarningPrimary [UIColor colorWithRed:0.992f green:0.690f blue:0.133f alpha:1.000f]
+#define ColorTextSuccessPrimary [UIColor colorWithRed:0.278f green:0.804f blue:0.537f alpha:1.000f]
+#define ColorTextDisabled [UIColor colorWithRed:0.522f green:0.533f blue:0.557f alpha:1.000f]
+#define ColorTextPlaceholder [UIColor colorWithRed:0.522f green:0.533f blue:0.557f alpha:1.000f]
+#define ColorTextPlaceholderSubtle [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorTextEditorIconFg [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorTextEditorIconFgActive [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
+#define ColorTextPrimaryOnBrand [UIColor colorWithRed:0.969f green:0.969f blue:0.969f alpha:1.000f]
+#define ColorTextSecondaryOnBrand [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorTextTertiaryOnBrand [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorTextQuaternaryOnBrand [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorTextBrandPrimary [UIColor colorWithRed:0.969f green:0.969f blue:0.969f alpha:1.000f]
+#define ColorTextBrandSecondary [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorTextBrandSecondaryHover [UIColor colorWithRed:0.925f green:0.925f blue:0.929f alpha:1.000f]
+#define ColorTextBrandTertiary [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorTextBrandTertiaryAlt [UIColor colorWithRed:0.969f green:0.969f blue:0.969f alpha:1.000f]
+#define ColorBorderPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorBorderSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define ColorBorderErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorBorderDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorBorderDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define ColorBorderBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorFgWhite [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
+#define ColorFgPrimary [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
+#define ColorFgSecondary [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorFgSecondaryHover [UIColor colorWithRed:0.925f green:0.925f blue:0.929f alpha:1.000f]
+#define ColorFgTertiary [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorFgTertiaryHover [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorFgQuaternary [UIColor colorWithRed:0.380f green:0.396f blue:0.424f alpha:1.000f]
+#define ColorFgQuaternaryHover [UIColor colorWithRed:0.522f green:0.533f blue:0.557f alpha:1.000f]
+#define ColorFgWarningPrimary [UIColor colorWithRed:0.969f green:0.565f blue:0.035f alpha:1.000f]
+#define ColorFgWarningSecondary [UIColor colorWithRed:0.992f green:0.690f blue:0.133f alpha:1.000f]
+#define ColorFgSuccessPrimary [UIColor colorWithRed:0.090f green:0.698f blue:0.416f alpha:1.000f]
+#define ColorFgSuccessSecondary [UIColor colorWithRed:0.278f green:0.804f blue:0.537f alpha:1.000f]
+#define ColorFgErrorPrimary [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorFgErrorSecondary [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define ColorFgDisabled [UIColor colorWithRed:0.522f green:0.533f blue:0.557f alpha:1.000f]
+#define ColorFgDisabledSubtle [UIColor colorWithRed:0.380f green:0.396f blue:0.424f alpha:1.000f]
+#define ColorFgBrandPrimary [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorFgBrandPrimaryAlt [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorFgBrandSecondary [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorFgBrandSecondaryAlt [UIColor colorWithRed:0.380f green:0.396f blue:0.424f alpha:1.000f]
+#define ColorFgBrandSecondaryHover [UIColor colorWithRed:0.522f green:0.533f blue:0.557f alpha:1.000f]
+#define ColorBgPrimary [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define ColorBgPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBgPrimaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBgSecondary [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBgSecondarySubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBgSecondaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBgSecondaryAlt [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define ColorBgTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBgQuaternary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorBgErrorPrimary [UIColor colorWithRed:0.333f green:0.086f blue:0.047f alpha:1.000f]
+#define ColorBgErrorSecondary [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
+#define ColorBgErrorSolid [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
+#define ColorBgErrorSolidHover [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorBgWarningPrimary [UIColor colorWithRed:0.306f green:0.114f blue:0.035f alpha:1.000f]
+#define ColorBgWarningSecondary [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
+#define ColorBgWarningSolid [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
+#define ColorBgSuccessPrimary [UIColor colorWithRed:0.020f green:0.200f blue:0.129f alpha:1.000f]
+#define ColorBgSuccessSecondary [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
+#define ColorBgSuccessSolid [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
+#define ColorBgDisabled [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBgDisabledSubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBgActive [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBgOverlay [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBgBrandPrimary [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorBgBrandPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBgBrandSecondary [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define ColorBgBrandSolid [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define ColorBgBrandSolidHover [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorBgBrandSection [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBgBrandSectionSubtle [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define ColorAppStoreBadgeBorder [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
+#define ColorAvatarBg [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
 #define ColorAvatarContrastBorder [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
-#define ColorAvatarProfilePhotoBorder var(--color-gray-950)
+#define ColorAvatarProfilePhotoBorder [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
 #define ColorAvatarStylesBgNeutral [UIColor colorWithRed:0.878f green:0.878f blue:0.878f alpha:1.000f]
-#define ColorButtonDestructivePrimaryIcon var(--color-error-300)
-#define ColorButtonDestructivePrimaryIconHover var(--color-error-200)
-#define ColorButtonPrimaryIcon var(--color-brand-300)
-#define ColorButtonPrimaryIconHover var(--color-brand-200)
-#define ColorFeaturedIconLightFgBrand var(--color-brand-200)
-#define ColorFeaturedIconLightFgError var(--color-error-200)
-#define ColorFeaturedIconLightFgGray var(--color-gray-200)
-#define ColorFeaturedIconLightFgSuccess var(--color-success-200)
-#define ColorFeaturedIconLightFgWarning var(--color-warning-200)
-#define ColorFocusRing var(--color-brand-500)
-#define ColorFooterButtonFg var(--color-gray-300)
-#define ColorFooterButtonFgHover var(--color-gray-100)
-#define ColorIconFgBrand var(--color-gray-400)
-#define ColorIconFgBrandOnBrand var(--color-gray-400)
-#define ColorScreenMockupBorder var(--color-gray-700)
-#define ColorSliderHandleBg var(--color-fg-brand-primary)
-#define ColorSliderHandleBorder var(--color-bg-primary)
-#define ColorToggleBorder var(--color-transparent)
-#define ColorToggleButtonFgDisabled var(--color-gray-600)
-#define ColorToggleSlimBorderPressed var(--color-transparent)
-#define ColorTooltipSupportingText var(--color-gray-300)
-#define ColorNavItemButtonIconFg var(--color-gray-400)
-#define ColorNavItemButtonIconFgActive var(--color-gray-300)
-#define ColorNavItemIconFg var(--color-gray-400)
-#define ColorNavItemIconFgActive var(--color-gray-300)
-#define ColorPrimary50 [UIColor colorWithRed:0.976f green:0.961f blue:1.000f alpha:1.000f]
-#define ColorPrimary100 [UIColor colorWithRed:0.957f green:0.922f blue:1.000f alpha:1.000f]
-#define ColorPrimary200 [UIColor colorWithRed:0.914f green:0.843f blue:0.996f alpha:1.000f]
-#define ColorPrimary300 [UIColor colorWithRed:0.839f green:0.733f blue:0.984f alpha:1.000f]
-#define ColorPrimary400 [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
-#define ColorPrimary500 [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
-#define ColorPrimary600 [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
-#define ColorPrimary700 [UIColor colorWithRed:0.412f green:0.255f blue:0.776f alpha:1.000f]
-#define ColorPrimary800 [UIColor colorWithRed:0.325f green:0.220f blue:0.620f alpha:1.000f]
-#define ColorPrimary900 [UIColor colorWithRed:0.259f green:0.188f blue:0.490f alpha:1.000f]
-#define ColorNeutral400 [UIColor colorWithRed:0.616f green:0.643f blue:0.682f alpha:1.000f]
-#define ColorNeutral500 [UIColor colorWithRed:0.424f green:0.451f blue:0.498f alpha:1.000f]
-#define ColorNeutral700 [UIColor colorWithRed:0.220f green:0.259f blue:0.314f alpha:1.000f]
-#define ColorNeutral900 [UIColor colorWithRed:0.067f green:0.098f blue:0.153f alpha:1.000f]
-#define BackgroundColorPrimary var(--color-bg-primary)
-#define BackgroundColorPrimaryAlt var(--color-bg-primary_alt)
-#define BackgroundColorPrimaryHover var(--color-bg-primary_hover)
-#define BackgroundColorSecondary var(--color-bg-secondary)
-#define BackgroundColorSecondaryAlt var(--color-bg-secondary_alt)
-#define BackgroundColorSecondaryHover var(--color-bg-secondary_hover)
-#define BackgroundColorSecondarySubtle var(--color-bg-secondary_subtle)
-#define BackgroundColorTertiary var(--color-bg-tertiary)
-#define BackgroundColorQuaternary var(--color-bg-quaternary)
-#define BackgroundColorBrandSolid var(--color-bg-brand-solid)
-#define BackgroundColorBrandPrimary var(--color-bg-brand-primary)
-#define BackgroundColorBrandPrimaryAlt var(--color-bg-brand-primary_alt)
-#define BackgroundColorBrandSecondary var(--color-bg-brand-secondary)
-#define BackgroundColorBrandSolidHover var(--color-bg-brand-solid_hover)
-#define BackgroundColorBrandSection var(--color-bg-brand-section)
-#define BackgroundColorBrandSectionSubtle var(--color-bg-brand-section_subtle)
-#define BackgroundColorActive var(--color-bg-active)
-#define BackgroundColorDisabled var(--color-bg-disabled)
-#define BackgroundColorDisabledSubtle var(--color-bg-disabled_subtle)
-#define BackgroundColorOverlay var(--color-bg-overlay)
-#define BackgroundColorErrorPrimary var(--color-bg-error-primary)
-#define BackgroundColorErrorSecondary var(--color-bg-error-secondary)
-#define BackgroundColorErrorSolid var(--color-bg-error-solid)
-#define BackgroundColorErrorSolidHover var(--color-bg-error-solid_hover)
-#define BackgroundColorWarningPrimary var(--color-bg-warning-primary)
-#define BackgroundColorWarningSecondary var(--color-bg-warning-secondary)
-#define BackgroundColorWarningSolid var(--color-bg-warning-solid)
-#define BackgroundColorSuccessPrimary var(--color-bg-success-primary)
-#define BackgroundColorSuccessSecondary var(--color-bg-success-secondary)
-#define BackgroundColorSuccessSolid var(--color-bg-success-solid)
-#define BackgroundColorBorderTertiary var(--color-border-tertiary)
-#define BackgroundColorBorderBrand var(--color-border-brand)
-#define BackgroundColorBorderBrandAlt var(--color-border-brand_alt)
-#define BorderColorPrimary var(--color-border-primary)
-#define BorderColorSecondary var(--color-border-secondary)
-#define BorderColorSecondaryAlt var(--color-border-secondary_alt)
-#define BorderColorTertiary var(--color-border-tertiary)
-#define BorderColorDisabled var(--color-border-disabled)
-#define BorderColorDisabledSubtle var(--color-border-disabled_subtle)
-#define BorderColorError var(--color-border-error)
-#define BorderColorErrorSubtle var(--color-border-error_subtle)
-#define BorderColorBrand var(--color-border-brand)
-#define BorderColorBrandAlt var(--color-border-brand_alt)
-#define OutlineColorPrimary var(--color-border-primary)
-#define OutlineColorSecondary var(--color-border-secondary)
-#define OutlineColorSecondaryAlt var(--color-border-secondary_alt)
-#define OutlineColorTertiary var(--color-border-tertiary)
-#define OutlineColorError var(--color-border-error)
-#define OutlineColorErrorSubtle var(--color-border-error_subtle)
-#define OutlineColorDisabled var(--color-border-disabled)
-#define OutlineColorDisabledSubtle var(--color-border-disabled_subtle)
-#define OutlineColorBrand var(--color-border-brand)
-#define OutlineColorBrandAlt var(--color-border-brand_alt)
-#define RingColorPrimary var(--color-border-primary)
-#define RingColorSecondary var(--color-border-secondary)
-#define RingColorSecondaryAlt var(--color-border-secondary_alt)
-#define RingColorTertiary var(--color-border-tertiary)
-#define RingColorError var(--color-border-error)
-#define RingColorErrorSubtle var(--color-border-error_subtle)
-#define RingColorDisabled var(--color-border-disabled)
-#define RingColorDisabledSubtle var(--color-border-disabled_subtle)
-#define RingColorBrand var(--color-border-brand)
-#define RingColorBrandAlt var(--color-border-brand_alt)
-#define RingColorBgBrandSolid var(--color-bg-brand-solid)
-#define SpacingXs 4
-#define SpacingSm 8
-#define SpacingMd 16
-#define SpacingLg 24
-#define SpacingXl 32
-#define Spacing2xl 48
-#define Spacing3xl 64
+#define ColorButtonDestructivePrimaryIcon [UIColor colorWithRed:0.992f green:0.635f blue:0.608f alpha:1.000f]
+#define ColorButtonDestructivePrimaryIconHover [UIColor colorWithRed:0.996f green:0.804f blue:0.792f alpha:1.000f]
+#define ColorButtonPrimaryIcon [UIColor colorWithRed:0.839f green:0.733f blue:0.984f alpha:1.000f]
+#define ColorButtonPrimaryIconHover [UIColor colorWithRed:0.914f green:0.843f blue:0.996f alpha:1.000f]
+#define ColorFeaturedIconLightFgBrand [UIColor colorWithRed:0.914f green:0.843f blue:0.996f alpha:1.000f]
+#define ColorFeaturedIconLightFgError [UIColor colorWithRed:0.996f green:0.804f blue:0.792f alpha:1.000f]
+#define ColorFeaturedIconLightFgGray [UIColor colorWithRed:0.925f green:0.925f blue:0.929f alpha:1.000f]
+#define ColorFeaturedIconLightFgSuccess [UIColor colorWithRed:0.671f green:0.937f blue:0.776f alpha:1.000f]
+#define ColorFeaturedIconLightFgWarning [UIColor colorWithRed:0.996f green:0.875f blue:0.537f alpha:1.000f]
+#define ColorFocusRing [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorFooterButtonFg [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorFooterButtonFgHover [UIColor colorWithRed:0.941f green:0.941f blue:0.945f alpha:1.000f]
+#define ColorIconFgBrand [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorIconFgBrandOnBrand [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorScreenMockupBorder [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorSliderHandleBg [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorSliderHandleBorder [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define ColorToggleBorder [UIColor colorWithRed:0.000f green:0.000f blue:0.000f alpha:1.000f]
+#define ColorToggleButtonFgDisabled [UIColor colorWithRed:0.380f green:0.396f blue:0.424f alpha:1.000f]
+#define ColorToggleSlimBorderPressed [UIColor colorWithRed:0.000f green:0.000f blue:0.000f alpha:1.000f]
+#define ColorTooltipSupportingText [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorNavItemButtonIconFg [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorNavItemButtonIconFgActive [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define ColorNavItemIconFg [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
+#define ColorNavItemIconFgActive [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
+#define BackgroundColorPrimary [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define BackgroundColorPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define BackgroundColorPrimaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BackgroundColorSecondary [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define BackgroundColorSecondaryAlt [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define BackgroundColorSecondaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BackgroundColorSecondarySubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define BackgroundColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BackgroundColorQuaternary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define BackgroundColorBrandSolid [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define BackgroundColorBrandPrimary [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define BackgroundColorBrandPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define BackgroundColorBrandSecondary [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define BackgroundColorBrandSolidHover [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define BackgroundColorBrandSection [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define BackgroundColorBrandSectionSubtle [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define BackgroundColorActive [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BackgroundColorDisabled [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BackgroundColorDisabledSubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define BackgroundColorOverlay [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BackgroundColorErrorPrimary [UIColor colorWithRed:0.333f green:0.086f blue:0.047f alpha:1.000f]
+#define BackgroundColorErrorSecondary [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
+#define BackgroundColorErrorSolid [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
+#define BackgroundColorErrorSolidHover [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define BackgroundColorWarningPrimary [UIColor colorWithRed:0.306f green:0.114f blue:0.035f alpha:1.000f]
+#define BackgroundColorWarningSecondary [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
+#define BackgroundColorWarningSolid [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
+#define BackgroundColorSuccessPrimary [UIColor colorWithRed:0.020f green:0.200f blue:0.129f alpha:1.000f]
+#define BackgroundColorSuccessSecondary [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
+#define BackgroundColorSuccessSolid [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
+#define BackgroundColorBorderTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BackgroundColorBorderBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define BackgroundColorBorderBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define BorderColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define BorderColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BorderColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BorderColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BorderColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define BorderColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define BorderColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define BorderColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define BorderColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define BorderColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define OutlineColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define OutlineColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define OutlineColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define OutlineColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define OutlineColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define OutlineColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define OutlineColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define OutlineColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define OutlineColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define OutlineColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define RingColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define RingColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define RingColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define RingColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define RingColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define RingColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define RingColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define RingColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define RingColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define RingColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define RingColorBgBrandSolid [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define MaxWidthContainer 1280px
+#define BreakpointXxs 320px
+#define BreakpointXs 600px
+#define RadiusNone 0px
+#define RadiusXs 0.125rem
+#define RadiusSm 0.25rem
+#define RadiusDefault 0.25rem
+#define RadiusMd 0.375rem
+#define RadiusLg 0.5rem
+#define RadiusXl 0.75rem
+#define Radius2xl 1rem
+#define Radius3xl 1.5rem
+#define RadiusFull 9999px
+#define ShadowXs 0px 1px 2px rgba(10, 13, 18, 0.05)
+#define ShadowSm 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+#define ShadowMd 0 4px 6px -1px rgba(0, 0, 0, 0.1)
+#define ShadowLg 0 10px 15px -3px rgba(0, 0, 0, 0.1)
+#define ShadowXl 0 20px 25px -5px rgba(0, 0, 0, 0.1)
+#define Shadow2xl 0px 24px 48px -12px rgba(10, 13, 18, 0.18), 0px 4px 4px -2px rgba(10, 13, 18, 0.04)
+#define Shadow3xl 0px 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04)
+#define ShadowSkeumorphic 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset
+#define ShadowModernMockupInnerLg 0px 0px 3.765px 1.255px rgba(10, 13, 18, 0.08) inset, 0px 0px 2.51px 1.255px rgba(10, 13, 18, 0.03) inset
+#define ShadowModernMockupInnerMd 0px 0px 1.692px 0.564px rgba(10, 13, 18, 0.08) inset, 0px 0px 1.128px 0.564px rgba(10, 13, 18, 0.03) inset
+#define ShadowModernMockupInnerSm 0px 0px 4.48px 1.493px rgba(10, 13, 18, 0.08) inset, 0px 0px 2.987px 1.493px rgba(10, 13, 18, 0.03) inset
+#define ShadowModernMockupOuterLg 0px 7.529px 10.039px -2.51px rgba(10, 13, 18, 0.08), 0px 2.51px 3.765px -1.255px rgba(10, 13, 18, 0.03),
+        0px 1.255px 1.255px -0.627px rgba(10, 13, 18, 0.04)
+#define ShadowModernMockupOuterMd 0px 3.385px 4.513px -1.128px rgba(10, 13, 18, 0.08), 0px 1.128px 1.692px -0.564px rgba(10, 13, 18, 0.03),
+        0px 0.564px 0.564px -0.282px rgba(10, 13, 18, 0.04)
+#define DropShadowIphoneMockup 20px 12px 18px rgba(16, 24, 40, 0.2)
 #define TypographyFontSizeXs 12
 #define TypographyFontSizeSm 14
 #define TypographyFontSizeBase 16
@@ -726,16 +736,19 @@
 #define TypographyFontWeightMedium 500
 #define TypographyFontWeightSemibold 600
 #define TypographyFontWeightBold 700
+#define SpacingXs 4
+#define SpacingSm 8
+#define SpacingMd 16
+#define SpacingLg 24
+#define SpacingXl 32
+#define Spacing2xl 48
+#define Spacing3xl 64
 #define BorderRadiusNone 0
 #define BorderRadiusSm 4
 #define BorderRadiusMd 8
 #define BorderRadiusLg 12
 #define BorderRadiusXl 16
 #define BorderRadiusFull 9999
-#define ShadowSm 0 1px 2px 0 rgba(0, 0, 0, 0.05)
-#define ShadowMd 0 4px 6px -1px rgba(0, 0, 0, 0.1)
-#define ShadowLg 0 10px 15px -3px rgba(0, 0, 0, 0.1)
-#define ShadowXl 0 20px 25px -5px rgba(0, 0, 0, 0.1)
 #define TextXs 12
 #define TextXslineHeight 24
 #define TextSm 14
