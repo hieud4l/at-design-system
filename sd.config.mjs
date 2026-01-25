@@ -1,12 +1,64 @@
 /**
- * Style Dictionary v5 Configuration
+ * Style Dictionary v5 Configuration with Theme Support
  * @see https://styledictionary.com/versions/v5/
  */
+
+// Custom CSS format for dark mode selector
+const darkModeFormat = {
+  name: 'css/dark-mode',
+  format: ({ dictionary, options }) => {
+    const header = `/**
+ * Do not edit directly, this file was auto-generated.
+ * Dark Mode Theme Variables
+ */
+
+.dark-mode,
+[data-theme="dark"] {`;
+
+    const footer = `}`;
+
+    const variables = dictionary.allTokens
+      .map(token => `  --${token.name}: ${token.value};`)
+      .join('\n');
+
+    return header + '\n' + variables + '\n' + footer;
+  }
+};
+
+// Custom CSS format for combined themes
+const combinedThemeFormat = {
+  name: 'css/themes',
+  format: ({ dictionary, options, file }) => {
+    const lightTokens = dictionary.allTokens.filter(t => !t.filePath.includes('dark'));
+    const darkTokens = dictionary.allTokens.filter(t => t.filePath.includes('dark'));
+
+    let output = `/**
+ * Do not edit directly, this file was auto-generated.
+ * Design System Theme Variables
+ */
+
+:root {
+`;
+
+    output += lightTokens.map(t => `  --${t.name}: ${t.value};`).join('\n');
+    output += '\n}\n\n';
+
+    if (darkTokens.length > 0) {
+      output += `.dark-mode,
+[data-theme="dark"] {
+`;
+      output += darkTokens.map(t => `  --${t.name}: ${t.value};`).join('\n');
+      output += '\n}\n';
+    }
+
+    return output;
+  }
+};
+
 export default {
   // Source token files
-  source: ['tokens/**/*.json'],
+  source: ['tokens/**/*.json', '!tokens/themes/**/*.json'],
 
-  // Preprocessors (v5 feature)
   // Preprocessors (v5 feature)
   preprocessors: ['tokens-studio'],
 
@@ -25,6 +77,7 @@ export default {
       }
     },
     formats: {
+      'css/dark-mode': darkModeFormat.format,
       'ios/custom-plist': ({ dictionary, options }) => {
         const header = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -35,9 +88,7 @@ export default {
 
         const content = dictionary.allTokens.map(token => {
           let value = token.value;
-          // Handle Colors
           if (token.type === 'color' || token.path.includes('color')) {
-            // Remove spaces from color/hex8android output if any
             value = value.replace(/\s/g, '');
             const hexMatch = value.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i);
             if (hexMatch) {
@@ -48,12 +99,10 @@ export default {
               return `    <key>${token.name}</key>\n    <dict>\n      <key>r</key> <real>${r}</real>\n      <key>g</key> <real>${g}</real>\n      <key>b</key> <real>${b}</real>\n      <key>a</key> <real>${a}</real>\n    </dict>`;
             }
           }
-          // Handle Numbers
           const num = parseFloat(value);
           if (!isNaN(num) && (token.type === 'dimension' || token.path.includes('spacing') || token.type === 'fontSize' || token.type === 'borderRadius')) {
             return `    <key>${token.name}</key>\n    <integer>${num}</integer>`;
           }
-          // Default
           return `    <key>${token.name}</key>\n    <string>${value}</string>`;
         }).join('\n');
         return header + '\n' + content + '\n' + footer;
@@ -63,6 +112,7 @@ export default {
 
   // Platform-specific outputs
   platforms: {
+    // Light theme CSS
     css: {
       transformGroup: 'css',
       buildPath: 'build/css/',
@@ -76,6 +126,23 @@ export default {
         }
       ]
     },
+
+    // Dark theme CSS - uses dark tokens
+    'css-dark': {
+      transformGroup: 'css',
+      buildPath: 'build/css/',
+      source: ['tokens/themes/dark.json'],
+      files: [
+        {
+          destination: 'variables-dark.css',
+          format: 'css/dark-mode',
+          options: {
+            outputReferences: true
+          }
+        }
+      ]
+    },
+
     scss: {
       transformGroup: 'scss',
       buildPath: 'build/scss/',
@@ -89,6 +156,23 @@ export default {
         }
       ]
     },
+
+    // Dark SCSS
+    'scss-dark': {
+      transformGroup: 'scss',
+      buildPath: 'build/scss/',
+      source: ['tokens/themes/dark.json'],
+      files: [
+        {
+          destination: '_variables-dark.scss',
+          format: 'scss/variables',
+          options: {
+            outputReferences: true
+          }
+        }
+      ]
+    },
+
     js: {
       transformGroup: 'js',
       buildPath: 'build/js/',
@@ -103,12 +187,38 @@ export default {
         }
       ]
     },
+
+    // Dark mode JS
+    'js-dark': {
+      transformGroup: 'js',
+      buildPath: 'build/js/',
+      source: ['tokens/themes/dark.json'],
+      files: [
+        {
+          destination: 'tokens-dark.js',
+          format: 'javascript/es6'
+        }
+      ]
+    },
+
     json: {
       transformGroup: 'js',
       buildPath: 'build/json/',
       files: [
         {
           destination: 'tokens.json',
+          format: 'json/flat'
+        }
+      ]
+    },
+
+    'json-dark': {
+      transformGroup: 'js',
+      buildPath: 'build/json/',
+      source: ['tokens/themes/dark.json'],
+      files: [
+        {
+          destination: 'tokens-dark.json',
           format: 'json/flat'
         }
       ]
@@ -133,11 +243,11 @@ export default {
     // iOS Plist
     'ios-plist': {
       buildPath: 'build/ios/',
-      transforms: ['attribute/cti', 'name/camel', 'color/hex'], // Ensure hex for parsing
+      transforms: ['attribute/cti', 'name/camel', 'color/hex'],
       files: [
         {
           destination: 'StyleDictionary.plist',
-          format: 'ios/custom-plist', // Use custom formatter
+          format: 'ios/custom-plist',
           options: {
             className: 'StyleDictionary'
           },
@@ -157,7 +267,7 @@ export default {
           options: {
             className: 'StyleDictionary'
           },
-          filter: (token) => token.type !== 'fontFamily' // Exclude web font stacks
+          filter: (token) => token.type !== 'fontFamily'
         }
       ]
     },
@@ -214,6 +324,19 @@ export default {
       ]
     },
 
+    // Android Dark Theme
+    'android-dark': {
+      transformGroup: 'android',
+      buildPath: 'build/android-night/',
+      source: ['tokens/themes/dark.json'],
+      files: [
+        {
+          destination: 'colors.xml',
+          format: 'android/colors'
+        }
+      ]
+    },
+
     // Android Compose
     'compose': {
       transformGroup: 'compose',
@@ -238,6 +361,26 @@ export default {
             packageName: 'com.yourapp.tokens'
           },
           filter: (token) => token.type === 'dimension' || token.path.includes('spacing')
+        }
+      ]
+    },
+
+    // Compose Dark Theme
+    'compose-dark': {
+      transformGroup: 'compose',
+      buildPath: 'build/compose/',
+      source: ['tokens/themes/dark.json'],
+      files: [
+        {
+          destination: 'StyleDictionaryColorDark.kt',
+          format: 'compose/object',
+          options: {
+            className: 'StyleDictionaryColorDark',
+            packageName: 'com.yourapp.tokens'
+          },
+          filter: {
+            type: 'color'
+          }
         }
       ]
     }
