@@ -1,0 +1,286 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Do not edit directly, this file was auto-generated.
+-->
+<plist version="1.0">
+  <dict>
+    <key>ColorPrimary50</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary100</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary200</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary300</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary400</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary500</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary600</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary700</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary800</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorPrimary900</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral50</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral100</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral200</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral300</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral400</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral500</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral600</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral700</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral800</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>ColorNeutral900</key>
+    <dict>
+      <key>r</key>
+      <real>NaN</real>
+      <key>g</key>
+      <real>NaN</real>
+      <key>b</key>
+      <real>NaN</real>
+      <key>a</key>
+      <real>1</real>
+    </dict>
+  <key>SpacingXs</key>
+<integer>64.00f</integer>
+  <key>SpacingSm</key>
+<integer>128.00f</integer>
+  <key>SpacingMd</key>
+<integer>256.00f</integer>
+  <key>SpacingLg</key>
+<integer>384.00f</integer>
+  <key>SpacingXl</key>
+<integer>512.00f</integer>
+  <key>Spacing2xl</key>
+<integer>768.00f</integer>
+  <key>Spacing3xl</key>
+<integer>1024.00f</integer>
+  <key>TypographyFontSizeXs</key>
+<integer>192.00f</integer>
+  <key>TypographyFontSizeSm</key>
+<integer>224.00f</integer>
+  <key>TypographyFontSizeBase</key>
+<integer>256.00f</integer>
+  <key>TypographyFontSizeLg</key>
+<integer>288.00f</integer>
+  <key>TypographyFontSizeXl</key>
+<integer>320.00f</integer>
+  <key>TypographyFontSize2xl</key>
+<integer>384.00f</integer>
+  <key>TypographyFontSize3xl</key>
+<integer>480.00f</integer>
+  <key>TypographyFontSize4xl</key>
+<integer>576.00f</integer>
+  <key>TypographyFontWeightLight</key>
+<string>300</string>
+  <key>TypographyFontWeightRegular</key>
+<string>400</string>
+  <key>TypographyFontWeightMedium</key>
+<string>500</string>
+  <key>TypographyFontWeightSemibold</key>
+<string>600</string>
+  <key>TypographyFontWeightBold</key>
+<string>700</string>
+  <key>TypographyFontFamilySans</key>
+<string>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif</string>
+  <key>TypographyFontFamilyMono</key>
+<string>'Courier New', monospace</string>
+  <key>BorderRadiusNone</key>
+<integer>0.00f</integer>
+  <key>BorderRadiusSm</key>
+<integer>64.00f</integer>
+  <key>BorderRadiusMd</key>
+<integer>128.00f</integer>
+  <key>BorderRadiusLg</key>
+<integer>192.00f</integer>
+  <key>BorderRadiusXl</key>
+<integer>256.00f</integer>
+  <key>BorderRadiusFull</key>
+<integer>159984.00f</integer>
+  </dict>
+</plist>

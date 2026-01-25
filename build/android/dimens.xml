@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Do not edit directly, this file was auto-generated.
+-->
+<resources>
+  <dimen name="spacing_xs">64.00dp</dimen>
+  <dimen name="spacing_sm">128.00dp</dimen>
+  <dimen name="spacing_md">256.00dp</dimen>
+  <dimen name="spacing_lg">384.00dp</dimen>
+  <dimen name="spacing_xl">512.00dp</dimen>
+  <dimen name="spacing_2xl">768.00dp</dimen>
+  <dimen name="spacing_3xl">1024.00dp</dimen>
+  <dimen name="typography_font_size_xs">192.00dp</dimen>
+  <dimen name="typography_font_size_sm">224.00dp</dimen>
+  <dimen name="typography_font_size_base">256.00dp</dimen>
+  <dimen name="typography_font_size_lg">288.00dp</dimen>
+  <dimen name="typography_font_size_xl">320.00dp</dimen>
+  <dimen name="typography_font_size_2xl">384.00dp</dimen>
+  <dimen name="typography_font_size_3xl">480.00dp</dimen>
+  <dimen name="typography_font_size_4xl">576.00dp</dimen>
+  <dimen name="border_radius_none">0.00dp</dimen>
+  <dimen name="border_radius_sm">64.00dp</dimen>
+  <dimen name="border_radius_md">128.00dp</dimen>
+  <dimen name="border_radius_lg">192.00dp</dimen>
+  <dimen name="border_radius_xl">256.00dp</dimen>
+  <dimen name="border_radius_full">159984.00dp</dimen>
+</resources>

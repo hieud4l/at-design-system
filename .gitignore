@@ -1,5 +1,5 @@
 # Build output
-build/
+# build/  # Commented out to include build files in repo
 dist/
 
 # Dependencies

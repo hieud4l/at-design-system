@@ -1,0 +1,57 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+export const ColorPrimary50 = "#f0f9ff";
+export const ColorPrimary100 = "#e0f2fe";
+export const ColorPrimary200 = "#bae6fd";
+export const ColorPrimary300 = "#7dd3fc";
+export const ColorPrimary400 = "#38bdf8";
+export const ColorPrimary500 = "#0ea5e9";
+export const ColorPrimary600 = "#0284c7";
+export const ColorPrimary700 = "#0369a1";
+export const ColorPrimary800 = "#075985";
+export const ColorPrimary900 = "#0c4a6e";
+export const ColorNeutral50 = "#fafafa";
+export const ColorNeutral100 = "#f5f5f5";
+export const ColorNeutral200 = "#e5e5e5";
+export const ColorNeutral300 = "#d4d4d4";
+export const ColorNeutral400 = "#a3a3a3";
+export const ColorNeutral500 = "#737373";
+export const ColorNeutral600 = "#525252";
+export const ColorNeutral700 = "#404040";
+export const ColorNeutral800 = "#262626";
+export const ColorNeutral900 = "#171717";
+export const SpacingXs = "4rem";
+export const SpacingSm = "8rem";
+export const SpacingMd = "16rem";
+export const SpacingLg = "24rem";
+export const SpacingXl = "32rem";
+export const Spacing2xl = "48rem";
+export const Spacing3xl = "64rem";
+export const TypographyFontSizeXs = "12rem";
+export const TypographyFontSizeSm = "14rem";
+export const TypographyFontSizeBase = "16rem";
+export const TypographyFontSizeLg = "18rem";
+export const TypographyFontSizeXl = "20rem";
+export const TypographyFontSize2xl = "24rem";
+export const TypographyFontSize3xl = "30rem";
+export const TypographyFontSize4xl = "36rem";
+export const TypographyFontWeightLight = "300";
+export const TypographyFontWeightRegular = "400";
+export const TypographyFontWeightMedium = "500";
+export const TypographyFontWeightSemibold = "600";
+export const TypographyFontWeightBold = "700";
+export const TypographyFontFamilySans =
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+export const TypographyFontFamilyMono = "'Courier New', monospace";
+export const BorderRadiusNone = "0";
+export const BorderRadiusSm = "4rem";
+export const BorderRadiusMd = "8rem";
+export const BorderRadiusLg = "12rem";
+export const BorderRadiusXl = "16rem";
+export const BorderRadiusFull = "9999rem";
+export const ShadowSm = "0 1px 2px 0 rgba(0, 0, 0, 0.05)";
+export const ShadowMd = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+export const ShadowLg = "0 10px 15px -3px rgba(0, 0, 0, 0.1)";
+export const ShadowXl = "0 20px 25px -5px rgba(0, 0, 0, 0.1)";
