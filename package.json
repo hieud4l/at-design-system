@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "build": "style-dictionary build --config sd.config.mjs",
+        "build:tokens": "style-dictionary build --config sd.config.mjs",
         "clean": "rm -rf build"
     },
     "keywords": [
