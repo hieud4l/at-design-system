@@ -1,0 +1,19 @@
+{
+    "name": "at-design-system",
+    "version": "1.0.0",
+    "description": "Design system using Style Dictionary v5",
+    "type": "module",
+    "scripts": {
+        "build": "style-dictionary build --config sd.config.mjs",
+        "clean": "rm -rf build"
+    },
+    "keywords": [
+        "design-tokens",
+        "style-dictionary"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "style-dictionary": "^5.0.0"
+    }
+}
