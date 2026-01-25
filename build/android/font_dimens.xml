@@ -4,12 +4,5 @@
   Do not edit directly, this file was auto-generated.
 -->
 <resources>
-  <dimen name="typography_font_size_xs">192.00sp</dimen>
-  <dimen name="typography_font_size_sm">224.00sp</dimen>
-  <dimen name="typography_font_size_base">256.00sp</dimen>
-  <dimen name="typography_font_size_lg">288.00sp</dimen>
-  <dimen name="typography_font_size_xl">320.00sp</dimen>
-  <dimen name="typography_font_size_2xl">384.00sp</dimen>
-  <dimen name="typography_font_size_3xl">480.00sp</dimen>
-  <dimen name="typography_font_size_4xl">576.00sp</dimen>
+
 </resources>

@@ -1,8 +1,10 @@
 /**
  * Do not edit directly, this file was auto-generated.
+ * Dark Mode Theme Variables
  */
 
-:root {
+.dark-mode,
+[data-theme="dark"] {
   --animate-marquee: marquee 60s linear infinite;
   --animate-caret-blink: caret-blink 1s infinite;
   --color-transparent: #000000;

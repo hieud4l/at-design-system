@@ -539,16 +539,39 @@
 #define ColorTextBrandSecondaryHover [UIColor colorWithRed:0.925f green:0.925f blue:0.929f alpha:1.000f]
 #define ColorTextBrandTertiary [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
 #define ColorTextBrandTertiaryAlt [UIColor colorWithRed:0.969f green:0.969f blue:0.969f alpha:1.000f]
-#define ColorBorderPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define ColorBorderSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define ColorBorderSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define ColorBorderTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define ColorBorderError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
-#define ColorBorderErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
-#define ColorBorderDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define ColorBorderDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define ColorBorderBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
-#define ColorBorderBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorTextColorPrimary rgb(247 247 247)
+#define ColorTextColorPrimaryOnBrand rgb(247 247 247)
+#define ColorTextColorSecondary rgb(206 207 210)
+#define ColorTextColorSecondaryHover rgb(236 236 237)
+#define ColorTextColorSecondaryOnBrand rgb(206 207 210)
+#define ColorTextColorTertiary rgb(148 151 156)
+#define ColorTextColorTertiaryHover rgb(206 207 210)
+#define ColorTextColorTertiaryOnBrand rgb(148 151 156)
+#define ColorTextColorQuaternary rgb(148 151 156)
+#define ColorTextColorQuaternaryOnBrand rgb(148 151 156)
+#define ColorTextColorDisabled rgb(133 136 142)
+#define ColorTextColorPlaceholder rgb(133 136 142)
+#define ColorTextColorPlaceholderSubtle rgb(55 58 65)
+#define ColorTextColorBrandPrimary rgb(247 247 247)
+#define ColorTextColorBrandSecondary rgb(206 207 210)
+#define ColorTextColorBrandSecondaryHover rgb(236 236 237)
+#define ColorTextColorBrandTertiary rgb(148 151 156)
+#define ColorTextColorBrandTertiaryAlt rgb(247 247 247)
+#define ColorTextColorErrorPrimary rgb(249 112 102)
+#define ColorTextColorErrorPrimaryHover rgb(253 162 155)
+#define ColorTextColorWarningPrimary rgb(253 176 34)
+#define ColorTextColorSuccessPrimary rgb(71 205 137)
+#define ColorTextColorTooltipSupportingText rgb(206 207 210)
+#define ColorBorderColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorBorderColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorBorderColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBorderColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define ColorBorderColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorBorderColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define ColorBorderColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
 #define ColorFgWhite [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
 #define ColorFgPrimary [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
 #define ColorFgSecondary [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
@@ -630,70 +653,60 @@
 #define ColorNavItemButtonIconFgActive [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
 #define ColorNavItemIconFg [UIColor colorWithRed:0.580f green:0.592f blue:0.612f alpha:1.000f]
 #define ColorNavItemIconFgActive [UIColor colorWithRed:0.808f green:0.812f blue:0.824f alpha:1.000f]
-#define BackgroundColorPrimary [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
-#define BackgroundColorPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
-#define BackgroundColorPrimaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BackgroundColorSecondary [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
-#define BackgroundColorSecondaryAlt [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
-#define BackgroundColorSecondaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BackgroundColorSecondarySubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
-#define BackgroundColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BackgroundColorQuaternary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define BackgroundColorBrandSolid [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
-#define BackgroundColorBrandPrimary [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
-#define BackgroundColorBrandPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
-#define BackgroundColorBrandSecondary [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
-#define BackgroundColorBrandSolidHover [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
-#define BackgroundColorBrandSection [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
-#define BackgroundColorBrandSectionSubtle [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
-#define BackgroundColorActive [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BackgroundColorDisabled [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BackgroundColorDisabledSubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
-#define BackgroundColorOverlay [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BackgroundColorErrorPrimary [UIColor colorWithRed:0.333f green:0.086f blue:0.047f alpha:1.000f]
-#define BackgroundColorErrorSecondary [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
-#define BackgroundColorErrorSolid [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
-#define BackgroundColorErrorSolidHover [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
-#define BackgroundColorWarningPrimary [UIColor colorWithRed:0.306f green:0.114f blue:0.035f alpha:1.000f]
-#define BackgroundColorWarningSecondary [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
-#define BackgroundColorWarningSolid [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
-#define BackgroundColorSuccessPrimary [UIColor colorWithRed:0.020f green:0.200f blue:0.129f alpha:1.000f]
-#define BackgroundColorSuccessSecondary [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
-#define BackgroundColorSuccessSolid [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
-#define BackgroundColorBorderTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BackgroundColorBorderBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
-#define BackgroundColorBorderBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define BorderColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define BorderColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BorderColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BorderColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BorderColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define BorderColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define BorderColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
-#define BorderColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
-#define BorderColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
-#define BorderColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define OutlineColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define OutlineColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define OutlineColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define OutlineColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define OutlineColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
-#define OutlineColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
-#define OutlineColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define OutlineColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define OutlineColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
-#define OutlineColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define RingColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define RingColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define RingColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define RingColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define RingColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
-#define RingColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
-#define RingColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define RingColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
-#define RingColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
-#define RingColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
-#define RingColorBgBrandSolid [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define ColorBackgroundColorPrimary [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define ColorBackgroundColorPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBackgroundColorPrimaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBackgroundColorSecondary [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBackgroundColorSecondaryAlt [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define ColorBackgroundColorSecondaryHover [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBackgroundColorSecondarySubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBackgroundColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBackgroundColorQuaternary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorBackgroundColorBrandSolid [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define ColorBackgroundColorBrandPrimary [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorBackgroundColorBrandPrimaryAlt [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBackgroundColorBrandSecondary [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define ColorBackgroundColorBrandSolidHover [UIColor colorWithRed:0.620f green:0.467f blue:0.929f alpha:1.000f]
+#define ColorBackgroundColorBrandSection [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBackgroundColorBrandSectionSubtle [UIColor colorWithRed:0.047f green:0.055f blue:0.071f alpha:1.000f]
+#define ColorBackgroundColorActive [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBackgroundColorDisabled [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBackgroundColorDisabledSubtle [UIColor colorWithRed:0.075f green:0.086f blue:0.106f alpha:1.000f]
+#define ColorBackgroundColorOverlay [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBackgroundColorErrorPrimary [UIColor colorWithRed:0.333f green:0.086f blue:0.047f alpha:1.000f]
+#define ColorBackgroundColorErrorSecondary [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
+#define ColorBackgroundColorErrorSolid [UIColor colorWithRed:0.851f green:0.176f blue:0.125f alpha:1.000f]
+#define ColorBackgroundColorErrorSolidHover [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorBackgroundColorWarningPrimary [UIColor colorWithRed:0.306f green:0.114f blue:0.035f alpha:1.000f]
+#define ColorBackgroundColorWarningSecondary [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
+#define ColorBackgroundColorWarningSolid [UIColor colorWithRed:0.863f green:0.408f blue:0.012f alpha:1.000f]
+#define ColorBackgroundColorSuccessPrimary [UIColor colorWithRed:0.020f green:0.200f blue:0.129f alpha:1.000f]
+#define ColorBackgroundColorSuccessSecondary [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
+#define ColorBackgroundColorSuccessSolid [UIColor colorWithRed:0.027f green:0.580f blue:0.333f alpha:1.000f]
+#define ColorBackgroundColorBorderTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorBackgroundColorBorderBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define ColorBackgroundColorBorderBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorRingColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorRingColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorRingColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorRingColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorRingColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define ColorRingColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorRingColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorRingColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorRingColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define ColorRingColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorRingColorBgBrandSolid [UIColor colorWithRed:0.498f green:0.337f blue:0.851f alpha:1.000f]
+#define ColorOutlineColorPrimary [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorOutlineColorSecondary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorOutlineColorSecondaryAlt [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorOutlineColorTertiary [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorOutlineColorError [UIColor colorWithRed:0.976f green:0.439f blue:0.400f alpha:1.000f]
+#define ColorOutlineColorErrorSubtle [UIColor colorWithRed:0.941f green:0.267f blue:0.220f alpha:1.000f]
+#define ColorOutlineColorDisabled [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
+#define ColorOutlineColorDisabledSubtle [UIColor colorWithRed:0.133f green:0.149f blue:0.184f alpha:1.000f]
+#define ColorOutlineColorBrand [UIColor colorWithRed:0.714f green:0.573f blue:0.965f alpha:1.000f]
+#define ColorOutlineColorBrandAlt [UIColor colorWithRed:0.216f green:0.227f blue:0.255f alpha:1.000f]
 #define MaxWidthContainer 1280px
 #define BreakpointXxs 320px
 #define BreakpointXs 600px
@@ -708,68 +721,16 @@
 #define Radius3xl 1.5rem
 #define RadiusFull 9999px
 #define ShadowXs 0px 1px 2px rgba(10, 13, 18, 0.05)
-#define ShadowSm 0 1px 2px 0 rgba(0, 0, 0, 0.05)
-#define ShadowMd 0 4px 6px -1px rgba(0, 0, 0, 0.1)
-#define ShadowLg 0 10px 15px -3px rgba(0, 0, 0, 0.1)
-#define ShadowXl 0 20px 25px -5px rgba(0, 0, 0, 0.1)
+#define ShadowSm 0px 1px 3px rgba(10, 13, 18, 0.1), 0px 1px 2px -1px rgba(10, 13, 18, 0.1)
+#define ShadowMd 0px 4px 6px -1px rgba(10, 13, 18, 0.1), 0px 2px 4px -2px rgba(10, 13, 18, 0.06)
+#define ShadowLg 0px 12px 16px -4px rgba(10, 13, 18, 0.08), 0px 4px 6px -2px rgba(10, 13, 18, 0.03), 0px 2px 2px -1px rgba(10, 13, 18, 0.04)
+#define ShadowXl 0px 20px 24px -4px rgba(10, 13, 18, 0.08), 0px 8px 8px -4px rgba(10, 13, 18, 0.03), 0px 3px 3px -1.5px rgba(10, 13, 18, 0.04)
 #define Shadow2xl 0px 24px 48px -12px rgba(10, 13, 18, 0.18), 0px 4px 4px -2px rgba(10, 13, 18, 0.04)
 #define Shadow3xl 0px 32px 64px -12px rgba(10, 13, 18, 0.14), 0px 5px 5px -2.5px rgba(10, 13, 18, 0.04)
 #define ShadowSkeumorphic 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset
 #define ShadowModernMockupInnerLg 0px 0px 3.765px 1.255px rgba(10, 13, 18, 0.08) inset, 0px 0px 2.51px 1.255px rgba(10, 13, 18, 0.03) inset
 #define ShadowModernMockupInnerMd 0px 0px 1.692px 0.564px rgba(10, 13, 18, 0.08) inset, 0px 0px 1.128px 0.564px rgba(10, 13, 18, 0.03) inset
 #define ShadowModernMockupInnerSm 0px 0px 4.48px 1.493px rgba(10, 13, 18, 0.08) inset, 0px 0px 2.987px 1.493px rgba(10, 13, 18, 0.03) inset
-#define ShadowModernMockupOuterLg 0px 7.529px 10.039px -2.51px rgba(10, 13, 18, 0.08), 0px 2.51px 3.765px -1.255px rgba(10, 13, 18, 0.03),
-        0px 1.255px 1.255px -0.627px rgba(10, 13, 18, 0.04)
-#define ShadowModernMockupOuterMd 0px 3.385px 4.513px -1.128px rgba(10, 13, 18, 0.08), 0px 1.128px 1.692px -0.564px rgba(10, 13, 18, 0.03),
-        0px 0.564px 0.564px -0.282px rgba(10, 13, 18, 0.04)
+#define ShadowModernMockupOuterLg 0px 7.529px 10.039px -2.51px rgba(10, 13, 18, 0.08), 0px 2.51px 3.765px -1.255px rgba(10, 13, 18, 0.03), 0px 1.255px 1.255px -0.627px rgba(10, 13, 18, 0.04)
+#define ShadowModernMockupOuterMd 0px 3.385px 4.513px -1.128px rgba(10, 13, 18, 0.08), 0px 1.128px 1.692px -0.564px rgba(10, 13, 18, 0.03), 0px 0.564px 0.564px -0.282px rgba(10, 13, 18, 0.04)
 #define DropShadowIphoneMockup 20px 12px 18px rgba(16, 24, 40, 0.2)
-#define TypographyFontSizeXs 12
-#define TypographyFontSizeSm 14
-#define TypographyFontSizeBase 16
-#define TypographyFontSizeLg 18
-#define TypographyFontSizeXl 20
-#define TypographyFontSize2xl 24
-#define TypographyFontSize3xl 30
-#define TypographyFontSize4xl 36
-#define TypographyFontWeightLight 300
-#define TypographyFontWeightRegular 400
-#define TypographyFontWeightMedium 500
-#define TypographyFontWeightSemibold 600
-#define TypographyFontWeightBold 700
-#define SpacingXs 4
-#define SpacingSm 8
-#define SpacingMd 16
-#define SpacingLg 24
-#define SpacingXl 32
-#define Spacing2xl 48
-#define Spacing3xl 64
-#define BorderRadiusNone 0
-#define BorderRadiusSm 4
-#define BorderRadiusMd 8
-#define BorderRadiusLg 12
-#define BorderRadiusXl 16
-#define BorderRadiusFull 9999
-#define TextXs 12
-#define TextXslineHeight 24
-#define TextSm 14
-#define TextSmlineHeight 32
-#define TextMd 16
-#define TextMdlineHeight 48
-#define TextLg 18
-#define TextLglineHeight 64
-#define TextXl 20
-#define TextXllineHeight 30
-#define TextDisplayXs 24
-#define TextDisplaySm 30
-#define TextDisplayMd 36
-#define TextDisplayLg 48
-#define TextDisplayXl 60
-#define TextDisplay2xl 72
-#define TextColorPrimary [UIColor colorWithRed:0.067f green:0.098f blue:0.153f alpha:1.000f]
-#define TextColorSecondary [UIColor colorWithRed:0.220f green:0.259f blue:0.314f alpha:1.000f]
-#define TextColorTertiary [UIColor colorWithRed:0.424f green:0.451f blue:0.498f alpha:1.000f]
-#define TextColorDisabled [UIColor colorWithRed:0.616f green:0.643f blue:0.682f alpha:1.000f]
-#define TextColorBrandPrimary [UIColor colorWithRed:0.325f green:0.220f blue:0.620f alpha:1.000f]
-#define TextColorErrorPrimary [UIColor colorWithRed:0.937f green:0.267f blue:0.267f alpha:1.000f]
-#define TextColorSuccessPrimary [UIColor colorWithRed:0.133f green:0.773f blue:0.369f alpha:1.000f]
-#define TextColorWarningPrimary [UIColor colorWithRed:0.918f green:0.702f blue:0.031f alpha:1.000f]

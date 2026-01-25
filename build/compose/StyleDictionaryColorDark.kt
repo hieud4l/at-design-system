@@ -9,7 +9,7 @@ package com.yourapp.tokens
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.*
 
-object StyleDictionaryColor {
+object StyleDictionaryColorDark {
   val colorAlphaBlack = Color(0xffffffff)
   val colorAlphaWhite = Color(0xff0c0e12)
   val colorAppStoreBadgeBorder = Color(0xffffffff)
