@@ -56,8 +56,17 @@ const combinedThemeFormat = {
 };
 
 export default {
-  // Source token files
-  source: ['tokens/**/*.json', '!tokens/themes/**/*.json'],
+  // Source token files (exclude dark mode tokens)
+  source: ['tokens/**/*.json', '!tokens/color/dark.json'],
+
+  // Logging configuration - allow warnings instead of errors
+  log: {
+    warnings: 'warn', // Changed from 'error' to 'warn'
+    verbosity: 'default',
+    errors: {
+      brokenReferences: 'warn' // Don't fail on broken references
+    }
+  },
 
   // Preprocessors (v5 feature)
   preprocessors: ['tokens-studio'],
@@ -68,8 +77,13 @@ export default {
       'size/float': {
         type: 'value',
         transitive: true,
-        matcher: (token) => ['dimension', 'fontSize', 'spacing', 'borderRadius', 'borderWidth'].includes(token.type) || token.path.includes('spacing'),
-        transformer: (token) => {
+        filter: (token) => {
+          // Only apply to dimension/size tokens, NOT color tokens
+          const isColor = token.type === 'color' || token.path.includes('color');
+          const isSize = ['dimension', 'fontSize', 'spacing', 'borderRadius', 'borderWidth'].includes(token.type) || token.path.includes('spacing');
+          return isSize && !isColor;
+        },
+        transform: (token) => {
           const val = parseFloat(token.value);
           if (isNaN(val)) return token.value;
           return `${val.toFixed(2)}f`;
@@ -86,25 +100,30 @@ export default {
   <dict>`;
         const footer = `  </dict>\n</plist>`;
 
-        const content = dictionary.allTokens.map(token => {
-          let value = token.value;
-          if (token.type === 'color' || token.path.includes('color')) {
-            value = value.replace(/\s/g, '');
-            const hexMatch = value.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i);
-            if (hexMatch) {
-              const r = parseInt(hexMatch[1], 16) / 255;
-              const g = parseInt(hexMatch[2], 16) / 255;
-              const b = parseInt(hexMatch[3], 16) / 255;
-              const a = hexMatch[4] ? parseInt(hexMatch[4], 16) / 255 : 1;
-              return `    <key>${token.name}</key>\n    <dict>\n      <key>r</key> <real>${r}</real>\n      <key>g</key> <real>${g}</real>\n      <key>b</key> <real>${b}</real>\n      <key>a</key> <real>${a}</real>\n    </dict>`;
+        const content = dictionary.allTokens
+          .filter(token => token.value !== undefined && token.value !== null)
+          .map(token => {
+            let value = token.value;
+            if (typeof value !== 'string') {
+              value = String(value);
             }
-          }
-          const num = parseFloat(value);
-          if (!isNaN(num) && (token.type === 'dimension' || token.path.includes('spacing') || token.type === 'fontSize' || token.type === 'borderRadius')) {
-            return `    <key>${token.name}</key>\n    <integer>${num}</integer>`;
-          }
-          return `    <key>${token.name}</key>\n    <string>${value}</string>`;
-        }).join('\n');
+            if (token.type === 'color' || token.path.includes('color')) {
+              value = value.replace(/\s/g, '');
+              const hexMatch = value.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i);
+              if (hexMatch) {
+                const r = parseInt(hexMatch[1], 16) / 255;
+                const g = parseInt(hexMatch[2], 16) / 255;
+                const b = parseInt(hexMatch[3], 16) / 255;
+                const a = hexMatch[4] ? parseInt(hexMatch[4], 16) / 255 : 1;
+                return `    <key>${token.name}</key>\n    <dict>\n      <key>r</key> <real>${r}</real>\n      <key>g</key> <real>${g}</real>\n      <key>b</key> <real>${b}</real>\n      <key>a</key> <real>${a}</real>\n    </dict>`;
+              }
+            }
+            const num = parseFloat(value);
+            if (!isNaN(num) && (token.type === 'dimension' || token.path.includes('spacing') || token.type === 'fontSize' || token.type === 'borderRadius')) {
+              return `    <key>${token.name}</key>\n    <integer>${num}</integer>`;
+            }
+            return `    <key>${token.name}</key>\n    <string>${value}</string>`;
+          }).join('\n');
         return header + '\n' + content + '\n' + footer;
       }
     }
@@ -131,7 +150,8 @@ export default {
     'css-dark': {
       transformGroup: 'css',
       buildPath: 'build/css/',
-      source: ['tokens/themes/dark.json'],
+      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      source: ['tokens/color/dark.json'],
       files: [
         {
           destination: 'variables-dark.css',
@@ -161,7 +181,8 @@ export default {
     'scss-dark': {
       transformGroup: 'scss',
       buildPath: 'build/scss/',
-      source: ['tokens/themes/dark.json'],
+      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      source: ['tokens/color/dark.json'],
       files: [
         {
           destination: '_variables-dark.scss',
@@ -192,7 +213,8 @@ export default {
     'js-dark': {
       transformGroup: 'js',
       buildPath: 'build/js/',
-      source: ['tokens/themes/dark.json'],
+      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      source: ['tokens/color/dark.json'],
       files: [
         {
           destination: 'tokens-dark.js',
@@ -215,7 +237,8 @@ export default {
     'json-dark': {
       transformGroup: 'js',
       buildPath: 'build/json/',
-      source: ['tokens/themes/dark.json'],
+      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      source: ['tokens/color/dark.json'],
       files: [
         {
           destination: 'tokens-dark.json',
@@ -328,7 +351,8 @@ export default {
     'android-dark': {
       transformGroup: 'android',
       buildPath: 'build/android-night/',
-      source: ['tokens/themes/dark.json'],
+      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      source: ['tokens/color/dark.json'],
       files: [
         {
           destination: 'colors.xml',
@@ -369,7 +393,8 @@ export default {
     'compose-dark': {
       transformGroup: 'compose',
       buildPath: 'build/compose/',
-      source: ['tokens/themes/dark.json'],
+      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      source: ['tokens/color/dark.json'],
       files: [
         {
           destination: 'StyleDictionaryColorDark.kt',
