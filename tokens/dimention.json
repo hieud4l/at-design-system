@@ -1,5 +1,4 @@
 {
-    "_comment": "This file was generated automatically by Supernova.io and should not be changed manually. To modify the format or content of this file, please contact your design system team.",
     "dimension": {
         "spacing": {
             "0-0px": {
@@ -135,184 +134,6 @@
                 "type": "dimension"
             }
         },
-        "dimension": {
-            "radius-none": {
-                "value": "0px",
-                "type": "dimension"
-            },
-            "radius-xxs": {
-                "value": "2px",
-                "type": "dimension"
-            },
-            "radius-xs": {
-                "value": "4px",
-                "type": "dimension"
-            },
-            "radius-sm": {
-                "value": "6px",
-                "type": "dimension"
-            },
-            "radius-md": {
-                "value": "8px",
-                "type": "dimension"
-            },
-            "radius-lg": {
-                "value": "10px",
-                "type": "dimension"
-            },
-            "radius-xl": {
-                "value": "12px",
-                "type": "dimension"
-            },
-            "radius-2xl": {
-                "value": "16px",
-                "type": "dimension"
-            },
-            "radius-3xl": {
-                "value": "20px",
-                "type": "dimension"
-            },
-            "radius-4xl": {
-                "value": "24px",
-                "type": "dimension"
-            },
-            "radius-full": {
-                "value": "9999px",
-                "type": "dimension"
-            },
-            "container-padding-mobile": {
-                "value": "{dimension.spacing.4-16px}",
-                "type": "dimension"
-            },
-            "container-padding-desktop": {
-                "value": "{dimension.spacing.8-32px}",
-                "type": "dimension"
-            },
-            "container-max-width-desktop": {
-                "value": "{dimension.spacing.320-1-280px}",
-                "type": "dimension"
-            },
-            "width-xxs": {
-                "value": "{dimension.spacing.80-320px}",
-                "type": "dimension"
-            },
-            "width-xs": {
-                "value": "{dimension.spacing.96-384px}",
-                "type": "dimension"
-            },
-            "width-sm": {
-                "value": "{dimension.spacing.120-480px}",
-                "type": "dimension"
-            },
-            "width-md": {
-                "value": "{dimension.spacing.140-560px}",
-                "type": "dimension"
-            },
-            "width-lg": {
-                "value": "{dimension.spacing.160-640px}",
-                "type": "dimension"
-            },
-            "width-xl": {
-                "value": "{dimension.spacing.192-768px}",
-                "type": "dimension"
-            },
-            "width-2xl": {
-                "value": "{dimension.spacing.256-1-024px}",
-                "type": "dimension"
-            },
-            "width-3xl": {
-                "value": "{dimension.spacing.320-1-280px}",
-                "type": "dimension"
-            },
-            "width-4xl": {
-                "value": "{dimension.spacing.360-1-440px}",
-                "type": "dimension"
-            },
-            "width-5xl": {
-                "value": "{dimension.spacing.400-1-600px}",
-                "type": "dimension"
-            },
-            "width-6xl": {
-                "value": "{dimension.spacing.480-1-920px}",
-                "type": "dimension"
-            },
-            "paragraph-max-width": {
-                "value": "{dimension.spacing.180-720px}",
-                "type": "dimension"
-            },
-            "spacing-none": {
-                "value": "{dimension.spacing.0-0px}",
-                "type": "dimension"
-            },
-            "spacing-xxs": {
-                "value": "{dimension.spacing.0-5-2px}",
-                "type": "dimension"
-            },
-            "spacing-xs": {
-                "value": "{dimension.spacing.1-4px}",
-                "type": "dimension"
-            },
-            "spacing-sm": {
-                "value": "{dimension.spacing.1-5-6px}",
-                "type": "dimension"
-            },
-            "spacing-md": {
-                "value": "{dimension.spacing.2-8px}",
-                "type": "dimension"
-            },
-            "spacing-lg": {
-                "value": "{dimension.spacing.3-12px}",
-                "type": "dimension"
-            },
-            "spacing-xl": {
-                "value": "{dimension.spacing.4-16px}",
-                "type": "dimension"
-            },
-            "spacing-2xl": {
-                "value": "{dimension.spacing.5-20px}",
-                "type": "dimension"
-            },
-            "spacing-3xl": {
-                "value": "{dimension.spacing.6-24px}",
-                "type": "dimension"
-            },
-            "spacing-4xl": {
-                "value": "{dimension.spacing.8-32px}",
-                "type": "dimension"
-            },
-            "spacing-5xl": {
-                "value": "{dimension.spacing.10-40px}",
-                "type": "dimension"
-            },
-            "spacing-6xl": {
-                "value": "{dimension.spacing.12-48px}",
-                "type": "dimension"
-            },
-            "spacing-7xl": {
-                "value": "{dimension.spacing.16-64px}",
-                "type": "dimension"
-            },
-            "spacing-8xl": {
-                "value": "{dimension.spacing.20-80px}",
-                "type": "dimension"
-            },
-            "spacing-9xl": {
-                "value": "{dimension.spacing.24-96px}",
-                "type": "dimension"
-            },
-            "spacing-10xl": {
-                "value": "{dimension.spacing.32-128px}",
-                "type": "dimension"
-            },
-            "spacing-11xl": {
-                "value": "{dimension.spacing.40-160px}",
-                "type": "dimension"
-            },
-            "spacing-md-2": {
-                "value": "{dimension.spacing.2-5-10px}",
-                "type": "dimension"
-            }
-        },
         "font-size": {
             "text-xs": {
                 "value": "12px",
@@ -402,6 +223,190 @@
             },
             "display-2xl": {
                 "value": "90px",
+                "type": "dimension"
+            }
+        },
+        "radius": {
+            "radius-none": {
+                "value": "0px",
+                "type": "dimension"
+            },
+            "radius-xxs": {
+                "value": "2px",
+                "type": "dimension"
+            },
+            "radius-xs": {
+                "value": "4px",
+                "type": "dimension"
+            },
+            "radius-sm": {
+                "value": "6px",
+                "type": "dimension"
+            },
+            "radius-md": {
+                "value": "8px",
+                "type": "dimension"
+            },
+            "radius-lg": {
+                "value": "10px",
+                "type": "dimension"
+            },
+            "radius-xl": {
+                "value": "12px",
+                "type": "dimension"
+            },
+            "radius-2xl": {
+                "value": "16px",
+                "type": "dimension"
+            },
+            "radius-3xl": {
+                "value": "20px",
+                "type": "dimension"
+            },
+            "radius-4xl": {
+                "value": "24px",
+                "type": "dimension"
+            },
+            "radius-full": {
+                "value": "9999px",
+                "type": "dimension"
+            }
+        },
+        "width": {
+            "width-xxs": {
+                "value": "{dimension.spacing.80-320px}",
+                "type": "dimension"
+            },
+            "width-xs": {
+                "value": "{dimension.spacing.96-384px}",
+                "type": "dimension"
+            },
+            "width-sm": {
+                "value": "{dimension.spacing.120-480px}",
+                "type": "dimension"
+            },
+            "width-md": {
+                "value": "{dimension.spacing.140-560px}",
+                "type": "dimension"
+            },
+            "width-lg": {
+                "value": "{dimension.spacing.160-640px}",
+                "type": "dimension"
+            },
+            "width-xl": {
+                "value": "{dimension.spacing.192-768px}",
+                "type": "dimension"
+            },
+            "width-2xl": {
+                "value": "{dimension.spacing.256-1-024px}",
+                "type": "dimension"
+            },
+            "width-3xl": {
+                "value": "{dimension.spacing.320-1-280px}",
+                "type": "dimension"
+            },
+            "width-4xl": {
+                "value": "{dimension.spacing.360-1-440px}",
+                "type": "dimension"
+            },
+            "width-5xl": {
+                "value": "{dimension.spacing.400-1-600px}",
+                "type": "dimension"
+            },
+            "width-6xl": {
+                "value": "{dimension.spacing.480-1-920px}",
+                "type": "dimension"
+            }
+        },
+        "spacing-semantic": {
+            "spacing-none": {
+                "value": "{dimension.spacing.0-0px}",
+                "type": "dimension"
+            },
+            "spacing-xxs": {
+                "value": "{dimension.spacing.0-5-2px}",
+                "type": "dimension"
+            },
+            "spacing-xs": {
+                "value": "{dimension.spacing.1-4px}",
+                "type": "dimension"
+            },
+            "spacing-sm": {
+                "value": "{dimension.spacing.1-5-6px}",
+                "type": "dimension"
+            },
+            "spacing-md": {
+                "value": "{dimension.spacing.2-8px}",
+                "type": "dimension"
+            },
+            "spacing-lg": {
+                "value": "{dimension.spacing.3-12px}",
+                "type": "dimension"
+            },
+            "spacing-xl": {
+                "value": "{dimension.spacing.4-16px}",
+                "type": "dimension"
+            },
+            "spacing-2xl": {
+                "value": "{dimension.spacing.5-20px}",
+                "type": "dimension"
+            },
+            "spacing-3xl": {
+                "value": "{dimension.spacing.6-24px}",
+                "type": "dimension"
+            },
+            "spacing-4xl": {
+                "value": "{dimension.spacing.8-32px}",
+                "type": "dimension"
+            },
+            "spacing-5xl": {
+                "value": "{dimension.spacing.10-40px}",
+                "type": "dimension"
+            },
+            "spacing-6xl": {
+                "value": "{dimension.spacing.12-48px}",
+                "type": "dimension"
+            },
+            "spacing-7xl": {
+                "value": "{dimension.spacing.16-64px}",
+                "type": "dimension"
+            },
+            "spacing-8xl": {
+                "value": "{dimension.spacing.20-80px}",
+                "type": "dimension"
+            },
+            "spacing-9xl": {
+                "value": "{dimension.spacing.24-96px}",
+                "type": "dimension"
+            },
+            "spacing-10xl": {
+                "value": "{dimension.spacing.32-128px}",
+                "type": "dimension"
+            },
+            "spacing-11xl": {
+                "value": "{dimension.spacing.40-160px}",
+                "type": "dimension"
+            },
+            "spacing-md-2": {
+                "value": "{dimension.spacing.2-5-10px}",
+                "type": "dimension"
+            }
+        },
+        "layout": {
+            "container-padding-mobile": {
+                "value": "{dimension.spacing.4-16px}",
+                "type": "dimension"
+            },
+            "container-padding-desktop": {
+                "value": "{dimension.spacing.8-32px}",
+                "type": "dimension"
+            },
+            "container-max-width-desktop": {
+                "value": "{dimension.spacing.320-1-280px}",
+                "type": "dimension"
+            },
+            "paragraph-max-width": {
+                "value": "{dimension.spacing.180-720px}",
                 "type": "dimension"
             }
         }
