@@ -52,49 +52,49 @@
         },
         "border": {
             "primary": {
-                "value": "{color.gray-dark-mode.300}",
+                "value": "{color.gray-dark-mode.700}",
                 "type": "color"
             },
             "secondary": {
-                "value": "{color.gray-dark-mode.200}",
+                "value": "{color.gray-dark-mode.800}",
                 "type": "color"
             },
             "tertiary": {
-                "value": "{color.gray-dark-mode.100}",
+                "value": "{color.gray-dark-mode.900}",
                 "type": "color"
             },
             "disabled": {
-                "value": "{color.gray-dark-mode.300}",
+                "value": "{color.gray-dark-mode.700}",
                 "type": "color"
             },
             "disabled-subtle": {
-                "value": "{color.gray-dark-mode.200}",
+                "value": "{color.gray-dark-mode.800}",
                 "type": "color"
             }
         },
         "text": {
             "primary-900": {
-                "value": "{color.gray-dark-mode.900}",
+                "value": "{color.gray-dark-mode.50}",
                 "type": "color"
             },
             "secondary-700": {
-                "value": "{color.gray-dark-mode.700}",
+                "value": "{color.gray-dark-mode.200}",
                 "type": "color"
             },
             "secondary-hover": {
-                "value": "{color.gray-dark-mode.800}",
+                "value": "{color.gray-dark-mode.100}",
                 "type": "color"
             },
             "tertiary-600": {
-                "value": "{color.gray-dark-mode.600}",
+                "value": "{color.gray-dark-mode.300}",
                 "type": "color"
             },
             "tertiary-hover": {
-                "value": "{color.gray-dark-mode.700}",
+                "value": "{color.gray-dark-mode.200}",
                 "type": "color"
             },
             "quaternary-500": {
-                "value": "{color.gray-dark-mode.500}",
+                "value": "{color.gray-dark-mode.400}",
                 "type": "color"
             },
             "disabled": {
@@ -106,29 +106,29 @@
                 "type": "color"
             },
             "placeholder-subtle": {
-                "value": "{color.gray-dark-mode.300}",
+                "value": "{color.gray-dark-mode.600}",
                 "type": "color"
             }
         },
         "foreground": {
             "primary-900": {
-                "value": "{color.gray-dark-mode.900}",
+                "value": "{color.gray-dark-mode.50}",
                 "type": "color"
             },
             "secondary-700": {
-                "value": "{color.gray-dark-mode.700}",
+                "value": "{color.gray-dark-mode.200}",
                 "type": "color"
             },
             "secondary-hover": {
-                "value": "{color.gray-dark-mode.800}",
+                "value": "{color.gray-dark-mode.100}",
                 "type": "color"
             },
             "tertiary-600": {
-                "value": "{color.gray-dark-mode.600}",
+                "value": "{color.gray-dark-mode.300}",
                 "type": "color"
             },
             "tertiary-hover": {
-                "value": "{color.gray-dark-mode.700}",
+                "value": "{color.gray-dark-mode.200}",
                 "type": "color"
             },
             "quaternary-400": {
@@ -136,15 +136,15 @@
                 "type": "color"
             },
             "quaternary-hover": {
-                "value": "{color.gray-dark-mode.500}",
+                "value": "{color.gray-dark-mode.300}",
                 "type": "color"
             },
             "disabled": {
-                "value": "{color.gray-dark-mode.400}",
+                "value": "{color.gray-dark-mode.500}",
                 "type": "color"
             },
             "disabled-subtle": {
-                "value": "{color.gray-dark-mode.300}",
+                "value": "{color.gray-dark-mode.600}",
                 "type": "color"
             }
         },

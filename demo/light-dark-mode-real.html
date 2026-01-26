@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Design System - Real Tokens Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Load both generated CSS files -->
+    <link rel="stylesheet" href="../build/css/variables-light.css">
+    <link rel="stylesheet" href="../build/css/variables-dark.css">
+
+    <style>
+        /* ===== CSS Using Design Tokens ===== */
+        /* No manual overrides here! Only mapping logic if necessary, 
+       but since we scoped variables, it should work automatically. */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Use semantic tokens directly */
+            background-color: var(--color-background-primary);
+            color: var(--color-text-primary-900);
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            /* Semantic token */
+            background: var(--color-background-secondary);
+            border-radius: var(--dimension-radius-xl);
+            margin-bottom: 32px;
+            border: 1px solid var(--color-border-secondary);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-brand-600-500-90deg);
+            border-radius: var(--dimension-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-text-primary-900);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 16px;
+            background: var(--color-background-tertiary);
+            border-radius: var(--dimension-radius-full);
+            cursor: pointer;
+            border: 1px solid var(--color-border-primary);
+        }
+
+        .theme-toggle:hover {
+            background: var(--color-background-quaternary);
+        }
+
+        .theme-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .theme-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-text-secondary-700);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 64px 24px;
+            background: var(--color-background-secondary);
+            border-radius: var(--dimension-radius-2xl);
+            margin-bottom: 32px;
+            border: 1px solid var(--color-border-tertiary);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--color-background-brand-primary);
+            color: var(--color-text-brand-secondary-700);
+            border-radius: var(--dimension-radius-full);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            border: 1px solid var(--color-border-brand);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: var(--gradient-brand-600-500-90deg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--color-text-tertiary-600);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: var(--color-background-primary);
+            border-radius: var(--dimension-radius-xl);
+            padding: 24px;
+            border: 1px solid var(--color-border-secondary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-border-brand);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--dimension-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+
+        .card-icon.brand {
+            background: var(--color-background-brand-primary);
+        }
+
+        .card-icon.success {
+            background: var(--color-background-success-primary);
+        }
+
+        .card-icon.warning {
+            background: var(--color-background-warning-primary);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-primary-900);
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--color-text-tertiary-600);
+            line-height: 1.6;
+        }
+
+        /* Buttons Demo */
+        .buttons-section {
+            background: var(--color-background-secondary);
+            border-radius: var(--dimension-radius-2xl);
+            padding: 32px;
+            margin-bottom: 32px;
+            border: 1px solid var(--color-border-tertiary);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--color-text-primary-900);
+        }
+
+        .buttons-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: var(--dimension-radius-md);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--color-background-brand-solid);
+            color: var(--color-text-primary-on-brand);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-background-brand-solid-hover);
+        }
+
+        .btn-secondary {
+            background: var(--color-background-primary);
+            color: var(--color-text-secondary-700);
+            border: 1px solid var(--color-border-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-background-primary-hover);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--color-text-tertiary-600);
+            font-size: 14px;
+            border-top: 1px solid var(--color-border-tertiary);
+            margin-top: 32px;
+        }
+
+        /* Mode indicator */
+        .mode-indicator {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 12px 24px;
+            background: var(--color-background-primary-solid);
+            color: var(--color-text-primary-on-brand);
+            border-radius: var(--dimension-radius-full);
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: var(--shadow-xl);
+            z-index: 1000;
+        }
+
+        /* Note: Manual color for indicator since tokens might conflict */
+        [data-theme="light"] .mode-indicator {
+            background: #181d27;
+            color: white;
+        }
+
+        [data-theme="dark"] .mode-indicator {
+            background: #f5f5f5;
+            color: #181d27;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">AT</div>
+                <span class="logo-text">AT Design System (Real Build)</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span class="theme-icon" id="theme-icon">☀️</span>
+                <span class="theme-label" id="theme-label">Light Mode</span>
+            </button>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="hero-badge">✨ Automated Dark Mode</span>
+            <h1>Scoped CSS Variables</h1>
+            <p>Demo này sử dụng trực tiếp file CSS được build từ Style Dictionary với selector scopes.</p>
+            <div class="buttons-row" style="justify-content: center;">
+                <button class="btn btn-primary">Primary Action</button>
+                <button class="btn btn-secondary">Secondary Action</button>
+            </div>
+        </section>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon brand">🎨</div>
+                <h3>Auto Theming</h3>
+                <p>Không cần class 'dark' cho từng element. CSS variable tự động thay đổi giá trị theo data-theme.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon success">⚡</div>
+                <h3>Hiệu suất cao</h3>
+                <p>Browser chỉ cần load file CSS một lần và tự động tính toán lại khi attribute thay đổi.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>AT Design System © 2024</p>
+        </footer>
+    </div>
+
+    <!-- Mode Indicator -->
+    <div class="mode-indicator" id="mode-indicator">☀️ Light Mode</div>
+
+    <script>
+        let isDarkMode = false;
+        const html = document.documentElement;
+
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+
+            const themeIcon = document.getElementById('theme-icon');
+            const themeLabel = document.getElementById('theme-label');
+            const modeIndicator = document.getElementById('mode-indicator');
+
+            if (isDarkMode) {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '🌙';
+                themeLabel.textContent = 'Dark Mode';
+                modeIndicator.textContent = '🌙 Dark Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '☀️';
+                themeLabel.textContent = 'Light Mode';
+                modeIndicator.textContent = '☀️ Light Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Auto-detect
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                toggleTheme();
+            }
+        })();
+    </script>
+</body>
+
+</html>

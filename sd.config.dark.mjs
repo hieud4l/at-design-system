@@ -80,6 +80,12 @@ export default {
                         return `    <key>${token.name}</key>\n    <string>${value}</string>`;
                     }).join('\n');
                 return header + '\n' + content + '\n' + footer;
+            },
+            'css/variables-themed': ({ dictionary, options, file }) => {
+                const selector = options.selector || ':root';
+                return `${selector} {\n` + dictionary.allTokens.map(token => {
+                    return `  --${token.name}: ${token.value};`;
+                }).join('\n') + `\n}`;
             }
         }
     },
@@ -92,9 +98,10 @@ export default {
             files: [
                 {
                     destination: 'variables-dark.css',
-                    format: 'css/variables',
+                    format: 'css/variables-themed',
                     options: {
-                        outputReferences: true
+                        outputReferences: true,
+                        selector: '[data-theme="dark"]'
                     }
                 }
             ]

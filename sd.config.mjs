@@ -64,6 +64,19 @@ const sharedConfig = {
             return `    <key>${token.name}</key>\n    <string>${value}</string>`;
           }).join('\n');
         return header + '\n' + content + '\n' + footer;
+      },
+      'css/variables-themed': ({ dictionary, options, file }) => {
+        const selector = options.selector || ':root';
+        return `${selector} {\n` + dictionary.allTokens.map(token => {
+          let value = token.value;
+          if (options.outputReferences && dictionary.usesReference(token.original.value)) {
+            const refs = dictionary.getReferences(token.original.value);
+            refs.forEach(ref => {
+              value = value.replace(ref.value, `var(--${ref.name})`);
+            });
+          }
+          return `  --${token.name}: ${value};`;
+        }).join('\n') + `\n}`;
       }
     }
   }
@@ -94,9 +107,10 @@ const createPlatforms = (theme) => ({
     files: [
       {
         destination: `variables-${theme}.css`,
-        format: 'css/variables',
+        format: 'css/variables-themed',
         options: {
-          outputReferences: true
+          outputReferences: true,
+          selector: theme === 'dark' ? '[data-theme="dark"]' : ':root, [data-theme="light"]'
         }
       }
     ]
