@@ -1,21 +1,10 @@
 /**
- * Style Dictionary v5 Configuration
+ * Style Dictionary v5 Configuration with Light and Dark themes
  * @see https://styledictionary.com/versions/v5/
  */
 
-export default {
-  // Source token files
-  source: [
-    'tokens/blur.json',
-    'tokens/color.json',
-    'tokens/dimension.json',
-    'tokens/gradient.json',
-    'tokens/shadows.json',
-    'tokens/strings.json',
-    'tokens/typography.json'
-  ],
-
-  // Logging configuration - allow warnings instead of errors
+// Shared configuration
+const sharedConfig = {
   log: {
     warnings: 'warn',
     verbosity: 'default',
@@ -23,11 +12,7 @@ export default {
       brokenReferences: 'warn'
     }
   },
-
-  // Preprocessors (v5 feature)
   preprocessors: ['tokens-studio'],
-
-  // Custom configuration
   hooks: {
     transforms: {
       'size/float': {
@@ -81,190 +66,221 @@ export default {
         return header + '\n' + content + '\n' + footer;
       }
     }
-  },
-
-  // Platform-specific outputs
-  platforms: {
-    css: {
-      transformGroup: 'css',
-      buildPath: 'build/css/',
-      files: [
-        {
-          destination: 'variables.css',
-          format: 'css/variables',
-          options: {
-            outputReferences: true
-          }
-        }
-      ]
-    },
-
-    scss: {
-      transformGroup: 'scss',
-      buildPath: 'build/scss/',
-      files: [
-        {
-          destination: '_variables.scss',
-          format: 'scss/variables',
-          options: {
-            outputReferences: true
-          }
-        }
-      ]
-    },
-
-    js: {
-      transformGroup: 'js',
-      buildPath: 'build/js/',
-      files: [
-        {
-          destination: 'tokens.js',
-          format: 'javascript/es6'
-        },
-        {
-          destination: 'tokens.d.ts',
-          format: 'typescript/es6-declarations'
-        }
-      ]
-    },
-
-    json: {
-      transformGroup: 'js',
-      buildPath: 'build/json/',
-      files: [
-        {
-          destination: 'tokens.json',
-          format: 'json/flat'
-        }
-      ]
-    },
-
-    // iOS Objective-C Header
-    'ios-objc': {
-      buildPath: 'build/ios/',
-      transforms: ['attribute/cti', 'name/pascal', 'color/UIColor', 'size/float'],
-      files: [
-        {
-          destination: 'StyleDictionary.h',
-          format: 'ios/macros',
-          options: {
-            className: 'StyleDictionary'
-          },
-          filter: (token) => token.type !== 'fontFamily'
-        }
-      ]
-    },
-
-    // iOS Plist
-    'ios-plist': {
-      buildPath: 'build/ios/',
-      transforms: ['attribute/cti', 'name/camel', 'color/hex'],
-      files: [
-        {
-          destination: 'StyleDictionary.plist',
-          format: 'ios/custom-plist',
-          options: {
-            className: 'StyleDictionary'
-          },
-          filter: (token) => token.type !== 'fontFamily'
-        }
-      ]
-    },
-
-    // iOS Swift
-    'ios-swift': {
-      transformGroup: 'ios-swift',
-      buildPath: 'build/ios-swift/',
-      files: [
-        {
-          destination: 'StyleDictionary.swift',
-          format: 'ios-swift/class.swift',
-          options: {
-            className: 'StyleDictionary'
-          },
-          filter: (token) => token.type !== 'fontFamily'
-        }
-      ]
-    },
-
-    // iOS SwiftUI
-    'ios-swiftui': {
-      transformGroup: 'ios-swift',
-      buildPath: 'build/ios-swiftui/',
-      files: [
-        {
-          destination: 'StyleDictionary+Color.swift',
-          format: 'ios-swift/class.swift',
-          options: {
-            className: 'StyleDictionaryColor',
-            accessControl: 'public'
-          },
-          filter: {
-            type: 'color'
-          }
-        },
-        {
-          destination: 'StyleDictionary+Size.swift',
-          format: 'ios-swift/class.swift',
-          options: {
-            className: 'StyleDictionarySize',
-            accessControl: 'public'
-          },
-          filter: (token) => token.type === 'dimension' || token.path.includes('spacing')
-        }
-      ]
-    },
-
-    // Android Platform
-    android: {
-      transformGroup: 'android',
-      buildPath: 'build/android/',
-      files: [
-        {
-          destination: 'colors.xml',
-          format: 'android/colors'
-        },
-        {
-          destination: 'dimens.xml',
-          format: 'android/dimens'
-        },
-        {
-          destination: 'font_dimens.xml',
-          format: 'android/fontDimens'
-        },
-        {
-          destination: 'integers.xml',
-          format: 'android/integers'
-        }
-      ]
-    },
-
-    // Android Compose
-    'compose': {
-      transformGroup: 'compose',
-      buildPath: 'build/compose/',
-      files: [
-        {
-          destination: 'StyleDictionaryColor.kt',
-          format: 'compose/object',
-          options: {
-            className: 'StyleDictionaryColor',
-            packageName: 'com.yourapp.tokens'
-          },
-          filter: {
-            type: 'color'
-          }
-        },
-        {
-          destination: 'StyleDictionarySize.kt',
-          format: 'compose/object',
-          options: {
-            className: 'StyleDictionarySize',
-            packageName: 'com.yourapp.tokens'
-          },
-          filter: (token) => token.type === 'dimension' || token.path.includes('spacing')
-        }
-      ]
-    }
   }
 };
+
+// Light theme sources
+const lightSources = [
+  'tokens/blur.json',
+  'tokens/color.json',
+  'tokens/dimension.json',
+  'tokens/gradient.json',
+  'tokens/shadows.json',
+  'tokens/strings.json',
+  'tokens/typography.json'
+];
+
+// Dark theme sources (includes dark overrides)
+const darkSources = [
+  ...lightSources,
+  'tokens-dark/color.json'
+];
+
+// Platform configurations factory
+const createPlatforms = (theme) => ({
+  css: {
+    transformGroup: 'css',
+    buildPath: `build/css/`,
+    files: [
+      {
+        destination: `variables-${theme}.css`,
+        format: 'css/variables',
+        options: {
+          outputReferences: true
+        }
+      }
+    ]
+  },
+
+  scss: {
+    transformGroup: 'scss',
+    buildPath: `build/scss/`,
+    files: [
+      {
+        destination: `_variables-${theme}.scss`,
+        format: 'scss/variables',
+        options: {
+          outputReferences: true
+        }
+      }
+    ]
+  },
+
+  js: {
+    transformGroup: 'js',
+    buildPath: `build/js/`,
+    files: [
+      {
+        destination: `tokens-${theme}.js`,
+        format: 'javascript/es6'
+      },
+      {
+        destination: `tokens-${theme}.d.ts`,
+        format: 'typescript/es6-declarations'
+      }
+    ]
+  },
+
+  json: {
+    transformGroup: 'js',
+    buildPath: `build/json/`,
+    files: [
+      {
+        destination: `tokens-${theme}.json`,
+        format: 'json/flat'
+      }
+    ]
+  },
+
+  // iOS Objective-C Header
+  [`ios-objc-${theme}`]: {
+    buildPath: `build/ios/`,
+    transforms: ['attribute/cti', 'name/pascal', 'color/UIColor', 'size/float'],
+    files: [
+      {
+        destination: `StyleDictionary-${theme}.h`,
+        format: 'ios/macros',
+        options: {
+          className: 'StyleDictionary'
+        },
+        filter: (token) => token.type !== 'fontFamily'
+      }
+    ]
+  },
+
+  // iOS Plist
+  [`ios-plist-${theme}`]: {
+    buildPath: `build/ios/`,
+    transforms: ['attribute/cti', 'name/camel', 'color/hex'],
+    files: [
+      {
+        destination: `StyleDictionary-${theme}.plist`,
+        format: 'ios/custom-plist',
+        options: {
+          className: 'StyleDictionary'
+        },
+        filter: (token) => token.type !== 'fontFamily'
+      }
+    ]
+  },
+
+  // iOS Swift
+  [`ios-swift-${theme}`]: {
+    transformGroup: 'ios-swift',
+    buildPath: `build/ios-swift/`,
+    files: [
+      {
+        destination: `StyleDictionary-${theme}.swift`,
+        format: 'ios-swift/class.swift',
+        options: {
+          className: 'StyleDictionary'
+        },
+        filter: (token) => token.type !== 'fontFamily'
+      }
+    ]
+  },
+
+  // iOS SwiftUI
+  [`ios-swiftui-${theme}`]: {
+    transformGroup: 'ios-swift',
+    buildPath: `build/ios-swiftui/`,
+    files: [
+      {
+        destination: `StyleDictionary+Color-${theme}.swift`,
+        format: 'ios-swift/class.swift',
+        options: {
+          className: 'StyleDictionaryColor',
+          accessControl: 'public'
+        },
+        filter: {
+          type: 'color'
+        }
+      },
+      {
+        destination: `StyleDictionary+Size-${theme}.swift`,
+        format: 'ios-swift/class.swift',
+        options: {
+          className: 'StyleDictionarySize',
+          accessControl: 'public'
+        },
+        filter: (token) => token.type === 'dimension' || token.path.includes('spacing')
+      }
+    ]
+  },
+
+  // Android Platform
+  [`android-${theme}`]: {
+    transformGroup: 'android',
+    buildPath: `build/android/`,
+    files: [
+      {
+        destination: `colors-${theme}.xml`,
+        format: 'android/colors'
+      },
+      {
+        destination: `dimens-${theme}.xml`,
+        format: 'android/dimens'
+      },
+      {
+        destination: `font_dimens-${theme}.xml`,
+        format: 'android/fontDimens'
+      },
+      {
+        destination: `integers-${theme}.xml`,
+        format: 'android/integers'
+      }
+    ]
+  },
+
+  // Android Compose
+  [`compose-${theme}`]: {
+    transformGroup: 'compose',
+    buildPath: `build/compose/`,
+    files: [
+      {
+        destination: `StyleDictionaryColor-${theme}.kt`,
+        format: 'compose/object',
+        options: {
+          className: 'StyleDictionaryColor',
+          packageName: 'com.yourapp.tokens'
+        },
+        filter: {
+          type: 'color'
+        }
+      },
+      {
+        destination: `StyleDictionarySize-${theme}.kt`,
+        format: 'compose/object',
+        options: {
+          className: 'StyleDictionarySize',
+          packageName: 'com.yourapp.tokens'
+        },
+        filter: (token) => token.type === 'dimension' || token.path.includes('spacing')
+      }
+    ]
+  }
+});
+
+// Export array of configurations for multiple theme builds
+export default [
+  {
+    ...sharedConfig,
+    source: lightSources,
+    platforms: createPlatforms('light')
+  },
+  {
+    ...sharedConfig,
+    source: darkSources,
+    platforms: createPlatforms('dark')
+  }
+];

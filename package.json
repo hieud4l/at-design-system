@@ -4,8 +4,10 @@
     "description": "Design system using Style Dictionary v5",
     "type": "module",
     "scripts": {
-        "build": "style-dictionary build --config sd.config.mjs",
-        "build:tokens": "style-dictionary build --config sd.config.mjs",
+        "build": "npm run build:light && npm run build:dark",
+        "build:light": "style-dictionary build --config sd.config.light.mjs",
+        "build:dark": "style-dictionary build --config sd.config.dark.mjs",
+        "build:tokens": "npm run build",
         "clean": "rm -rf build"
     },
     "keywords": [

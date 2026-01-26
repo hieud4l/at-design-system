@@ -1,6 +1,6 @@
 
 //
-// StyleDictionary+Size.swift
+// StyleDictionary+Size-dark.swift
 //
 
 // Do not edit directly, this file was auto-generated.
