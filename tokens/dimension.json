@@ -227,167 +227,167 @@
             }
         },
         "radius": {
-            "radius-none": {
+            "none": {
                 "value": "0px",
                 "type": "dimension"
             },
-            "radius-xxs": {
+            "xxs": {
                 "value": "2px",
                 "type": "dimension"
             },
-            "radius-xs": {
+            "xs": {
                 "value": "4px",
                 "type": "dimension"
             },
-            "radius-sm": {
+            "sm": {
                 "value": "6px",
                 "type": "dimension"
             },
-            "radius-md": {
+            "md": {
                 "value": "8px",
                 "type": "dimension"
             },
-            "radius-lg": {
+            "lg": {
                 "value": "10px",
                 "type": "dimension"
             },
-            "radius-xl": {
+            "xl": {
                 "value": "12px",
                 "type": "dimension"
             },
-            "radius-2xl": {
+            "2xl": {
                 "value": "16px",
                 "type": "dimension"
             },
-            "radius-3xl": {
+            "3xl": {
                 "value": "20px",
                 "type": "dimension"
             },
-            "radius-4xl": {
+            "4xl": {
                 "value": "24px",
                 "type": "dimension"
             },
-            "radius-full": {
+            "full": {
                 "value": "9999px",
                 "type": "dimension"
             }
         },
         "width": {
-            "width-xxs": {
+            "xxs": {
                 "value": "{dimension.spacing.80-320px}",
                 "type": "dimension"
             },
-            "width-xs": {
+            "xs": {
                 "value": "{dimension.spacing.96-384px}",
                 "type": "dimension"
             },
-            "width-sm": {
+            "sm": {
                 "value": "{dimension.spacing.120-480px}",
                 "type": "dimension"
             },
-            "width-md": {
+            "md": {
                 "value": "{dimension.spacing.140-560px}",
                 "type": "dimension"
             },
-            "width-lg": {
+            "lg": {
                 "value": "{dimension.spacing.160-640px}",
                 "type": "dimension"
             },
-            "width-xl": {
+            "xl": {
                 "value": "{dimension.spacing.192-768px}",
                 "type": "dimension"
             },
-            "width-2xl": {
+            "2xl": {
                 "value": "{dimension.spacing.256-1-024px}",
                 "type": "dimension"
             },
-            "width-3xl": {
+            "3xl": {
                 "value": "{dimension.spacing.320-1-280px}",
                 "type": "dimension"
             },
-            "width-4xl": {
+            "4xl": {
                 "value": "{dimension.spacing.360-1-440px}",
                 "type": "dimension"
             },
-            "width-5xl": {
+            "5xl": {
                 "value": "{dimension.spacing.400-1-600px}",
                 "type": "dimension"
             },
-            "width-6xl": {
+            "6xl": {
                 "value": "{dimension.spacing.480-1-920px}",
                 "type": "dimension"
             }
         },
         "spacing-semantic": {
-            "spacing-none": {
+            "none": {
                 "value": "{dimension.spacing.0-0px}",
                 "type": "dimension"
             },
-            "spacing-xxs": {
+            "xxs": {
                 "value": "{dimension.spacing.0-5-2px}",
                 "type": "dimension"
             },
-            "spacing-xs": {
+            "xs": {
                 "value": "{dimension.spacing.1-4px}",
                 "type": "dimension"
             },
-            "spacing-sm": {
+            "sm": {
                 "value": "{dimension.spacing.1-5-6px}",
                 "type": "dimension"
             },
-            "spacing-md": {
+            "md": {
                 "value": "{dimension.spacing.2-8px}",
                 "type": "dimension"
             },
-            "spacing-lg": {
+            "lg": {
                 "value": "{dimension.spacing.3-12px}",
                 "type": "dimension"
             },
-            "spacing-xl": {
+            "xl": {
                 "value": "{dimension.spacing.4-16px}",
                 "type": "dimension"
             },
-            "spacing-2xl": {
+            "2xl": {
                 "value": "{dimension.spacing.5-20px}",
                 "type": "dimension"
             },
-            "spacing-3xl": {
+            "3xl": {
                 "value": "{dimension.spacing.6-24px}",
                 "type": "dimension"
             },
-            "spacing-4xl": {
+            "4xl": {
                 "value": "{dimension.spacing.8-32px}",
                 "type": "dimension"
             },
-            "spacing-5xl": {
+            "5xl": {
                 "value": "{dimension.spacing.10-40px}",
                 "type": "dimension"
             },
-            "spacing-6xl": {
+            "6xl": {
                 "value": "{dimension.spacing.12-48px}",
                 "type": "dimension"
             },
-            "spacing-7xl": {
+            "7xl": {
                 "value": "{dimension.spacing.16-64px}",
                 "type": "dimension"
             },
-            "spacing-8xl": {
+            "8xl": {
                 "value": "{dimension.spacing.20-80px}",
                 "type": "dimension"
             },
-            "spacing-9xl": {
+            "9xl": {
                 "value": "{dimension.spacing.24-96px}",
                 "type": "dimension"
             },
-            "spacing-10xl": {
+            "10xl": {
                 "value": "{dimension.spacing.32-128px}",
                 "type": "dimension"
             },
-            "spacing-11xl": {
+            "11xl": {
                 "value": "{dimension.spacing.40-160px}",
                 "type": "dimension"
             },
-            "spacing-md-2": {
+            "md-2": {
                 "value": "{dimension.spacing.2-5-10px}",
                 "type": "dimension"
             }

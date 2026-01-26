@@ -2,6 +2,10 @@
  * Do not edit directly, this file was auto-generated.
  */
 
+export const BlurBackdropSm = "blur(8px)";
+export const BlurBackdropMd2 = "blur(16px)";
+export const BlurBackdropLg3 = "blur(24px)";
+export const BlurBackdropXl4 = "blur(40px)";
 export const ColorBaseWhite = "#ffffff";
 export const ColorBaseBlack = "#000000";
 export const ColorBaseTransparent = "#ffffff00";
@@ -746,47 +750,364 @@ export const DimensionLineHeightDisplayMd = "44px";
 export const DimensionLineHeightDisplayLg = "60px";
 export const DimensionLineHeightDisplayXl = "72px";
 export const DimensionLineHeightDisplay2xl = "90px";
-export const DimensionRadiusRadiusNone = "0px";
-export const DimensionRadiusRadiusXxs = "2px";
-export const DimensionRadiusRadiusXs = "4px";
-export const DimensionRadiusRadiusSm = "6px";
-export const DimensionRadiusRadiusMd = "8px";
-export const DimensionRadiusRadiusLg = "10px";
-export const DimensionRadiusRadiusXl = "12px";
-export const DimensionRadiusRadius2xl = "16px";
-export const DimensionRadiusRadius3xl = "20px";
-export const DimensionRadiusRadius4xl = "24px";
-export const DimensionRadiusRadiusFull = "9999px";
-export const DimensionWidthWidthXxs = "320px";
-export const DimensionWidthWidthXs = "384px";
-export const DimensionWidthWidthSm = "480px";
-export const DimensionWidthWidthMd = "560px";
-export const DimensionWidthWidthLg = "640px";
-export const DimensionWidthWidthXl = "768px";
-export const DimensionWidthWidth2xl = "1024px";
-export const DimensionWidthWidth3xl = "1280px";
-export const DimensionWidthWidth4xl = "1440px";
-export const DimensionWidthWidth5xl = "1600px";
-export const DimensionWidthWidth6xl = "1920px";
-export const DimensionSpacingSemanticSpacingNone = "0px";
-export const DimensionSpacingSemanticSpacingXxs = "2px";
-export const DimensionSpacingSemanticSpacingXs = "4px";
-export const DimensionSpacingSemanticSpacingSm = "6px";
-export const DimensionSpacingSemanticSpacingMd = "8px";
-export const DimensionSpacingSemanticSpacingLg = "12px";
-export const DimensionSpacingSemanticSpacingXl = "16px";
-export const DimensionSpacingSemanticSpacing2xl = "20px";
-export const DimensionSpacingSemanticSpacing3xl = "24px";
-export const DimensionSpacingSemanticSpacing4xl = "32px";
-export const DimensionSpacingSemanticSpacing5xl = "40px";
-export const DimensionSpacingSemanticSpacing6xl = "48px";
-export const DimensionSpacingSemanticSpacing7xl = "64px";
-export const DimensionSpacingSemanticSpacing8xl = "80px";
-export const DimensionSpacingSemanticSpacing9xl = "96px";
-export const DimensionSpacingSemanticSpacing10xl = "128px";
-export const DimensionSpacingSemanticSpacing11xl = "160px";
-export const DimensionSpacingSemanticSpacingMd2 = "10px";
+export const DimensionRadiusNone = "0px";
+export const DimensionRadiusXxs = "2px";
+export const DimensionRadiusXs = "4px";
+export const DimensionRadiusSm = "6px";
+export const DimensionRadiusMd = "8px";
+export const DimensionRadiusLg = "10px";
+export const DimensionRadiusXl = "12px";
+export const DimensionRadius2xl = "16px";
+export const DimensionRadius3xl = "20px";
+export const DimensionRadius4xl = "24px";
+export const DimensionRadiusFull = "9999px";
+export const DimensionWidthXxs = "320px";
+export const DimensionWidthXs = "384px";
+export const DimensionWidthSm = "480px";
+export const DimensionWidthMd = "560px";
+export const DimensionWidthLg = "640px";
+export const DimensionWidthXl = "768px";
+export const DimensionWidth2xl = "1024px";
+export const DimensionWidth3xl = "1280px";
+export const DimensionWidth4xl = "1440px";
+export const DimensionWidth5xl = "1600px";
+export const DimensionWidth6xl = "1920px";
+export const DimensionSpacingSemanticNone = "0px";
+export const DimensionSpacingSemanticXxs = "2px";
+export const DimensionSpacingSemanticXs = "4px";
+export const DimensionSpacingSemanticSm = "6px";
+export const DimensionSpacingSemanticMd = "8px";
+export const DimensionSpacingSemanticLg = "12px";
+export const DimensionSpacingSemanticXl = "16px";
+export const DimensionSpacingSemantic2xl = "20px";
+export const DimensionSpacingSemantic3xl = "24px";
+export const DimensionSpacingSemantic4xl = "32px";
+export const DimensionSpacingSemantic5xl = "40px";
+export const DimensionSpacingSemantic6xl = "48px";
+export const DimensionSpacingSemantic7xl = "64px";
+export const DimensionSpacingSemantic8xl = "80px";
+export const DimensionSpacingSemantic9xl = "96px";
+export const DimensionSpacingSemantic10xl = "128px";
+export const DimensionSpacingSemantic11xl = "160px";
+export const DimensionSpacingSemanticMd2 = "10px";
 export const DimensionLayoutContainerPaddingMobile = "16px";
 export const DimensionLayoutContainerPaddingDesktop = "32px";
 export const DimensionLayoutContainerMaxWidthDesktop = "1280px";
 export const DimensionLayoutParagraphMaxWidth = "720px";
+export const GradientSkeuemorphicGradientBorder =
+  "linear-gradient(180deg, #ffffff1f 0%, #ffffff00 100%)";
+export const GradientGray60050090deg =
+  "linear-gradient(90deg, #535862 0%, #717680 100%)";
+export const GradientGray70060045deg =
+  "linear-gradient(45deg, #414651 0%, #535862 100%)";
+export const GradientGray80060045deg =
+  "linear-gradient(45deg, #252b37 0%, #535862 100%)";
+export const GradientGray80060090deg =
+  "linear-gradient(90deg, #252b37 0%, #535862 100%)";
+export const GradientGray800700265deg =
+  "linear-gradient(26.56505117707799deg, #252b37 0%, #414651 100%)";
+export const GradientGray90060045deg =
+  "linear-gradient(45deg, #181d27 0%, #535862 100%)";
+export const GradientGray90070045deg =
+  "linear-gradient(45deg, #181d27 0%, #414651 100%)";
+export const GradientGray50White180deg =
+  "linear-gradient(180deg, #ffffff 0%, #fafafa 100%)";
+export const GradientGray100White180deg =
+  "linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%)";
+export const GradientGray10025180deg =
+  "linear-gradient(180deg, #fdfdfd 0%, #f5f5f5 100%)";
+export const GradientGray10050180deg =
+  "linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%)";
+export const GradientGray20025180deg =
+  "linear-gradient(180deg, #fdfdfd 0%, #e9eaeb 100%)";
+export const GradientGray20050180deg =
+  "linear-gradient(180deg, #fafafa 0%, #e9eaeb 100%)";
+export const GradientGray200100180deg =
+  "linear-gradient(180deg, #f5f5f5 0%, #e9eaeb 100%)";
+export const GradientBrand60050090deg =
+  "linear-gradient(90deg, #7f56d9 0%, #9e77ed 100%)";
+export const GradientBrand70060045deg =
+  "linear-gradient(45deg, #6941c6 0%, #7f56d9 100%)";
+export const GradientBrand80060045deg =
+  "linear-gradient(45deg, #53389e 0%, #7f56d9 100%)";
+export const GradientBrand80060090deg =
+  "linear-gradient(90deg, #53389e 0%, #7f56d9 100%)";
+export const GradientBrand800700265deg =
+  "linear-gradient(26.56505117707799deg, #53389e 0%, #6941c6 100%)";
+export const GradientBrand90060045deg =
+  "linear-gradient(45deg, #42307d 0%, #7f56d9 100%)";
+export const GradientBrand90070045deg =
+  "linear-gradient(45deg, #42307d 0%, #6941c6 100%)";
+export const GradientLinear10 =
+  "linear-gradient(0deg, #cfc7f8 0%, #ebbba7 100%)";
+export const GradientLinear11 =
+  "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)";
+export const GradientLinear12 =
+  "linear-gradient(45deg, #7b6ae0 0%, #ffbb89 100%)";
+export const GradientLinear13 =
+  "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)";
+export const GradientLinear14 =
+  "linear-gradient(0deg, #fed6e3 0%, #a8edea 100%)";
+export const GradientLinear15 =
+  "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)";
+export const GradientLinear16 =
+  "linear-gradient(45deg, #dfd1c5 0%, #fff6eb 100%)";
+export const GradientLinear17 =
+  "linear-gradient(135deg, #fff6b7 0%, #fb758a 100%)";
+export const GradientLinear18 =
+  "linear-gradient(45deg, #ff7ec7 0%, #ffed46 100%)";
+export const GradientLinear19 =
+  "linear-gradient(0deg, #feafa8 0%, #f5efef 100%)";
+export const GradientLinear20 =
+  "linear-gradient(45deg, #e9defa 0%, #fff6eb 100%)";
+export const GradientLinear21 =
+  "linear-gradient(0deg, #fff1eb 0%, #ace0f9 100%)";
+export const GradientLinear22 =
+  "linear-gradient(0deg, #c1dfc4 0%, #deecdd 100%)";
+export const GradientLinear24 =
+  "linear-gradient(0deg, #accbee 0%, #e7f0fd 100%)";
+export const GradientLinear25 =
+  "linear-gradient(0deg, #84fab0 0%, #accbee 100%)";
+export const GradientLinear26 =
+  "linear-gradient(45deg, #39a0ff 0%, #8fff85 100%)";
+export const GradientLinear27 =
+  "linear-gradient(-90deg, #74ebd5 0%, #9face6 100%)";
+export const GradientLinear29 =
+  "linear-gradient(0deg, #9890e3 0%, #b1f4cf 100%)";
+export const GradientLinear30 =
+  "linear-gradient(45deg, #7cdada 0%, #f697aa 100%)";
+export const GradientLinear31 =
+  "linear-gradient(45deg, #b1ff96 0%, #ffadf7 100%)";
+export const GradientLinear32 =
+  "linear-gradient(0deg, #96fbc4 0%, #f9f586 100%)";
+export const GradientLinear33 =
+  "linear-gradient(45deg, #4def8e 0%, #ffeb3a 100%)";
+export const GradientLinear34 =
+  "linear-gradient(135deg, #f0ff00 0%, #58cffb 100%)";
+export const GradientLinear35 =
+  "linear-gradient(0deg, #d1fdff 0%, #fddb92 100%)";
+export const GradientLinear36 =
+  "linear-gradient(0deg, #ebc0fd 0%, #d9ded8 100%)";
+export const GradientLinear37 =
+  "linear-gradient(45deg, #ffa4f6 0%, #b7dcff 100%)";
+export const GradientLinear38 =
+  "linear-gradient(0deg, #cd9cf2 0%, #f6f3ff 100%)";
+export const GradientLinear39 =
+  "linear-gradient(-45deg, #f5c8f5 0%, #daddfa 83.85%)";
+export const GradientLinear40 =
+  "linear-gradient(0deg, #e6dee9 0%, #bdc2e8 100%)";
+export const GradientLinear41 =
+  "linear-gradient(0deg, #6a85b6 0%, #bac8e0 100%)";
+export const GradientLinear42 =
+  "linear-gradient(45deg, #8b8b8b 0%, #eaeaea 100%)";
+export const GradientLinear43 =
+  "linear-gradient(135deg, #e2b0ff 0%, #9f44d3 100%)";
+export const GradientLinear44 =
+  "linear-gradient(135deg, #ce9ffc 0%, #7367f0 100%)";
+export const GradientLinear45 =
+  "linear-gradient(135deg, #72edf2 0%, #5151e5 100%)";
+export const GradientLinear46 =
+  "linear-gradient(0deg, #a3bded 0%, #6991c7 100%)";
+export const GradientLinear47 =
+  "linear-gradient(0deg, #fbc8d4 0%, #9795f0 100%)";
+export const GradientLinear48 =
+  "linear-gradient(0deg, #a7a6cb 0%, #8989ba 100%)";
+export const GradientLinear49 =
+  "linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%)";
+export const GradientLinear50 =
+  "linear-gradient(135deg, #81ffef 0%, #f067b4 100%)";
+export const GradientLinear51 =
+  "linear-gradient(135deg, #dcb0ed 0%, #9999cc 100%)";
+export const GradientLinear52 =
+  "linear-gradient(135deg, #fff5c3 0%, #9452a5 100%)";
+export const GradientLinear53 =
+  "linear-gradient(135deg, #f1ca74 0%, #a64db6 100%)";
+export const GradientLinear54 =
+  "linear-gradient(45deg, #4d6ad0 0%, #ff9d7e 100%)";
+export const GradientLinear55 =
+  "linear-gradient(135deg, #ffcf71 0%, #2376dd 100%)";
+export const GradientLinear56 =
+  "linear-gradient(135deg, #e8d07a 0%, #5312d6 100%)";
+export const GradientLinear57 =
+  "linear-gradient(180deg, #bfd9fe 0%, #df89b5 100%)";
+export const GradientLinear58 =
+  "linear-gradient(0deg, #fa71cd 0%, #c471f5 100%)";
+export const GradientLinear59 =
+  "linear-gradient(135deg, #43cbff 0%, #9708cc 100%)";
+export const GradientLinear60 =
+  "linear-gradient(180deg, #7579ff 0%, #b224ef 100%)";
+export const GradientLinear61 =
+  "linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%)";
+export const GradientLinear62 =
+  "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)";
+export const GradientLinear63 =
+  "linear-gradient(0deg, #009efd 0%, #2af598 100%)";
+export const GradientLinear64 =
+  "linear-gradient(45deg, #ffb800 0%, #fff500 100%)";
+export const GradientLinear65 =
+  "linear-gradient(135deg, #ffa8a8 0%, #fcff00 100%)";
+export const GradientLinear66 =
+  "linear-gradient(45deg, #ff7a00 0%, #ffd439 100%)";
+export const GradientLinear67 =
+  "linear-gradient(135deg, #ffd3a5 0%, #fd6585 100%)";
+export const GradientLinear68 =
+  "linear-gradient(180deg, #f9d423 0%, #e14fad 100%)";
+export const GradientLinear69 =
+  "linear-gradient(135deg, #f74fac 0%, #fcb24f 100%)";
+export const GradientLinear70 =
+  "linear-gradient(135deg, #f49062 0%, #fd371f 100%)";
+export const GradientLinear71 =
+  "linear-gradient(45deg, #ff6c6c 0%, #dd7bff 100%)";
+export const GradientLinear72 =
+  "linear-gradient(135deg, #f97794 0%, #623aa2 100%)";
+export const GradientLinear73 =
+  "linear-gradient(180deg, #c569cf 0%, #ee609c 100%)";
+export const GradientLinear74 =
+  "linear-gradient(0deg, #c7eafd 0%, #e8198b 100%)";
+export const GradientLinear75 =
+  "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)";
+export const GradientLinear76 =
+  "linear-gradient(135deg, #f6ceec 0%, #d939cd 100%)";
+export const GradientLinear77 =
+  "linear-gradient(135deg, #ee9ae5 0%, #5961f9 100%)";
+export const GradientLinear78 =
+  "linear-gradient(-90deg, #6a11cb 0%, #2575fc 100%)";
+export const GradientLinear79 =
+  "linear-gradient(45deg, #0017e4 0%, #3793ff 100%)";
+export const GradientLinear80 =
+  "linear-gradient(0deg, #00c6fb 0%, #005bea 100%)";
+export const GradientLinear81 =
+  "linear-gradient(45deg, #4b73ff 0%, #7cf7ff 100%)";
+export const GradientLinear82 =
+  "linear-gradient(135deg, #5efce8 0%, #736efe 100%)";
+export const GradientLinear83 =
+  "linear-gradient(0deg, #7028e4 0%, #e5b2ca 100%)";
+export const GradientLinear84 =
+  "linear-gradient(90deg, #7873f5 0%, #ec77ab 100%)";
+export const GradientLinear85 =
+  "linear-gradient(135deg, #b01eff 0%, #e1467c 100%)";
+export const GradientLinear86 =
+  "linear-gradient(45deg, #d079ee 0%, #8a88fb 100%)";
+export const GradientLinear87 =
+  "linear-gradient(135deg, #c99fff 0%, #981ed2 100%)";
+export const GradientLinear88 =
+  "linear-gradient(0deg, #9b23ea 0%, #5f72bd 100%)";
+export const GradientLinear89 =
+  "linear-gradient(135deg, #b39fff 0%, #6a1ed2 100%)";
+export const GradientLinear90 =
+  "linear-gradient(45deg, #4300b1 0%, #a531dc 100%)";
+export const GradientLinear91 =
+  "linear-gradient(-45deg, #764ba2 0%, #667eea 100%)";
+export const GradientLinear01 =
+  "linear-gradient(180deg, #a5c0ee 0%, #fbc5ec 100%)";
+export const GradientLinear02 =
+  "linear-gradient(180deg, #fbc2eb 0%, #a18cd1 100%)";
+export const GradientLinear03 =
+  "linear-gradient(180deg, #ffd1ff 0%, #fad0c4 100%)";
+export const GradientLinear04 =
+  "linear-gradient(-135deg, #fad0c4 0%, #ff9a9e 100%)";
+export const GradientLinear05 =
+  "linear-gradient(-90deg, #fcb69f 0%, #ffecd2 100%)";
+export const GradientLinear06 =
+  "linear-gradient(180deg, #fecfef 0%, #ff989c 100%)";
+export const GradientLinear07 =
+  "linear-gradient(45deg, #ff9de4 0%, #ffeaf6 100%)";
+export const GradientLinear08 =
+  "linear-gradient(180deg, #e6dee9 0%, #fdcaf1 100%)";
+export const GradientLinear09 =
+  "linear-gradient(45deg, #a6c0fe 0%, #ffeaf6 100%)";
+export const ShadowXs = "0px 1px 2px 0px #0a0d120d";
+export const ShadowXsSkeuomorphic =
+  "0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e";
+export const ShadowSm = "0px 1px 2px -1px #0a0d121a, 0px 1px 3px 0px #0a0d121a";
+export const ShadowMd =
+  "0px 2px 4px -2px #0a0d120f, 0px 4px 6px -1px #0a0d121a";
+export const ShadowLg =
+  "0px 2px 2px -1px #0a0d120a, 0px 4px 6px -2px #0a0d1208, 0px 12px 16px -4px #0a0d1214";
+export const ShadowXl =
+  "0px 3px 3px -1.5px #0a0d120a, 0px 8px 8px -4px #0a0d1208, 0px 20px 24px -4px #0a0d1214";
+export const Shadow2xl =
+  "0px 4px 4px -2px #0a0d120a, 0px 24px 48px -12px #0a0d122e";
+export const Shadow3xl =
+  "0px 5px 5px -2.5px #0a0d120a, 0px 32px 64px -12px #0a0d1224";
+export const ShadowPortfolioMockupsMainCentreMd =
+  "0px 75px 150px 0px #0a0d1224";
+export const ShadowPortfolioMockupsMainCentreLg =
+  "0px 100px 200px 0px #0a0d122e";
+export const ShadowPortfolioMockupsOverlayRightLg =
+  "-40px 40px 72px 0px #0a0d121f";
+export const ShadowPortfolioMockupsOverlayLeftLg =
+  "100px 100px 150px 0px #0a0d121f";
+export const ShadowPortfolioMockupsGridMd = "32px 32px 64px 0px #0a0d1214";
+export const ShadowFocusRingsStandard =
+  "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff";
+export const ShadowFocusRingsXs =
+  "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d";
+export const ShadowFocusRingsXsSkeuomorphic =
+  "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e";
+export const ShadowFocusRingsSm =
+  "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d121a, 0px 1px 3px 0px #0a0d121a";
+export const ShadowFocusRingsError =
+  "0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff";
+export const ShadowFocusRingsErrorXs =
+  "0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d";
+export const ShadowFocusRingsErrorXsSkeuomorphic =
+  "0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e";
+export const StringFontFamilyDisplay = "Inter";
+export const StringFontFamilyDisplay2 = "Xanh Display 2.0";
+export const StringFontFamilyBody = "Inter";
+export const StringFontFamilyBody2 = "Xanh Display 2.0";
+export const StringFontFamilyDisplay3 = "Lexend";
+export const StringFontFamilyBody3 = "Lexend";
+export const StringFontWeightRegular = "Regular";
+export const StringFontWeightRegularItalic = "Regular italic";
+export const StringFontWeightMedium = "Medium";
+export const StringFontWeightMediumItalic = "Medium italic";
+export const StringFontWeightSemibold = "Semibold";
+export const StringFontWeightSemiboldItalic = "Semibold italic";
+export const StringFontWeightBold = "Bold";
+export const StringFontWeightBoldItalic = "Bold italic";
+export const TypographyDisplay2xlRegular = "400 72px/90px Inter";
+export const TypographyDisplay2xlMedium = "500 72px/90px Inter";
+export const TypographyDisplay2xlSemibold = "600 72px/90px Inter";
+export const TypographyDisplay2xlBold = "700 72px/90px Inter";
+export const TypographyDisplayXlRegular = "400 60px/72px Inter";
+export const TypographyDisplayXlMedium = "500 60px/72px Inter";
+export const TypographyDisplayXlSemibold = "600 60px/72px Inter";
+export const TypographyDisplayXlBold = "700 60px/72px Inter";
+export const TypographyDisplayLgRegular = "400 48px/60px Inter";
+export const TypographyDisplayLgMedium = "500 48px/60px Inter";
+export const TypographyDisplayLgSemibold = "600 48px/60px Inter";
+export const TypographyDisplayLgBold = "700 48px/60px Inter";
+export const TypographyDisplayMdRegular = "400 36px/44px Inter";
+export const TypographyDisplayMdMedium = "500 36px/44px Inter";
+export const TypographyDisplayMdSemibold = "600 36px/44px Inter";
+export const TypographyDisplayMdBold = "700 36px/44px Inter";
+export const TypographyDisplaySmRegular = "400 30px/38px Inter";
+export const TypographyDisplaySmMedium = "500 30px/38px Inter";
+export const TypographyDisplaySmSemibold = "600 30px/38px Inter";
+export const TypographyDisplaySmBold = "700 30px/38px Inter";
+export const TypographyDisplayXsRegular = "400 24px/32px Inter";
+export const TypographyDisplayXsMedium = "500 24px/32px Inter";
+export const TypographyDisplayXsSemibold = "600 24px/32px Inter";
+export const TypographyDisplayXsBold = "700 24px/32px Inter";
+export const TypographyTextXlRegular = "400 20px/30px Inter";
+export const TypographyTextXlMedium = "500 20px/30px Inter";
+export const TypographyTextXlSemibold = "600 20px/30px Inter";
+export const TypographyTextXlBold = "700 20px/30px Inter";
+export const TypographyTextLgRegular = "400 18px/28px Inter";
+export const TypographyTextLgMedium = "500 18px/28px Inter";
+export const TypographyTextLgSemibold = "600 18px/28px Inter";
+export const TypographyTextLgBold = "700 18px/28px Inter";
+export const TypographyTextMdRegular = "400 16px/24px Inter";
+export const TypographyTextMdMedium = "500 16px/24px Inter";
+export const TypographyTextMdSemibold = "600 16px/24px Inter";
+export const TypographyTextMdBold = "700 16px/24px Inter";
+export const TypographyTextSmRegular = "400 14px/20px Inter";
+export const TypographyTextSmMedium = "500 14px/20px Inter";
+export const TypographyTextSmSemibold = "600 14px/20px Inter";
+export const TypographyTextSmBold = "700 14px/20px Inter";
+export const TypographyTextXsRegular = "400 12px/18px Inter";
+export const TypographyTextXsMedium = "500 12px/18px Inter";
+export const TypographyTextXsSemibold = "600 12px/18px Inter";
+export const TypographyTextXsBold = "700 12px/18px Inter";

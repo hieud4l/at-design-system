@@ -3,6 +3,14 @@
 <!-- Do not edit directly, this file was auto-generated. -->
 <plist version="1.0">
   <dict>
+    <key>blurBackdropSm</key>
+    <string>blur(8px)</string>
+    <key>blurBackdropMd2</key>
+    <string>blur(16px)</string>
+    <key>blurBackdropLg3</key>
+    <string>blur(24px)</string>
+    <key>blurBackdropXl4</key>
+    <string>blur(40px)</string>
     <key>colorBaseWhite</key>
     <dict>
       <key>r</key> <real>1</real>
@@ -4859,85 +4867,85 @@
     <integer>72</integer>
     <key>dimensionLineHeightDisplay2xl</key>
     <integer>90</integer>
-    <key>dimensionRadiusRadiusNone</key>
+    <key>dimensionRadiusNone</key>
     <integer>0</integer>
-    <key>dimensionRadiusRadiusXxs</key>
+    <key>dimensionRadiusXxs</key>
     <integer>2</integer>
-    <key>dimensionRadiusRadiusXs</key>
+    <key>dimensionRadiusXs</key>
     <integer>4</integer>
-    <key>dimensionRadiusRadiusSm</key>
+    <key>dimensionRadiusSm</key>
     <integer>6</integer>
-    <key>dimensionRadiusRadiusMd</key>
+    <key>dimensionRadiusMd</key>
     <integer>8</integer>
-    <key>dimensionRadiusRadiusLg</key>
+    <key>dimensionRadiusLg</key>
     <integer>10</integer>
-    <key>dimensionRadiusRadiusXl</key>
+    <key>dimensionRadiusXl</key>
     <integer>12</integer>
-    <key>dimensionRadiusRadius2xl</key>
+    <key>dimensionRadius2xl</key>
     <integer>16</integer>
-    <key>dimensionRadiusRadius3xl</key>
+    <key>dimensionRadius3xl</key>
     <integer>20</integer>
-    <key>dimensionRadiusRadius4xl</key>
+    <key>dimensionRadius4xl</key>
     <integer>24</integer>
-    <key>dimensionRadiusRadiusFull</key>
+    <key>dimensionRadiusFull</key>
     <integer>9999</integer>
-    <key>dimensionWidthWidthXxs</key>
+    <key>dimensionWidthXxs</key>
     <integer>320</integer>
-    <key>dimensionWidthWidthXs</key>
+    <key>dimensionWidthXs</key>
     <integer>384</integer>
-    <key>dimensionWidthWidthSm</key>
+    <key>dimensionWidthSm</key>
     <integer>480</integer>
-    <key>dimensionWidthWidthMd</key>
+    <key>dimensionWidthMd</key>
     <integer>560</integer>
-    <key>dimensionWidthWidthLg</key>
+    <key>dimensionWidthLg</key>
     <integer>640</integer>
-    <key>dimensionWidthWidthXl</key>
+    <key>dimensionWidthXl</key>
     <integer>768</integer>
-    <key>dimensionWidthWidth2xl</key>
+    <key>dimensionWidth2xl</key>
     <integer>1024</integer>
-    <key>dimensionWidthWidth3xl</key>
+    <key>dimensionWidth3xl</key>
     <integer>1280</integer>
-    <key>dimensionWidthWidth4xl</key>
+    <key>dimensionWidth4xl</key>
     <integer>1440</integer>
-    <key>dimensionWidthWidth5xl</key>
+    <key>dimensionWidth5xl</key>
     <integer>1600</integer>
-    <key>dimensionWidthWidth6xl</key>
+    <key>dimensionWidth6xl</key>
     <integer>1920</integer>
-    <key>dimensionSpacingSemanticSpacingNone</key>
+    <key>dimensionSpacingSemanticNone</key>
     <integer>0</integer>
-    <key>dimensionSpacingSemanticSpacingXxs</key>
+    <key>dimensionSpacingSemanticXxs</key>
     <integer>2</integer>
-    <key>dimensionSpacingSemanticSpacingXs</key>
+    <key>dimensionSpacingSemanticXs</key>
     <integer>4</integer>
-    <key>dimensionSpacingSemanticSpacingSm</key>
+    <key>dimensionSpacingSemanticSm</key>
     <integer>6</integer>
-    <key>dimensionSpacingSemanticSpacingMd</key>
+    <key>dimensionSpacingSemanticMd</key>
     <integer>8</integer>
-    <key>dimensionSpacingSemanticSpacingLg</key>
+    <key>dimensionSpacingSemanticLg</key>
     <integer>12</integer>
-    <key>dimensionSpacingSemanticSpacingXl</key>
+    <key>dimensionSpacingSemanticXl</key>
     <integer>16</integer>
-    <key>dimensionSpacingSemanticSpacing2xl</key>
+    <key>dimensionSpacingSemantic2xl</key>
     <integer>20</integer>
-    <key>dimensionSpacingSemanticSpacing3xl</key>
+    <key>dimensionSpacingSemantic3xl</key>
     <integer>24</integer>
-    <key>dimensionSpacingSemanticSpacing4xl</key>
+    <key>dimensionSpacingSemantic4xl</key>
     <integer>32</integer>
-    <key>dimensionSpacingSemanticSpacing5xl</key>
+    <key>dimensionSpacingSemantic5xl</key>
     <integer>40</integer>
-    <key>dimensionSpacingSemanticSpacing6xl</key>
+    <key>dimensionSpacingSemantic6xl</key>
     <integer>48</integer>
-    <key>dimensionSpacingSemanticSpacing7xl</key>
+    <key>dimensionSpacingSemantic7xl</key>
     <integer>64</integer>
-    <key>dimensionSpacingSemanticSpacing8xl</key>
+    <key>dimensionSpacingSemantic8xl</key>
     <integer>80</integer>
-    <key>dimensionSpacingSemanticSpacing9xl</key>
+    <key>dimensionSpacingSemantic9xl</key>
     <integer>96</integer>
-    <key>dimensionSpacingSemanticSpacing10xl</key>
+    <key>dimensionSpacingSemantic10xl</key>
     <integer>128</integer>
-    <key>dimensionSpacingSemanticSpacing11xl</key>
+    <key>dimensionSpacingSemantic11xl</key>
     <integer>160</integer>
-    <key>dimensionSpacingSemanticSpacingMd2</key>
+    <key>dimensionSpacingSemanticMd2</key>
     <integer>10</integer>
     <key>dimensionLayoutContainerPaddingMobile</key>
     <integer>16</integer>
@@ -4947,5 +4955,383 @@
     <integer>1280</integer>
     <key>dimensionLayoutParagraphMaxWidth</key>
     <integer>720</integer>
+    <key>gradientSkeuemorphicGradientBorder</key>
+    <string>linear-gradient(180deg, #ffffff1f 0%, #ffffff00 100%)</string>
+    <key>gradientGray60050090deg</key>
+    <string>linear-gradient(90deg, #535862 0%, #717680 100%)</string>
+    <key>gradientGray70060045deg</key>
+    <string>linear-gradient(45deg, #414651 0%, #535862 100%)</string>
+    <key>gradientGray80060045deg</key>
+    <string>linear-gradient(45deg, #252b37 0%, #535862 100%)</string>
+    <key>gradientGray80060090deg</key>
+    <string>linear-gradient(90deg, #252b37 0%, #535862 100%)</string>
+    <key>gradientGray800700265deg</key>
+    <string>linear-gradient(26.56505117707799deg, #252b37 0%, #414651 100%)</string>
+    <key>gradientGray90060045deg</key>
+    <string>linear-gradient(45deg, #181d27 0%, #535862 100%)</string>
+    <key>gradientGray90070045deg</key>
+    <string>linear-gradient(45deg, #181d27 0%, #414651 100%)</string>
+    <key>gradientGray50White180deg</key>
+    <string>linear-gradient(180deg, #ffffff 0%, #fafafa 100%)</string>
+    <key>gradientGray100White180deg</key>
+    <string>linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%)</string>
+    <key>gradientGray10025180deg</key>
+    <string>linear-gradient(180deg, #fdfdfd 0%, #f5f5f5 100%)</string>
+    <key>gradientGray10050180deg</key>
+    <string>linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%)</string>
+    <key>gradientGray20025180deg</key>
+    <string>linear-gradient(180deg, #fdfdfd 0%, #e9eaeb 100%)</string>
+    <key>gradientGray20050180deg</key>
+    <string>linear-gradient(180deg, #fafafa 0%, #e9eaeb 100%)</string>
+    <key>gradientGray200100180deg</key>
+    <string>linear-gradient(180deg, #f5f5f5 0%, #e9eaeb 100%)</string>
+    <key>gradientBrand60050090deg</key>
+    <string>linear-gradient(90deg, #7f56d9 0%, #9e77ed 100%)</string>
+    <key>gradientBrand70060045deg</key>
+    <string>linear-gradient(45deg, #6941c6 0%, #7f56d9 100%)</string>
+    <key>gradientBrand80060045deg</key>
+    <string>linear-gradient(45deg, #53389e 0%, #7f56d9 100%)</string>
+    <key>gradientBrand80060090deg</key>
+    <string>linear-gradient(90deg, #53389e 0%, #7f56d9 100%)</string>
+    <key>gradientBrand800700265deg</key>
+    <string>linear-gradient(26.56505117707799deg, #53389e 0%, #6941c6 100%)</string>
+    <key>gradientBrand90060045deg</key>
+    <string>linear-gradient(45deg, #42307d 0%, #7f56d9 100%)</string>
+    <key>gradientBrand90070045deg</key>
+    <string>linear-gradient(45deg, #42307d 0%, #6941c6 100%)</string>
+    <key>gradientLinear10</key>
+    <string>linear-gradient(0deg, #cfc7f8 0%, #ebbba7 100%)</string>
+    <key>gradientLinear11</key>
+    <string>linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)</string>
+    <key>gradientLinear12</key>
+    <string>linear-gradient(45deg, #7b6ae0 0%, #ffbb89 100%)</string>
+    <key>gradientLinear13</key>
+    <string>linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)</string>
+    <key>gradientLinear14</key>
+    <string>linear-gradient(0deg, #fed6e3 0%, #a8edea 100%)</string>
+    <key>gradientLinear15</key>
+    <string>linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)</string>
+    <key>gradientLinear16</key>
+    <string>linear-gradient(45deg, #dfd1c5 0%, #fff6eb 100%)</string>
+    <key>gradientLinear17</key>
+    <string>linear-gradient(135deg, #fff6b7 0%, #fb758a 100%)</string>
+    <key>gradientLinear18</key>
+    <string>linear-gradient(45deg, #ff7ec7 0%, #ffed46 100%)</string>
+    <key>gradientLinear19</key>
+    <string>linear-gradient(0deg, #feafa8 0%, #f5efef 100%)</string>
+    <key>gradientLinear20</key>
+    <string>linear-gradient(45deg, #e9defa 0%, #fff6eb 100%)</string>
+    <key>gradientLinear21</key>
+    <string>linear-gradient(0deg, #fff1eb 0%, #ace0f9 100%)</string>
+    <key>gradientLinear22</key>
+    <string>linear-gradient(0deg, #c1dfc4 0%, #deecdd 100%)</string>
+    <key>gradientLinear24</key>
+    <string>linear-gradient(0deg, #accbee 0%, #e7f0fd 100%)</string>
+    <key>gradientLinear25</key>
+    <string>linear-gradient(0deg, #84fab0 0%, #accbee 100%)</string>
+    <key>gradientLinear26</key>
+    <string>linear-gradient(45deg, #39a0ff 0%, #8fff85 100%)</string>
+    <key>gradientLinear27</key>
+    <string>linear-gradient(-90deg, #74ebd5 0%, #9face6 100%)</string>
+    <key>gradientLinear29</key>
+    <string>linear-gradient(0deg, #9890e3 0%, #b1f4cf 100%)</string>
+    <key>gradientLinear30</key>
+    <string>linear-gradient(45deg, #7cdada 0%, #f697aa 100%)</string>
+    <key>gradientLinear31</key>
+    <string>linear-gradient(45deg, #b1ff96 0%, #ffadf7 100%)</string>
+    <key>gradientLinear32</key>
+    <string>linear-gradient(0deg, #96fbc4 0%, #f9f586 100%)</string>
+    <key>gradientLinear33</key>
+    <string>linear-gradient(45deg, #4def8e 0%, #ffeb3a 100%)</string>
+    <key>gradientLinear34</key>
+    <string>linear-gradient(135deg, #f0ff00 0%, #58cffb 100%)</string>
+    <key>gradientLinear35</key>
+    <string>linear-gradient(0deg, #d1fdff 0%, #fddb92 100%)</string>
+    <key>gradientLinear36</key>
+    <string>linear-gradient(0deg, #ebc0fd 0%, #d9ded8 100%)</string>
+    <key>gradientLinear37</key>
+    <string>linear-gradient(45deg, #ffa4f6 0%, #b7dcff 100%)</string>
+    <key>gradientLinear38</key>
+    <string>linear-gradient(0deg, #cd9cf2 0%, #f6f3ff 100%)</string>
+    <key>gradientLinear39</key>
+    <string>linear-gradient(-45deg, #f5c8f5 0%, #daddfa 83.85%)</string>
+    <key>gradientLinear40</key>
+    <string>linear-gradient(0deg, #e6dee9 0%, #bdc2e8 100%)</string>
+    <key>gradientLinear41</key>
+    <string>linear-gradient(0deg, #6a85b6 0%, #bac8e0 100%)</string>
+    <key>gradientLinear42</key>
+    <string>linear-gradient(45deg, #8b8b8b 0%, #eaeaea 100%)</string>
+    <key>gradientLinear43</key>
+    <string>linear-gradient(135deg, #e2b0ff 0%, #9f44d3 100%)</string>
+    <key>gradientLinear44</key>
+    <string>linear-gradient(135deg, #ce9ffc 0%, #7367f0 100%)</string>
+    <key>gradientLinear45</key>
+    <string>linear-gradient(135deg, #72edf2 0%, #5151e5 100%)</string>
+    <key>gradientLinear46</key>
+    <string>linear-gradient(0deg, #a3bded 0%, #6991c7 100%)</string>
+    <key>gradientLinear47</key>
+    <string>linear-gradient(0deg, #fbc8d4 0%, #9795f0 100%)</string>
+    <key>gradientLinear48</key>
+    <string>linear-gradient(0deg, #a7a6cb 0%, #8989ba 100%)</string>
+    <key>gradientLinear49</key>
+    <string>linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%)</string>
+    <key>gradientLinear50</key>
+    <string>linear-gradient(135deg, #81ffef 0%, #f067b4 100%)</string>
+    <key>gradientLinear51</key>
+    <string>linear-gradient(135deg, #dcb0ed 0%, #9999cc 100%)</string>
+    <key>gradientLinear52</key>
+    <string>linear-gradient(135deg, #fff5c3 0%, #9452a5 100%)</string>
+    <key>gradientLinear53</key>
+    <string>linear-gradient(135deg, #f1ca74 0%, #a64db6 100%)</string>
+    <key>gradientLinear54</key>
+    <string>linear-gradient(45deg, #4d6ad0 0%, #ff9d7e 100%)</string>
+    <key>gradientLinear55</key>
+    <string>linear-gradient(135deg, #ffcf71 0%, #2376dd 100%)</string>
+    <key>gradientLinear56</key>
+    <string>linear-gradient(135deg, #e8d07a 0%, #5312d6 100%)</string>
+    <key>gradientLinear57</key>
+    <string>linear-gradient(180deg, #bfd9fe 0%, #df89b5 100%)</string>
+    <key>gradientLinear58</key>
+    <string>linear-gradient(0deg, #fa71cd 0%, #c471f5 100%)</string>
+    <key>gradientLinear59</key>
+    <string>linear-gradient(135deg, #43cbff 0%, #9708cc 100%)</string>
+    <key>gradientLinear60</key>
+    <string>linear-gradient(180deg, #7579ff 0%, #b224ef 100%)</string>
+    <key>gradientLinear61</key>
+    <string>linear-gradient(45deg, #ad00fe 0%, #00e0ee 100%)</string>
+    <key>gradientLinear62</key>
+    <string>linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)</string>
+    <key>gradientLinear63</key>
+    <string>linear-gradient(0deg, #009efd 0%, #2af598 100%)</string>
+    <key>gradientLinear64</key>
+    <string>linear-gradient(45deg, #ffb800 0%, #fff500 100%)</string>
+    <key>gradientLinear65</key>
+    <string>linear-gradient(135deg, #ffa8a8 0%, #fcff00 100%)</string>
+    <key>gradientLinear66</key>
+    <string>linear-gradient(45deg, #ff7a00 0%, #ffd439 100%)</string>
+    <key>gradientLinear67</key>
+    <string>linear-gradient(135deg, #ffd3a5 0%, #fd6585 100%)</string>
+    <key>gradientLinear68</key>
+    <string>linear-gradient(180deg, #f9d423 0%, #e14fad 100%)</string>
+    <key>gradientLinear69</key>
+    <string>linear-gradient(135deg, #f74fac 0%, #fcb24f 100%)</string>
+    <key>gradientLinear70</key>
+    <string>linear-gradient(135deg, #f49062 0%, #fd371f 100%)</string>
+    <key>gradientLinear71</key>
+    <string>linear-gradient(45deg, #ff6c6c 0%, #dd7bff 100%)</string>
+    <key>gradientLinear72</key>
+    <string>linear-gradient(135deg, #f97794 0%, #623aa2 100%)</string>
+    <key>gradientLinear73</key>
+    <string>linear-gradient(180deg, #c569cf 0%, #ee609c 100%)</string>
+    <key>gradientLinear74</key>
+    <string>linear-gradient(0deg, #c7eafd 0%, #e8198b 100%)</string>
+    <key>gradientLinear75</key>
+    <string>linear-gradient(135deg, #f093fb 0%, #f5576c 100%)</string>
+    <key>gradientLinear76</key>
+    <string>linear-gradient(135deg, #f6ceec 0%, #d939cd 100%)</string>
+    <key>gradientLinear77</key>
+    <string>linear-gradient(135deg, #ee9ae5 0%, #5961f9 100%)</string>
+    <key>gradientLinear78</key>
+    <string>linear-gradient(-90deg, #6a11cb 0%, #2575fc 100%)</string>
+    <key>gradientLinear79</key>
+    <string>linear-gradient(45deg, #0017e4 0%, #3793ff 100%)</string>
+    <key>gradientLinear80</key>
+    <string>linear-gradient(0deg, #00c6fb 0%, #005bea 100%)</string>
+    <key>gradientLinear81</key>
+    <string>linear-gradient(45deg, #4b73ff 0%, #7cf7ff 100%)</string>
+    <key>gradientLinear82</key>
+    <string>linear-gradient(135deg, #5efce8 0%, #736efe 100%)</string>
+    <key>gradientLinear83</key>
+    <string>linear-gradient(0deg, #7028e4 0%, #e5b2ca 100%)</string>
+    <key>gradientLinear84</key>
+    <string>linear-gradient(90deg, #7873f5 0%, #ec77ab 100%)</string>
+    <key>gradientLinear85</key>
+    <string>linear-gradient(135deg, #b01eff 0%, #e1467c 100%)</string>
+    <key>gradientLinear86</key>
+    <string>linear-gradient(45deg, #d079ee 0%, #8a88fb 100%)</string>
+    <key>gradientLinear87</key>
+    <string>linear-gradient(135deg, #c99fff 0%, #981ed2 100%)</string>
+    <key>gradientLinear88</key>
+    <string>linear-gradient(0deg, #9b23ea 0%, #5f72bd 100%)</string>
+    <key>gradientLinear89</key>
+    <string>linear-gradient(135deg, #b39fff 0%, #6a1ed2 100%)</string>
+    <key>gradientLinear90</key>
+    <string>linear-gradient(45deg, #4300b1 0%, #a531dc 100%)</string>
+    <key>gradientLinear91</key>
+    <string>linear-gradient(-45deg, #764ba2 0%, #667eea 100%)</string>
+    <key>gradientLinear01</key>
+    <string>linear-gradient(180deg, #a5c0ee 0%, #fbc5ec 100%)</string>
+    <key>gradientLinear02</key>
+    <string>linear-gradient(180deg, #fbc2eb 0%, #a18cd1 100%)</string>
+    <key>gradientLinear03</key>
+    <string>linear-gradient(180deg, #ffd1ff 0%, #fad0c4 100%)</string>
+    <key>gradientLinear04</key>
+    <string>linear-gradient(-135deg, #fad0c4 0%, #ff9a9e 100%)</string>
+    <key>gradientLinear05</key>
+    <string>linear-gradient(-90deg, #fcb69f 0%, #ffecd2 100%)</string>
+    <key>gradientLinear06</key>
+    <string>linear-gradient(180deg, #fecfef 0%, #ff989c 100%)</string>
+    <key>gradientLinear07</key>
+    <string>linear-gradient(45deg, #ff9de4 0%, #ffeaf6 100%)</string>
+    <key>gradientLinear08</key>
+    <string>linear-gradient(180deg, #e6dee9 0%, #fdcaf1 100%)</string>
+    <key>gradientLinear09</key>
+    <string>linear-gradient(45deg, #a6c0fe 0%, #ffeaf6 100%)</string>
+    <key>shadowXs</key>
+    <string>0px 1px 2px 0px #0a0d120d</string>
+    <key>shadowXsSkeuomorphic</key>
+    <string>0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e</string>
+    <key>shadowSm</key>
+    <string>0px 1px 2px -1px #0a0d121a, 0px 1px 3px 0px #0a0d121a</string>
+    <key>shadowMd</key>
+    <string>0px 2px 4px -2px #0a0d120f, 0px 4px 6px -1px #0a0d121a</string>
+    <key>shadowLg</key>
+    <string>0px 2px 2px -1px #0a0d120a, 0px 4px 6px -2px #0a0d1208, 0px 12px 16px -4px #0a0d1214</string>
+    <key>shadowXl</key>
+    <string>0px 3px 3px -1.5px #0a0d120a, 0px 8px 8px -4px #0a0d1208, 0px 20px 24px -4px #0a0d1214</string>
+    <key>shadow2xl</key>
+    <string>0px 4px 4px -2px #0a0d120a, 0px 24px 48px -12px #0a0d122e</string>
+    <key>shadow3xl</key>
+    <string>0px 5px 5px -2.5px #0a0d120a, 0px 32px 64px -12px #0a0d1224</string>
+    <key>shadowPortfolioMockupsMainCentreMd</key>
+    <string>0px 75px 150px 0px #0a0d1224</string>
+    <key>shadowPortfolioMockupsMainCentreLg</key>
+    <string>0px 100px 200px 0px #0a0d122e</string>
+    <key>shadowPortfolioMockupsOverlayRightLg</key>
+    <string>-40px 40px 72px 0px #0a0d121f</string>
+    <key>shadowPortfolioMockupsOverlayLeftLg</key>
+    <string>100px 100px 150px 0px #0a0d121f</string>
+    <key>shadowPortfolioMockupsGridMd</key>
+    <string>32px 32px 64px 0px #0a0d1214</string>
+    <key>shadowFocusRingsStandard</key>
+    <string>0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff</string>
+    <key>shadowFocusRingsXs</key>
+    <string>0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d</string>
+    <key>shadowFocusRingsXsSkeuomorphic</key>
+    <string>0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e</string>
+    <key>shadowFocusRingsSm</key>
+    <string>0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d121a, 0px 1px 3px 0px #0a0d121a</string>
+    <key>shadowFocusRingsError</key>
+    <string>0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff</string>
+    <key>shadowFocusRingsErrorXs</key>
+    <string>0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d</string>
+    <key>shadowFocusRingsErrorXsSkeuomorphic</key>
+    <string>0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e</string>
+    <key>stringFontFamilyDisplay</key>
+    <string>Inter</string>
+    <key>stringFontFamilyDisplay2</key>
+    <string>Xanh Display 2.0</string>
+    <key>stringFontFamilyBody</key>
+    <string>Inter</string>
+    <key>stringFontFamilyBody2</key>
+    <string>Xanh Display 2.0</string>
+    <key>stringFontFamilyDisplay3</key>
+    <string>Lexend</string>
+    <key>stringFontFamilyBody3</key>
+    <string>Lexend</string>
+    <key>stringFontWeightRegular</key>
+    <string>Regular</string>
+    <key>stringFontWeightRegularItalic</key>
+    <string>Regular italic</string>
+    <key>stringFontWeightMedium</key>
+    <string>Medium</string>
+    <key>stringFontWeightMediumItalic</key>
+    <string>Medium italic</string>
+    <key>stringFontWeightSemibold</key>
+    <string>Semibold</string>
+    <key>stringFontWeightSemiboldItalic</key>
+    <string>Semibold italic</string>
+    <key>stringFontWeightBold</key>
+    <string>Bold</string>
+    <key>stringFontWeightBoldItalic</key>
+    <string>Bold italic</string>
+    <key>typographyDisplay2xlRegular</key>
+    <string>400 72px/90px Inter</string>
+    <key>typographyDisplay2xlMedium</key>
+    <string>500 72px/90px Inter</string>
+    <key>typographyDisplay2xlSemibold</key>
+    <string>600 72px/90px Inter</string>
+    <key>typographyDisplay2xlBold</key>
+    <string>700 72px/90px Inter</string>
+    <key>typographyDisplayXlRegular</key>
+    <string>400 60px/72px Inter</string>
+    <key>typographyDisplayXlMedium</key>
+    <string>500 60px/72px Inter</string>
+    <key>typographyDisplayXlSemibold</key>
+    <string>600 60px/72px Inter</string>
+    <key>typographyDisplayXlBold</key>
+    <string>700 60px/72px Inter</string>
+    <key>typographyDisplayLgRegular</key>
+    <string>400 48px/60px Inter</string>
+    <key>typographyDisplayLgMedium</key>
+    <string>500 48px/60px Inter</string>
+    <key>typographyDisplayLgSemibold</key>
+    <string>600 48px/60px Inter</string>
+    <key>typographyDisplayLgBold</key>
+    <string>700 48px/60px Inter</string>
+    <key>typographyDisplayMdRegular</key>
+    <string>400 36px/44px Inter</string>
+    <key>typographyDisplayMdMedium</key>
+    <string>500 36px/44px Inter</string>
+    <key>typographyDisplayMdSemibold</key>
+    <string>600 36px/44px Inter</string>
+    <key>typographyDisplayMdBold</key>
+    <string>700 36px/44px Inter</string>
+    <key>typographyDisplaySmRegular</key>
+    <string>400 30px/38px Inter</string>
+    <key>typographyDisplaySmMedium</key>
+    <string>500 30px/38px Inter</string>
+    <key>typographyDisplaySmSemibold</key>
+    <string>600 30px/38px Inter</string>
+    <key>typographyDisplaySmBold</key>
+    <string>700 30px/38px Inter</string>
+    <key>typographyDisplayXsRegular</key>
+    <string>400 24px/32px Inter</string>
+    <key>typographyDisplayXsMedium</key>
+    <string>500 24px/32px Inter</string>
+    <key>typographyDisplayXsSemibold</key>
+    <string>600 24px/32px Inter</string>
+    <key>typographyDisplayXsBold</key>
+    <string>700 24px/32px Inter</string>
+    <key>typographyTextXlRegular</key>
+    <string>400 20px/30px Inter</string>
+    <key>typographyTextXlMedium</key>
+    <string>500 20px/30px Inter</string>
+    <key>typographyTextXlSemibold</key>
+    <string>600 20px/30px Inter</string>
+    <key>typographyTextXlBold</key>
+    <string>700 20px/30px Inter</string>
+    <key>typographyTextLgRegular</key>
+    <string>400 18px/28px Inter</string>
+    <key>typographyTextLgMedium</key>
+    <string>500 18px/28px Inter</string>
+    <key>typographyTextLgSemibold</key>
+    <string>600 18px/28px Inter</string>
+    <key>typographyTextLgBold</key>
+    <string>700 18px/28px Inter</string>
+    <key>typographyTextMdRegular</key>
+    <string>400 16px/24px Inter</string>
+    <key>typographyTextMdMedium</key>
+    <string>500 16px/24px Inter</string>
+    <key>typographyTextMdSemibold</key>
+    <string>600 16px/24px Inter</string>
+    <key>typographyTextMdBold</key>
+    <string>700 16px/24px Inter</string>
+    <key>typographyTextSmRegular</key>
+    <string>400 14px/20px Inter</string>
+    <key>typographyTextSmMedium</key>
+    <string>500 14px/20px Inter</string>
+    <key>typographyTextSmSemibold</key>
+    <string>600 14px/20px Inter</string>
+    <key>typographyTextSmBold</key>
+    <string>700 14px/20px Inter</string>
+    <key>typographyTextXsRegular</key>
+    <string>400 12px/18px Inter</string>
+    <key>typographyTextXsMedium</key>
+    <string>500 12px/18px Inter</string>
+    <key>typographyTextXsSemibold</key>
+    <string>600 12px/18px Inter</string>
+    <key>typographyTextXsBold</key>
+    <string>700 12px/18px Inter</string>
   </dict>
 </plist>
