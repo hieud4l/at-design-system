@@ -2628,70 +2628,70 @@
       <key>b</key> <real>0.050980392156862744</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderSecondaryAlt</key>
+    <key>colorBorderSecondaryAlt</key>
     <dict>
       <key>r</key> <real>0</real>
       <key>g</key> <real>0</real>
       <key>b</key> <real>0</real>
       <key>a</key> <real>0.0784313725490196</real>
     </dict>
-    <key>colorBorderBorderPrimary</key>
+    <key>colorBorderPrimary</key>
     <dict>
       <key>r</key> <real>0.8352941176470589</real>
       <key>g</key> <real>0.8431372549019608</real>
       <key>b</key> <real>0.8549019607843137</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderSecondary</key>
+    <key>colorBorderSecondary</key>
     <dict>
       <key>r</key> <real>0.9137254901960784</real>
       <key>g</key> <real>0.9176470588235294</real>
       <key>b</key> <real>0.9215686274509803</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderTertiary</key>
+    <key>colorBorderTertiary</key>
     <dict>
       <key>r</key> <real>0.9607843137254902</real>
       <key>g</key> <real>0.9607843137254902</real>
       <key>b</key> <real>0.9607843137254902</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderDisabled</key>
+    <key>colorBorderDisabled</key>
     <dict>
       <key>r</key> <real>0.8352941176470589</real>
       <key>g</key> <real>0.8431372549019608</real>
       <key>b</key> <real>0.8549019607843137</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderDisabledSubtle</key>
+    <key>colorBorderDisabledSubtle</key>
     <dict>
       <key>r</key> <real>0.9137254901960784</real>
       <key>g</key> <real>0.9176470588235294</real>
       <key>b</key> <real>0.9215686274509803</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderBrand</key>
+    <key>colorBorderBrand</key>
     <dict>
       <key>r</key> <real>0.6196078431372549</real>
       <key>g</key> <real>0.4666666666666667</real>
       <key>b</key> <real>0.9294117647058824</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderBrandAlt</key>
+    <key>colorBorderBrandAlt</key>
     <dict>
       <key>r</key> <real>0.4980392156862745</real>
       <key>g</key> <real>0.33725490196078434</real>
       <key>b</key> <real>0.8509803921568627</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderError</key>
+    <key>colorBorderError</key>
     <dict>
       <key>r</key> <real>0.9411764705882353</real>
       <key>g</key> <real>0.26666666666666666</real>
       <key>b</key> <real>0.2196078431372549</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBorderBorderErrorSubtle</key>
+    <key>colorBorderErrorSubtle</key>
     <dict>
       <key>r</key> <real>0.9921568627450981</real>
       <key>g</key> <real>0.6352941176470588</real>
@@ -2859,525 +2859,525 @@
       <key>b</key> <real>0.2196078431372549</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextPrimary900</key>
+    <key>colorTextPrimary900</key>
     <dict>
       <key>r</key> <real>0.09411764705882353</real>
       <key>g</key> <real>0.11372549019607843</real>
       <key>b</key> <real>0.15294117647058825</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextPrimaryOnBrand</key>
+    <key>colorTextPrimaryOnBrand</key>
     <dict>
       <key>r</key> <real>1</real>
       <key>g</key> <real>1</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextSecondary700</key>
+    <key>colorTextSecondary700</key>
     <dict>
       <key>r</key> <real>0.2549019607843137</real>
       <key>g</key> <real>0.27450980392156865</real>
       <key>b</key> <real>0.3176470588235294</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextSecondaryHover</key>
+    <key>colorTextSecondaryHover</key>
     <dict>
       <key>r</key> <real>0.1450980392156863</real>
       <key>g</key> <real>0.16862745098039217</real>
       <key>b</key> <real>0.21568627450980393</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextSecondaryOnBrand</key>
+    <key>colorTextSecondaryOnBrand</key>
     <dict>
       <key>r</key> <real>0.9137254901960784</real>
       <key>g</key> <real>0.8431372549019608</real>
       <key>b</key> <real>0.996078431372549</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextTertiary600</key>
+    <key>colorTextTertiary600</key>
     <dict>
       <key>r</key> <real>0.3254901960784314</real>
       <key>g</key> <real>0.34509803921568627</real>
       <key>b</key> <real>0.3843137254901961</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextTertiaryHover</key>
+    <key>colorTextTertiaryHover</key>
     <dict>
       <key>r</key> <real>0.2549019607843137</real>
       <key>g</key> <real>0.27450980392156865</real>
       <key>b</key> <real>0.3176470588235294</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextTertiaryOnBrand</key>
+    <key>colorTextTertiaryOnBrand</key>
     <dict>
       <key>r</key> <real>0.9137254901960784</real>
       <key>g</key> <real>0.8431372549019608</real>
       <key>b</key> <real>0.996078431372549</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextQuaternary500</key>
+    <key>colorTextQuaternary500</key>
     <dict>
       <key>r</key> <real>0.44313725490196076</real>
       <key>g</key> <real>0.4627450980392157</real>
       <key>b</key> <real>0.5019607843137255</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextQuaternaryOnBrand</key>
+    <key>colorTextQuaternaryOnBrand</key>
     <dict>
       <key>r</key> <real>0.8392156862745098</real>
       <key>g</key> <real>0.7333333333333333</real>
       <key>b</key> <real>0.984313725490196</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextWhite</key>
+    <key>colorTextWhite</key>
     <dict>
       <key>r</key> <real>1</real>
       <key>g</key> <real>1</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextDisabled</key>
+    <key>colorTextDisabled</key>
     <dict>
       <key>r</key> <real>0.44313725490196076</real>
       <key>g</key> <real>0.4627450980392157</real>
       <key>b</key> <real>0.5019607843137255</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextPlaceholder</key>
+    <key>colorTextPlaceholder</key>
     <dict>
       <key>r</key> <real>0.44313725490196076</real>
       <key>g</key> <real>0.4627450980392157</real>
       <key>b</key> <real>0.5019607843137255</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextPlaceholderSubtle</key>
+    <key>colorTextPlaceholderSubtle</key>
     <dict>
       <key>r</key> <real>0.8352941176470589</real>
       <key>g</key> <real>0.8431372549019608</real>
       <key>b</key> <real>0.8549019607843137</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextBrandPrimary900</key>
+    <key>colorTextBrandPrimary900</key>
     <dict>
       <key>r</key> <real>0.25882352941176473</real>
       <key>g</key> <real>0.18823529411764706</real>
       <key>b</key> <real>0.49019607843137253</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextBrandSecondary700</key>
+    <key>colorTextBrandSecondary700</key>
     <dict>
       <key>r</key> <real>0.4117647058823529</real>
       <key>g</key> <real>0.2549019607843137</real>
       <key>b</key> <real>0.7764705882352941</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextBrandSecondaryHover</key>
+    <key>colorTextBrandSecondaryHover</key>
     <dict>
       <key>r</key> <real>0.3254901960784314</real>
       <key>g</key> <real>0.2196078431372549</real>
       <key>b</key> <real>0.6196078431372549</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextBrandTertiary600</key>
+    <key>colorTextBrandTertiary600</key>
     <dict>
       <key>r</key> <real>0.4980392156862745</real>
       <key>g</key> <real>0.33725490196078434</real>
       <key>b</key> <real>0.8509803921568627</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextBrandTertiaryAlt</key>
+    <key>colorTextBrandTertiaryAlt</key>
     <dict>
       <key>r</key> <real>0.4980392156862745</real>
       <key>g</key> <real>0.33725490196078434</real>
       <key>b</key> <real>0.8509803921568627</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextErrorPrimary600</key>
+    <key>colorTextErrorPrimary600</key>
     <dict>
       <key>r</key> <real>0.8509803921568627</real>
       <key>g</key> <real>0.17647058823529413</real>
       <key>b</key> <real>0.12549019607843137</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextErrorPrimaryHover</key>
+    <key>colorTextErrorPrimaryHover</key>
     <dict>
       <key>r</key> <real>0.7058823529411765</real>
       <key>g</key> <real>0.13725490196078433</real>
       <key>b</key> <real>0.09411764705882353</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextWarningPrimary600</key>
+    <key>colorTextWarningPrimary600</key>
     <dict>
       <key>r</key> <real>0.8627450980392157</real>
       <key>g</key> <real>0.40784313725490196</real>
       <key>b</key> <real>0.011764705882352941</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorTextTextSuccessPrimary600</key>
+    <key>colorTextSuccessPrimary600</key>
     <dict>
       <key>r</key> <real>0.027450980392156862</real>
       <key>g</key> <real>0.5803921568627451</real>
       <key>b</key> <real>0.3333333333333333</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgPrimary900</key>
+    <key>colorForegroundPrimary900</key>
     <dict>
       <key>r</key> <real>0.09411764705882353</real>
       <key>g</key> <real>0.11372549019607843</real>
       <key>b</key> <real>0.15294117647058825</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgSecondary700</key>
+    <key>colorForegroundSecondary700</key>
     <dict>
       <key>r</key> <real>0.2549019607843137</real>
       <key>g</key> <real>0.27450980392156865</real>
       <key>b</key> <real>0.3176470588235294</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgSecondaryHover</key>
+    <key>colorForegroundSecondaryHover</key>
     <dict>
       <key>r</key> <real>0.1450980392156863</real>
       <key>g</key> <real>0.16862745098039217</real>
       <key>b</key> <real>0.21568627450980393</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgTertiary600</key>
+    <key>colorForegroundTertiary600</key>
     <dict>
       <key>r</key> <real>0.3254901960784314</real>
       <key>g</key> <real>0.34509803921568627</real>
       <key>b</key> <real>0.3843137254901961</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgTertiaryHover</key>
+    <key>colorForegroundTertiaryHover</key>
     <dict>
       <key>r</key> <real>0.2549019607843137</real>
       <key>g</key> <real>0.27450980392156865</real>
       <key>b</key> <real>0.3176470588235294</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgQuaternary400</key>
+    <key>colorForegroundQuaternary400</key>
     <dict>
       <key>r</key> <real>0.6431372549019608</real>
       <key>g</key> <real>0.6549019607843137</real>
       <key>b</key> <real>0.6823529411764706</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgQuaternaryHover</key>
+    <key>colorForegroundQuaternaryHover</key>
     <dict>
       <key>r</key> <real>0.44313725490196076</real>
       <key>g</key> <real>0.4627450980392157</real>
       <key>b</key> <real>0.5019607843137255</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgWhite</key>
+    <key>colorForegroundWhite</key>
     <dict>
       <key>r</key> <real>1</real>
       <key>g</key> <real>1</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgDisabled</key>
+    <key>colorForegroundDisabled</key>
     <dict>
       <key>r</key> <real>0.6431372549019608</real>
       <key>g</key> <real>0.6549019607843137</real>
       <key>b</key> <real>0.6823529411764706</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgDisabledSubtle</key>
+    <key>colorForegroundDisabledSubtle</key>
     <dict>
       <key>r</key> <real>0.8352941176470589</real>
       <key>g</key> <real>0.8431372549019608</real>
       <key>b</key> <real>0.8549019607843137</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgBrandPrimary600</key>
+    <key>colorForegroundBrandPrimary600</key>
     <dict>
       <key>r</key> <real>0.4980392156862745</real>
       <key>g</key> <real>0.33725490196078434</real>
       <key>b</key> <real>0.8509803921568627</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgBrandPrimaryAlt</key>
+    <key>colorForegroundBrandPrimaryAlt</key>
     <dict>
       <key>r</key> <real>0.4980392156862745</real>
       <key>g</key> <real>0.33725490196078434</real>
       <key>b</key> <real>0.8509803921568627</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgBrandSecondary500</key>
+    <key>colorForegroundBrandSecondary500</key>
     <dict>
       <key>r</key> <real>0.6196078431372549</real>
       <key>g</key> <real>0.4666666666666667</real>
       <key>b</key> <real>0.9294117647058824</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgBrandSecondaryAlt</key>
+    <key>colorForegroundBrandSecondaryAlt</key>
     <dict>
       <key>r</key> <real>0.6196078431372549</real>
       <key>g</key> <real>0.4666666666666667</real>
       <key>b</key> <real>0.9294117647058824</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgBrandSecondaryHover</key>
+    <key>colorForegroundBrandSecondaryHover</key>
     <dict>
       <key>r</key> <real>0.4980392156862745</real>
       <key>g</key> <real>0.33725490196078434</real>
       <key>b</key> <real>0.8509803921568627</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgErrorPrimary</key>
+    <key>colorForegroundErrorPrimary</key>
     <dict>
       <key>r</key> <real>0.8509803921568627</real>
       <key>g</key> <real>0.17647058823529413</real>
       <key>b</key> <real>0.12549019607843137</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgErrorSecondary</key>
+    <key>colorForegroundErrorSecondary</key>
     <dict>
       <key>r</key> <real>0.9411764705882353</real>
       <key>g</key> <real>0.26666666666666666</real>
       <key>b</key> <real>0.2196078431372549</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgWarningPrimary</key>
+    <key>colorForegroundWarningPrimary</key>
     <dict>
       <key>r</key> <real>0.8627450980392157</real>
       <key>g</key> <real>0.40784313725490196</real>
       <key>b</key> <real>0.011764705882352941</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgWarningSecondary</key>
+    <key>colorForegroundWarningSecondary</key>
     <dict>
       <key>r</key> <real>0.9686274509803922</real>
       <key>g</key> <real>0.5647058823529412</real>
       <key>b</key> <real>0.03529411764705882</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgSuccessPrimary</key>
+    <key>colorForegroundSuccessPrimary</key>
     <dict>
       <key>r</key> <real>0.027450980392156862</real>
       <key>g</key> <real>0.5803921568627451</real>
       <key>b</key> <real>0.3333333333333333</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorForegroundFgSuccessSecondary</key>
+    <key>colorForegroundSuccessSecondary</key>
     <dict>
       <key>r</key> <real>0.09019607843137255</real>
       <key>g</key> <real>0.6980392156862745</real>
       <key>b</key> <real>0.41568627450980394</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgBrandSolid</key>
+    <key>colorBackgroundBrandSolid</key>
     <dict>
       <key>r</key> <real>0.4980392156862745</real>
       <key>g</key> <real>0.33725490196078434</real>
       <key>b</key> <real>0.8509803921568627</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgBrandSolidHover</key>
+    <key>colorBackgroundBrandSolidHover</key>
     <dict>
       <key>r</key> <real>0.4117647058823529</real>
       <key>g</key> <real>0.2549019607843137</real>
       <key>b</key> <real>0.7764705882352941</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgPrimary</key>
+    <key>colorBackgroundPrimary</key>
     <dict>
       <key>r</key> <real>1</real>
       <key>g</key> <real>1</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgPrimaryAlt</key>
+    <key>colorBackgroundPrimaryAlt</key>
     <dict>
       <key>r</key> <real>1</real>
       <key>g</key> <real>1</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgPrimaryHover</key>
+    <key>colorBackgroundPrimaryHover</key>
     <dict>
       <key>r</key> <real>0.9803921568627451</real>
       <key>g</key> <real>0.9803921568627451</real>
       <key>b</key> <real>0.9803921568627451</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgPrimarySolid</key>
+    <key>colorBackgroundPrimarySolid</key>
     <dict>
       <key>r</key> <real>0.0392156862745098</real>
       <key>g</key> <real>0.050980392156862744</real>
       <key>b</key> <real>0.07058823529411765</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSecondary</key>
+    <key>colorBackgroundSecondary</key>
     <dict>
       <key>r</key> <real>0.9803921568627451</real>
       <key>g</key> <real>0.9803921568627451</real>
       <key>b</key> <real>0.9803921568627451</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSecondaryAlt</key>
+    <key>colorBackgroundSecondaryAlt</key>
     <dict>
       <key>r</key> <real>0.9803921568627451</real>
       <key>g</key> <real>0.9803921568627451</real>
       <key>b</key> <real>0.9803921568627451</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSecondaryHover</key>
+    <key>colorBackgroundSecondaryHover</key>
     <dict>
       <key>r</key> <real>0.9607843137254902</real>
       <key>g</key> <real>0.9607843137254902</real>
       <key>b</key> <real>0.9607843137254902</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSecondarySubtle</key>
+    <key>colorBackgroundSecondarySubtle</key>
     <dict>
       <key>r</key> <real>0.9921568627450981</real>
       <key>g</key> <real>0.9921568627450981</real>
       <key>b</key> <real>0.9921568627450981</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSecondarySolid</key>
+    <key>colorBackgroundSecondarySolid</key>
     <dict>
       <key>r</key> <real>0.3254901960784314</real>
       <key>g</key> <real>0.34509803921568627</real>
       <key>b</key> <real>0.3843137254901961</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgTertiary</key>
+    <key>colorBackgroundTertiary</key>
     <dict>
       <key>r</key> <real>0.9607843137254902</real>
       <key>g</key> <real>0.9607843137254902</real>
       <key>b</key> <real>0.9607843137254902</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgQuaternary</key>
+    <key>colorBackgroundQuaternary</key>
     <dict>
       <key>r</key> <real>0.9137254901960784</real>
       <key>g</key> <real>0.9176470588235294</real>
       <key>b</key> <real>0.9215686274509803</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgActive</key>
+    <key>colorBackgroundActive</key>
     <dict>
       <key>r</key> <real>0.9803921568627451</real>
       <key>g</key> <real>0.9803921568627451</real>
       <key>b</key> <real>0.9803921568627451</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgDisabled</key>
+    <key>colorBackgroundDisabled</key>
     <dict>
       <key>r</key> <real>0.9607843137254902</real>
       <key>g</key> <real>0.9607843137254902</real>
       <key>b</key> <real>0.9607843137254902</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgDisabledSubtle</key>
+    <key>colorBackgroundDisabledSubtle</key>
     <dict>
       <key>r</key> <real>0.9803921568627451</real>
       <key>g</key> <real>0.9803921568627451</real>
       <key>b</key> <real>0.9803921568627451</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgOverlay</key>
+    <key>colorBackgroundOverlay</key>
     <dict>
       <key>r</key> <real>0.0392156862745098</real>
       <key>g</key> <real>0.050980392156862744</real>
       <key>b</key> <real>0.07058823529411765</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgBrandPrimary</key>
+    <key>colorBackgroundBrandPrimary</key>
     <dict>
       <key>r</key> <real>0.9764705882352941</real>
       <key>g</key> <real>0.9607843137254902</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgBrandPrimaryAlt</key>
+    <key>colorBackgroundBrandPrimaryAlt</key>
     <dict>
       <key>r</key> <real>0.9764705882352941</real>
       <key>g</key> <real>0.9607843137254902</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgBrandSecondary</key>
+    <key>colorBackgroundBrandSecondary</key>
     <dict>
       <key>r</key> <real>0.9568627450980393</real>
       <key>g</key> <real>0.9215686274509803</real>
       <key>b</key> <real>1</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgBrandSection</key>
+    <key>colorBackgroundBrandSection</key>
     <dict>
       <key>r</key> <real>0.3254901960784314</real>
       <key>g</key> <real>0.2196078431372549</real>
       <key>b</key> <real>0.6196078431372549</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgBrandSectionSubtle</key>
+    <key>colorBackgroundBrandSectionSubtle</key>
     <dict>
       <key>r</key> <real>0.4117647058823529</real>
       <key>g</key> <real>0.2549019607843137</real>
       <key>b</key> <real>0.7764705882352941</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgErrorPrimary</key>
+    <key>colorBackgroundErrorPrimary</key>
     <dict>
       <key>r</key> <real>0.996078431372549</real>
       <key>g</key> <real>0.9529411764705882</real>
       <key>b</key> <real>0.9490196078431372</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgErrorSecondary</key>
+    <key>colorBackgroundErrorSecondary</key>
     <dict>
       <key>r</key> <real>0.996078431372549</real>
       <key>g</key> <real>0.8941176470588236</real>
       <key>b</key> <real>0.8862745098039215</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgErrorSolid</key>
+    <key>colorBackgroundErrorSolid</key>
     <dict>
       <key>r</key> <real>0.8509803921568627</real>
       <key>g</key> <real>0.17647058823529413</real>
       <key>b</key> <real>0.12549019607843137</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgWarningPrimary</key>
+    <key>colorBackgroundWarningPrimary</key>
     <dict>
       <key>r</key> <real>1</real>
       <key>g</key> <real>0.9803921568627451</real>
       <key>b</key> <real>0.9215686274509803</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgWarningSecondary</key>
+    <key>colorBackgroundWarningSecondary</key>
     <dict>
       <key>r</key> <real>0.996078431372549</real>
       <key>g</key> <real>0.9411764705882353</real>
       <key>b</key> <real>0.7803921568627451</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgWarningSolid</key>
+    <key>colorBackgroundWarningSolid</key>
     <dict>
       <key>r</key> <real>0.8627450980392157</real>
       <key>g</key> <real>0.40784313725490196</real>
       <key>b</key> <real>0.011764705882352941</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSuccessPrimary</key>
+    <key>colorBackgroundSuccessPrimary</key>
     <dict>
       <key>r</key> <real>0.9254901960784314</real>
       <key>g</key> <real>0.9921568627450981</real>
       <key>b</key> <real>0.9529411764705882</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSuccessSecondary</key>
+    <key>colorBackgroundSuccessSecondary</key>
     <dict>
       <key>r</key> <real>0.8627450980392157</real>
       <key>g</key> <real>0.9803921568627451</real>
       <key>b</key> <real>0.9019607843137255</real>
       <key>a</key> <real>1</real>
     </dict>
-    <key>colorBackgroundBgSuccessSolid</key>
+    <key>colorBackgroundSuccessSolid</key>
     <dict>
       <key>r</key> <real>0.027450980392156862</real>
       <key>g</key> <real>0.5803921568627451</real>
