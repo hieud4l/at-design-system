@@ -150,7 +150,7 @@ export default {
     'css-dark': {
       transformGroup: 'css',
       buildPath: 'build/css/',
-      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      include: ['tokens/color.json'],
       source: ['tokens/color/dark.json'],
       files: [
         {
@@ -181,7 +181,7 @@ export default {
     'scss-dark': {
       transformGroup: 'scss',
       buildPath: 'build/scss/',
-      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      include: ['tokens/color.json'],
       source: ['tokens/color/dark.json'],
       files: [
         {
@@ -213,7 +213,7 @@ export default {
     'js-dark': {
       transformGroup: 'js',
       buildPath: 'build/js/',
-      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      include: ['tokens/color.json'],
       source: ['tokens/color/dark.json'],
       files: [
         {
@@ -237,7 +237,7 @@ export default {
     'json-dark': {
       transformGroup: 'js',
       buildPath: 'build/json/',
-      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      include: ['tokens/color.json'],
       source: ['tokens/color/dark.json'],
       files: [
         {
@@ -351,7 +351,7 @@ export default {
     'android-dark': {
       transformGroup: 'android',
       buildPath: 'build/android-night/',
-      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      include: ['tokens/color.json'],
       source: ['tokens/color/dark.json'],
       files: [
         {
@@ -393,7 +393,7 @@ export default {
     'compose-dark': {
       transformGroup: 'compose',
       buildPath: 'build/compose/',
-      include: ['tokens/color/base.json', 'tokens/color/semantic.json'],
+      include: ['tokens/color.json'],
       source: ['tokens/color/dark.json'],
       files: [
         {
