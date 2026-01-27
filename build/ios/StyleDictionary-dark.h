@@ -9,10 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define BlurBackdropSm blur(8px)
-#define BlurBackdropMd2 blur(16px)
-#define BlurBackdropLg3 blur(24px)
-#define BlurBackdropXl4 blur(40px)
 #define ColorBaseWhite [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:1.000f]
 #define ColorBaseBlack [UIColor colorWithRed:0.000f green:0.000f blue:0.000f alpha:1.000f]
 #define ColorBaseTransparent [UIColor colorWithRed:1.000f green:1.000f blue:1.000f alpha:0.000f]
@@ -802,6 +798,68 @@
 #define DimensionLayoutContainerPaddingDesktop 32.00f
 #define DimensionLayoutContainerMaxWidthDesktop 1280.00f
 #define DimensionLayoutParagraphMaxWidth 720.00f
+#define TypographyDisplay2xlRegular 400 72px/90px Inter
+#define TypographyDisplay2xlMedium 500 72px/90px Inter
+#define TypographyDisplay2xlSemibold 600 72px/90px Inter
+#define TypographyDisplay2xlBold 700 72px/90px Inter
+#define TypographyDisplayXlRegular 400 60px/72px Inter
+#define TypographyDisplayXlMedium 500 60px/72px Inter
+#define TypographyDisplayXlSemibold 600 60px/72px Inter
+#define TypographyDisplayXlBold 700 60px/72px Inter
+#define TypographyDisplayLgRegular 400 48px/60px Inter
+#define TypographyDisplayLgMedium 500 48px/60px Inter
+#define TypographyDisplayLgSemibold 600 48px/60px Inter
+#define TypographyDisplayLgBold 700 48px/60px Inter
+#define TypographyDisplayMdRegular 400 36px/44px Inter
+#define TypographyDisplayMdMedium 500 36px/44px Inter
+#define TypographyDisplayMdSemibold 600 36px/44px Inter
+#define TypographyDisplayMdBold 700 36px/44px Inter
+#define TypographyDisplaySmRegular 400 30px/38px Inter
+#define TypographyDisplaySmMedium 500 30px/38px Inter
+#define TypographyDisplaySmSemibold 600 30px/38px Inter
+#define TypographyDisplaySmBold 700 30px/38px Inter
+#define TypographyDisplayXsRegular 400 24px/32px Inter
+#define TypographyDisplayXsMedium 500 24px/32px Inter
+#define TypographyDisplayXsSemibold 600 24px/32px Inter
+#define TypographyDisplayXsBold 700 24px/32px Inter
+#define TypographyTextXlRegular 400 20px/30px Inter
+#define TypographyTextXlMedium 500 20px/30px Inter
+#define TypographyTextXlSemibold 600 20px/30px Inter
+#define TypographyTextXlBold 700 20px/30px Inter
+#define TypographyTextLgRegular 400 18px/28px Inter
+#define TypographyTextLgMedium 500 18px/28px Inter
+#define TypographyTextLgSemibold 600 18px/28px Inter
+#define TypographyTextLgBold 700 18px/28px Inter
+#define TypographyTextMdRegular 400 16px/24px Inter
+#define TypographyTextMdMedium 500 16px/24px Inter
+#define TypographyTextMdSemibold 600 16px/24px Inter
+#define TypographyTextMdBold 700 16px/24px Inter
+#define TypographyTextSmRegular 400 14px/20px Inter
+#define TypographyTextSmMedium 500 14px/20px Inter
+#define TypographyTextSmSemibold 600 14px/20px Inter
+#define TypographyTextSmBold 700 14px/20px Inter
+#define TypographyTextXsRegular 400 12px/18px Inter
+#define TypographyTextXsMedium 500 12px/18px Inter
+#define TypographyTextXsSemibold 600 12px/18px Inter
+#define TypographyTextXsBold 700 12px/18px Inter
+#define BlurBackdropSm blur(8px)
+#define BlurBackdropMd2 blur(16px)
+#define BlurBackdropLg3 blur(24px)
+#define BlurBackdropXl4 blur(40px)
+#define StringFontFamilyDisplay Inter
+#define StringFontFamilyDisplay2 Xanh Display 2.0
+#define StringFontFamilyBody Inter
+#define StringFontFamilyBody2 Xanh Display 2.0
+#define StringFontFamilyDisplay3 Lexend
+#define StringFontFamilyBody3 Lexend
+#define StringFontWeightRegular Regular
+#define StringFontWeightRegularItalic Regular italic
+#define StringFontWeightMedium Medium
+#define StringFontWeightMediumItalic Medium italic
+#define StringFontWeightSemibold Semibold
+#define StringFontWeightSemiboldItalic Semibold italic
+#define StringFontWeightBold Bold
+#define StringFontWeightBoldItalic Bold italic
 #define GradientSkeuemorphicGradientBorder linear-gradient(180deg, #ffffff1f 0%, #ffffff00 100%)
 #define GradientGray60050090deg linear-gradient(90deg, #535862 0%, #717680 100%)
 #define GradientGray70060045deg linear-gradient(45deg, #414651 0%, #535862 100%)
@@ -933,61 +991,3 @@
 #define ShadowFocusRingsError 0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff
 #define ShadowFocusRingsErrorXs 0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d
 #define ShadowFocusRingsErrorXsSkeuomorphic 0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e
-#define StringFontFamilyDisplay Inter
-#define StringFontFamilyDisplay2 Xanh Display 2.0
-#define StringFontFamilyBody Inter
-#define StringFontFamilyBody2 Xanh Display 2.0
-#define StringFontFamilyDisplay3 Lexend
-#define StringFontFamilyBody3 Lexend
-#define StringFontWeightRegular Regular
-#define StringFontWeightRegularItalic Regular italic
-#define StringFontWeightMedium Medium
-#define StringFontWeightMediumItalic Medium italic
-#define StringFontWeightSemibold Semibold
-#define StringFontWeightSemiboldItalic Semibold italic
-#define StringFontWeightBold Bold
-#define StringFontWeightBoldItalic Bold italic
-#define TypographyDisplay2xlRegular 400 72px/90px Inter
-#define TypographyDisplay2xlMedium 500 72px/90px Inter
-#define TypographyDisplay2xlSemibold 600 72px/90px Inter
-#define TypographyDisplay2xlBold 700 72px/90px Inter
-#define TypographyDisplayXlRegular 400 60px/72px Inter
-#define TypographyDisplayXlMedium 500 60px/72px Inter
-#define TypographyDisplayXlSemibold 600 60px/72px Inter
-#define TypographyDisplayXlBold 700 60px/72px Inter
-#define TypographyDisplayLgRegular 400 48px/60px Inter
-#define TypographyDisplayLgMedium 500 48px/60px Inter
-#define TypographyDisplayLgSemibold 600 48px/60px Inter
-#define TypographyDisplayLgBold 700 48px/60px Inter
-#define TypographyDisplayMdRegular 400 36px/44px Inter
-#define TypographyDisplayMdMedium 500 36px/44px Inter
-#define TypographyDisplayMdSemibold 600 36px/44px Inter
-#define TypographyDisplayMdBold 700 36px/44px Inter
-#define TypographyDisplaySmRegular 400 30px/38px Inter
-#define TypographyDisplaySmMedium 500 30px/38px Inter
-#define TypographyDisplaySmSemibold 600 30px/38px Inter
-#define TypographyDisplaySmBold 700 30px/38px Inter
-#define TypographyDisplayXsRegular 400 24px/32px Inter
-#define TypographyDisplayXsMedium 500 24px/32px Inter
-#define TypographyDisplayXsSemibold 600 24px/32px Inter
-#define TypographyDisplayXsBold 700 24px/32px Inter
-#define TypographyTextXlRegular 400 20px/30px Inter
-#define TypographyTextXlMedium 500 20px/30px Inter
-#define TypographyTextXlSemibold 600 20px/30px Inter
-#define TypographyTextXlBold 700 20px/30px Inter
-#define TypographyTextLgRegular 400 18px/28px Inter
-#define TypographyTextLgMedium 500 18px/28px Inter
-#define TypographyTextLgSemibold 600 18px/28px Inter
-#define TypographyTextLgBold 700 18px/28px Inter
-#define TypographyTextMdRegular 400 16px/24px Inter
-#define TypographyTextMdMedium 500 16px/24px Inter
-#define TypographyTextMdSemibold 600 16px/24px Inter
-#define TypographyTextMdBold 700 16px/24px Inter
-#define TypographyTextSmRegular 400 14px/20px Inter
-#define TypographyTextSmMedium 500 14px/20px Inter
-#define TypographyTextSmSemibold 600 14px/20px Inter
-#define TypographyTextSmBold 700 14px/20px Inter
-#define TypographyTextXsRegular 400 12px/18px Inter
-#define TypographyTextXsMedium 500 12px/18px Inter
-#define TypographyTextXsSemibold 600 12px/18px Inter
-#define TypographyTextXsBold 700 12px/18px Inter

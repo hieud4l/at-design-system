@@ -4,16 +4,18 @@
  */
 
 export default {
-    // Source token files - includes dark overrides
+    // Source token files - base + light semantic + dark overrides
+    // Dark overrides will merge on top of light semantic tokens
     source: [
-        'tokens/blur.json',
-        'tokens/color.json',
-        'tokens/dimension.json',
-        'tokens/gradient.json',
-        'tokens/shadows.json',
-        'tokens/strings.json',
-        'tokens/typography.json',
-        'tokens-dark/color.json'
+        'tokens/base/color-primitives.json',
+        'tokens/base/dimension.json',
+        'tokens/base/typography.json',
+        'tokens/base/blur.json',
+        'tokens/base/strings.json',
+        'tokens/base/gradient.json',
+        'tokens/themes/light/color-semantic.json',  // Base semantic tokens
+        'tokens/themes/light/shadows.json',
+        'tokens/themes/dark/color-semantic.json'    // Dark overrides on top
     ],
 
     // Logging configuration

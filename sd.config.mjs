@@ -82,21 +82,28 @@ const sharedConfig = {
   }
 };
 
+// Base tokens - shared across all themes
+const baseSources = [
+  'tokens/base/color-primitives.json',
+  'tokens/base/dimension.json',
+  'tokens/base/typography.json',
+  'tokens/base/blur.json',
+  'tokens/base/strings.json',
+  'tokens/base/gradient.json'
+];
+
 // Light theme sources
 const lightSources = [
-  'tokens/blur.json',
-  'tokens/color.json',
-  'tokens/dimension.json',
-  'tokens/gradient.json',
-  'tokens/shadows.json',
-  'tokens/strings.json',
-  'tokens/typography.json'
+  ...baseSources,
+  'tokens/themes/light/color-semantic.json',
+  'tokens/themes/light/shadows.json'
 ];
 
 // Dark theme sources (includes dark overrides)
 const darkSources = [
-  ...lightSources,
-  'tokens-dark/color.json'
+  ...baseSources,
+  'tokens/themes/dark/color-semantic.json',
+  'tokens/themes/dark/shadows.json'
 ];
 
 // Platform configurations factory

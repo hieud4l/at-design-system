@@ -4,15 +4,16 @@
  */
 
 export default {
-    // Source token files
+    // Source token files - base + light theme
     source: [
-        'tokens/blur.json',
-        'tokens/color.json',
-        'tokens/dimension.json',
-        'tokens/gradient.json',
-        'tokens/shadows.json',
-        'tokens/strings.json',
-        'tokens/typography.json'
+        'tokens/base/color-primitives.json',
+        'tokens/base/dimension.json',
+        'tokens/base/typography.json',
+        'tokens/base/blur.json',
+        'tokens/base/strings.json',
+        'tokens/base/gradient.json',
+        'tokens/themes/light/color-semantic.json',
+        'tokens/themes/light/shadows.json'
     ],
 
     // Logging configuration

@@ -3,14 +3,6 @@
 <!-- Do not edit directly, this file was auto-generated. -->
 <plist version="1.0">
   <dict>
-    <key>blurBackdropSm</key>
-    <string>blur(8px)</string>
-    <key>blurBackdropMd2</key>
-    <string>blur(16px)</string>
-    <key>blurBackdropLg3</key>
-    <string>blur(24px)</string>
-    <key>blurBackdropXl4</key>
-    <string>blur(40px)</string>
     <key>colorBaseWhite</key>
     <dict>
       <key>r</key> <real>1</real>
@@ -4955,6 +4947,130 @@
     <integer>1280</integer>
     <key>dimensionLayoutParagraphMaxWidth</key>
     <integer>720</integer>
+    <key>typographyDisplay2xlRegular</key>
+    <string>400 72px/90px Inter</string>
+    <key>typographyDisplay2xlMedium</key>
+    <string>500 72px/90px Inter</string>
+    <key>typographyDisplay2xlSemibold</key>
+    <string>600 72px/90px Inter</string>
+    <key>typographyDisplay2xlBold</key>
+    <string>700 72px/90px Inter</string>
+    <key>typographyDisplayXlRegular</key>
+    <string>400 60px/72px Inter</string>
+    <key>typographyDisplayXlMedium</key>
+    <string>500 60px/72px Inter</string>
+    <key>typographyDisplayXlSemibold</key>
+    <string>600 60px/72px Inter</string>
+    <key>typographyDisplayXlBold</key>
+    <string>700 60px/72px Inter</string>
+    <key>typographyDisplayLgRegular</key>
+    <string>400 48px/60px Inter</string>
+    <key>typographyDisplayLgMedium</key>
+    <string>500 48px/60px Inter</string>
+    <key>typographyDisplayLgSemibold</key>
+    <string>600 48px/60px Inter</string>
+    <key>typographyDisplayLgBold</key>
+    <string>700 48px/60px Inter</string>
+    <key>typographyDisplayMdRegular</key>
+    <string>400 36px/44px Inter</string>
+    <key>typographyDisplayMdMedium</key>
+    <string>500 36px/44px Inter</string>
+    <key>typographyDisplayMdSemibold</key>
+    <string>600 36px/44px Inter</string>
+    <key>typographyDisplayMdBold</key>
+    <string>700 36px/44px Inter</string>
+    <key>typographyDisplaySmRegular</key>
+    <string>400 30px/38px Inter</string>
+    <key>typographyDisplaySmMedium</key>
+    <string>500 30px/38px Inter</string>
+    <key>typographyDisplaySmSemibold</key>
+    <string>600 30px/38px Inter</string>
+    <key>typographyDisplaySmBold</key>
+    <string>700 30px/38px Inter</string>
+    <key>typographyDisplayXsRegular</key>
+    <string>400 24px/32px Inter</string>
+    <key>typographyDisplayXsMedium</key>
+    <string>500 24px/32px Inter</string>
+    <key>typographyDisplayXsSemibold</key>
+    <string>600 24px/32px Inter</string>
+    <key>typographyDisplayXsBold</key>
+    <string>700 24px/32px Inter</string>
+    <key>typographyTextXlRegular</key>
+    <string>400 20px/30px Inter</string>
+    <key>typographyTextXlMedium</key>
+    <string>500 20px/30px Inter</string>
+    <key>typographyTextXlSemibold</key>
+    <string>600 20px/30px Inter</string>
+    <key>typographyTextXlBold</key>
+    <string>700 20px/30px Inter</string>
+    <key>typographyTextLgRegular</key>
+    <string>400 18px/28px Inter</string>
+    <key>typographyTextLgMedium</key>
+    <string>500 18px/28px Inter</string>
+    <key>typographyTextLgSemibold</key>
+    <string>600 18px/28px Inter</string>
+    <key>typographyTextLgBold</key>
+    <string>700 18px/28px Inter</string>
+    <key>typographyTextMdRegular</key>
+    <string>400 16px/24px Inter</string>
+    <key>typographyTextMdMedium</key>
+    <string>500 16px/24px Inter</string>
+    <key>typographyTextMdSemibold</key>
+    <string>600 16px/24px Inter</string>
+    <key>typographyTextMdBold</key>
+    <string>700 16px/24px Inter</string>
+    <key>typographyTextSmRegular</key>
+    <string>400 14px/20px Inter</string>
+    <key>typographyTextSmMedium</key>
+    <string>500 14px/20px Inter</string>
+    <key>typographyTextSmSemibold</key>
+    <string>600 14px/20px Inter</string>
+    <key>typographyTextSmBold</key>
+    <string>700 14px/20px Inter</string>
+    <key>typographyTextXsRegular</key>
+    <string>400 12px/18px Inter</string>
+    <key>typographyTextXsMedium</key>
+    <string>500 12px/18px Inter</string>
+    <key>typographyTextXsSemibold</key>
+    <string>600 12px/18px Inter</string>
+    <key>typographyTextXsBold</key>
+    <string>700 12px/18px Inter</string>
+    <key>blurBackdropSm</key>
+    <string>blur(8px)</string>
+    <key>blurBackdropMd2</key>
+    <string>blur(16px)</string>
+    <key>blurBackdropLg3</key>
+    <string>blur(24px)</string>
+    <key>blurBackdropXl4</key>
+    <string>blur(40px)</string>
+    <key>stringFontFamilyDisplay</key>
+    <string>Inter</string>
+    <key>stringFontFamilyDisplay2</key>
+    <string>Xanh Display 2.0</string>
+    <key>stringFontFamilyBody</key>
+    <string>Inter</string>
+    <key>stringFontFamilyBody2</key>
+    <string>Xanh Display 2.0</string>
+    <key>stringFontFamilyDisplay3</key>
+    <string>Lexend</string>
+    <key>stringFontFamilyBody3</key>
+    <string>Lexend</string>
+    <key>stringFontWeightRegular</key>
+    <string>Regular</string>
+    <key>stringFontWeightRegularItalic</key>
+    <string>Regular italic</string>
+    <key>stringFontWeightMedium</key>
+    <string>Medium</string>
+    <key>stringFontWeightMediumItalic</key>
+    <string>Medium italic</string>
+    <key>stringFontWeightSemibold</key>
+    <string>Semibold</string>
+    <key>stringFontWeightSemiboldItalic</key>
+    <string>Semibold italic</string>
+    <key>stringFontWeightBold</key>
+    <string>Bold</string>
+    <key>stringFontWeightBoldItalic</key>
+    <string>Bold italic</string>
     <key>gradientSkeuemorphicGradientBorder</key>
     <string>linear-gradient(180deg, #ffffff1f 0%, #ffffff00 100%)</string>
     <key>gradientGray60050090deg</key>
@@ -5217,121 +5333,5 @@
     <string>0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d</string>
     <key>shadowFocusRingsErrorXsSkeuomorphic</key>
     <string>0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e</string>
-    <key>stringFontFamilyDisplay</key>
-    <string>Inter</string>
-    <key>stringFontFamilyDisplay2</key>
-    <string>Xanh Display 2.0</string>
-    <key>stringFontFamilyBody</key>
-    <string>Inter</string>
-    <key>stringFontFamilyBody2</key>
-    <string>Xanh Display 2.0</string>
-    <key>stringFontFamilyDisplay3</key>
-    <string>Lexend</string>
-    <key>stringFontFamilyBody3</key>
-    <string>Lexend</string>
-    <key>stringFontWeightRegular</key>
-    <string>Regular</string>
-    <key>stringFontWeightRegularItalic</key>
-    <string>Regular italic</string>
-    <key>stringFontWeightMedium</key>
-    <string>Medium</string>
-    <key>stringFontWeightMediumItalic</key>
-    <string>Medium italic</string>
-    <key>stringFontWeightSemibold</key>
-    <string>Semibold</string>
-    <key>stringFontWeightSemiboldItalic</key>
-    <string>Semibold italic</string>
-    <key>stringFontWeightBold</key>
-    <string>Bold</string>
-    <key>stringFontWeightBoldItalic</key>
-    <string>Bold italic</string>
-    <key>typographyDisplay2xlRegular</key>
-    <string>400 72px/90px Inter</string>
-    <key>typographyDisplay2xlMedium</key>
-    <string>500 72px/90px Inter</string>
-    <key>typographyDisplay2xlSemibold</key>
-    <string>600 72px/90px Inter</string>
-    <key>typographyDisplay2xlBold</key>
-    <string>700 72px/90px Inter</string>
-    <key>typographyDisplayXlRegular</key>
-    <string>400 60px/72px Inter</string>
-    <key>typographyDisplayXlMedium</key>
-    <string>500 60px/72px Inter</string>
-    <key>typographyDisplayXlSemibold</key>
-    <string>600 60px/72px Inter</string>
-    <key>typographyDisplayXlBold</key>
-    <string>700 60px/72px Inter</string>
-    <key>typographyDisplayLgRegular</key>
-    <string>400 48px/60px Inter</string>
-    <key>typographyDisplayLgMedium</key>
-    <string>500 48px/60px Inter</string>
-    <key>typographyDisplayLgSemibold</key>
-    <string>600 48px/60px Inter</string>
-    <key>typographyDisplayLgBold</key>
-    <string>700 48px/60px Inter</string>
-    <key>typographyDisplayMdRegular</key>
-    <string>400 36px/44px Inter</string>
-    <key>typographyDisplayMdMedium</key>
-    <string>500 36px/44px Inter</string>
-    <key>typographyDisplayMdSemibold</key>
-    <string>600 36px/44px Inter</string>
-    <key>typographyDisplayMdBold</key>
-    <string>700 36px/44px Inter</string>
-    <key>typographyDisplaySmRegular</key>
-    <string>400 30px/38px Inter</string>
-    <key>typographyDisplaySmMedium</key>
-    <string>500 30px/38px Inter</string>
-    <key>typographyDisplaySmSemibold</key>
-    <string>600 30px/38px Inter</string>
-    <key>typographyDisplaySmBold</key>
-    <string>700 30px/38px Inter</string>
-    <key>typographyDisplayXsRegular</key>
-    <string>400 24px/32px Inter</string>
-    <key>typographyDisplayXsMedium</key>
-    <string>500 24px/32px Inter</string>
-    <key>typographyDisplayXsSemibold</key>
-    <string>600 24px/32px Inter</string>
-    <key>typographyDisplayXsBold</key>
-    <string>700 24px/32px Inter</string>
-    <key>typographyTextXlRegular</key>
-    <string>400 20px/30px Inter</string>
-    <key>typographyTextXlMedium</key>
-    <string>500 20px/30px Inter</string>
-    <key>typographyTextXlSemibold</key>
-    <string>600 20px/30px Inter</string>
-    <key>typographyTextXlBold</key>
-    <string>700 20px/30px Inter</string>
-    <key>typographyTextLgRegular</key>
-    <string>400 18px/28px Inter</string>
-    <key>typographyTextLgMedium</key>
-    <string>500 18px/28px Inter</string>
-    <key>typographyTextLgSemibold</key>
-    <string>600 18px/28px Inter</string>
-    <key>typographyTextLgBold</key>
-    <string>700 18px/28px Inter</string>
-    <key>typographyTextMdRegular</key>
-    <string>400 16px/24px Inter</string>
-    <key>typographyTextMdMedium</key>
-    <string>500 16px/24px Inter</string>
-    <key>typographyTextMdSemibold</key>
-    <string>600 16px/24px Inter</string>
-    <key>typographyTextMdBold</key>
-    <string>700 16px/24px Inter</string>
-    <key>typographyTextSmRegular</key>
-    <string>400 14px/20px Inter</string>
-    <key>typographyTextSmMedium</key>
-    <string>500 14px/20px Inter</string>
-    <key>typographyTextSmSemibold</key>
-    <string>600 14px/20px Inter</string>
-    <key>typographyTextSmBold</key>
-    <string>700 14px/20px Inter</string>
-    <key>typographyTextXsRegular</key>
-    <string>400 12px/18px Inter</string>
-    <key>typographyTextXsMedium</key>
-    <string>500 12px/18px Inter</string>
-    <key>typographyTextXsSemibold</key>
-    <string>600 12px/18px Inter</string>
-    <key>typographyTextXsBold</key>
-    <string>700 12px/18px Inter</string>
   </dict>
 </plist>
