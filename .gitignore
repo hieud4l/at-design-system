@@ -1,5 +1,4 @@
 # Build output
-# build/  # Commented out to include build files in repo
 dist/
 
 # Dependencies
@@ -23,5 +22,9 @@ Thumbs.db
 .env
 .env.local
 
-# Tokens
-tokens-converted/
+# Cache
+.npm-cache/
+
+# Package lock (use root only)
+packages/*/package-lock.json
+\n# Agent files\n.agent/

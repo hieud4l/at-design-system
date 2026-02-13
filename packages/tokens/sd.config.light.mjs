@@ -1,0 +1,278 @@
+/**
+ * Style Dictionary v5 Configuration - Light Theme
+ * @see https://styledictionary.com/versions/v5/
+ */
+
+export default {
+    // Source token files - base + light theme
+    source: [
+        'src/base/color-primitives.json',
+        'src/base/dimension.json',
+        'src/base/typography.json',
+        'src/base/blur.json',
+        'src/base/strings.json',
+        'src/base/gradient.json',
+        'src/themes/light/color-semantic.json',
+        'src/themes/light/shadows.json'
+    ],
+
+    // Logging configuration
+    log: {
+        warnings: 'warn',
+        verbosity: 'default',
+        errors: {
+            brokenReferences: 'warn'
+        }
+    },
+
+    // Preprocessors (v5 feature)
+    preprocessors: ['tokens-studio'],
+
+    // Custom configuration
+    hooks: {
+        transforms: {
+            'size/float': {
+                type: 'value',
+                transitive: true,
+                filter: (token) => {
+                    const isColor = token.type === 'color' || token.path.includes('color');
+                    const isSize = ['dimension', 'fontSize', 'spacing', 'borderRadius', 'borderWidth'].includes(token.type) || token.path.includes('spacing');
+                    return isSize && !isColor;
+                },
+                transform: (token) => {
+                    const val = parseFloat(token.value);
+                    if (isNaN(val)) return token.value;
+                    return `${val.toFixed(2)}f`;
+                }
+            }
+        },
+        formats: {
+            'ios/custom-plist': ({ dictionary, options }) => {
+                const header = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Do not edit directly, this file was auto-generated. -->
+<plist version="1.0">
+  <dict>`;
+                const footer = `  </dict>\n</plist>`;
+
+                const content = dictionary.allTokens
+                    .filter(token => token.value !== undefined && token.value !== null)
+                    .map(token => {
+                        let value = token.value;
+                        if (typeof value !== 'string') {
+                            value = String(value);
+                        }
+                        if (token.type === 'color' || token.path.includes('color')) {
+                            value = value.replace(/\s/g, '');
+                            const hexMatch = value.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i);
+                            if (hexMatch) {
+                                const r = parseInt(hexMatch[1], 16) / 255;
+                                const g = parseInt(hexMatch[2], 16) / 255;
+                                const b = parseInt(hexMatch[3], 16) / 255;
+                                const a = hexMatch[4] ? parseInt(hexMatch[4], 16) / 255 : 1;
+                                return `    <key>${token.name}</key>\n    <dict>\n      <key>r</key> <real>${r}</real>\n      <key>g</key> <real>${g}</real>\n      <key>b</key> <real>${b}</real>\n      <key>a</key> <real>${a}</real>\n    </dict>`;
+                            }
+                        }
+                        const num = parseFloat(value);
+                        if (!isNaN(num) && (token.type === 'dimension' || token.path.includes('spacing') || token.type === 'fontSize' || token.type === 'borderRadius')) {
+                            return `    <key>${token.name}</key>\n    <integer>${num}</integer>`;
+                        }
+                        return `    <key>${token.name}</key>\n    <string>${value}</string>`;
+                    }).join('\n');
+                return header + '\n' + content + '\n' + footer;
+            },
+            'css/variables-themed': ({ dictionary, options, file }) => {
+                const selector = options.selector || ':root';
+                return `${selector} {\n` + dictionary.allTokens.map(token => {
+                    return `  --${token.name}: ${token.value};`;
+                }).join('\n') + `\n}`;
+            }
+        }
+    },
+
+    // Platform-specific outputs
+    platforms: {
+        css: {
+            transformGroup: 'css',
+            buildPath: 'dist/css/',
+            files: [
+                {
+                    destination: 'variables-light.css',
+                    format: 'css/variables-themed',
+                    options: {
+                        outputReferences: true,
+                        selector: ':root, [data-theme="light"]'
+                    }
+                }
+            ]
+        },
+
+        scss: {
+            transformGroup: 'scss',
+            buildPath: 'dist/scss/',
+            files: [
+                {
+                    destination: '_variables-light.scss',
+                    format: 'scss/variables',
+                    options: {
+                        outputReferences: true
+                    }
+                }
+            ]
+        },
+
+        js: {
+            transformGroup: 'js',
+            buildPath: 'dist/js/',
+            files: [
+                {
+                    destination: 'tokens-light.js',
+                    format: 'javascript/es6'
+                },
+                {
+                    destination: 'tokens-light.d.ts',
+                    format: 'typescript/es6-declarations'
+                }
+            ]
+        },
+
+        json: {
+            transformGroup: 'js',
+            buildPath: 'dist/json/',
+            files: [
+                {
+                    destination: 'tokens-light.json',
+                    format: 'json/flat'
+                }
+            ]
+        },
+
+        // iOS Objective-C Header
+        'ios-objc': {
+            buildPath: 'dist/ios/',
+            transforms: ['attribute/cti', 'name/pascal', 'color/UIColor', 'size/float'],
+            files: [
+                {
+                    destination: 'StyleDictionary-light.h',
+                    format: 'ios/macros',
+                    options: {
+                        className: 'StyleDictionary'
+                    },
+                    filter: (token) => token.type !== 'fontFamily'
+                }
+            ]
+        },
+
+        // iOS Plist
+        'ios-plist': {
+            buildPath: 'dist/ios/',
+            transforms: ['attribute/cti', 'name/camel', 'color/hex'],
+            files: [
+                {
+                    destination: 'StyleDictionary-light.plist',
+                    format: 'ios/custom-plist',
+                    options: {
+                        className: 'StyleDictionary'
+                    },
+                    filter: (token) => token.type !== 'fontFamily'
+                }
+            ]
+        },
+
+        // iOS Swift
+        'ios-swift': {
+            transformGroup: 'ios-swift',
+            buildPath: 'dist/ios-swift/',
+            files: [
+                {
+                    destination: 'StyleDictionary-light.swift',
+                    format: 'ios-swift/class.swift',
+                    options: {
+                        className: 'StyleDictionary'
+                    },
+                    filter: (token) => token.type !== 'fontFamily'
+                }
+            ]
+        },
+
+        // iOS SwiftUI
+        'ios-swiftui': {
+            transformGroup: 'ios-swift',
+            buildPath: 'dist/ios-swiftui/',
+            files: [
+                {
+                    destination: 'StyleDictionary+Color-light.swift',
+                    format: 'ios-swift/class.swift',
+                    options: {
+                        className: 'StyleDictionaryColor',
+                        accessControl: 'public'
+                    },
+                    filter: {
+                        type: 'color'
+                    }
+                },
+                {
+                    destination: 'StyleDictionary+Size-light.swift',
+                    format: 'ios-swift/class.swift',
+                    options: {
+                        className: 'StyleDictionarySize',
+                        accessControl: 'public'
+                    },
+                    filter: (token) => token.type === 'dimension' || token.path.includes('spacing')
+                }
+            ]
+        },
+
+        // Android Platform
+        android: {
+            transformGroup: 'android',
+            buildPath: 'dist/android/',
+            files: [
+                {
+                    destination: 'colors-light.xml',
+                    format: 'android/colors'
+                },
+                {
+                    destination: 'dimens-light.xml',
+                    format: 'android/dimens'
+                },
+                {
+                    destination: 'font_dimens-light.xml',
+                    format: 'android/fontDimens'
+                },
+                {
+                    destination: 'integers-light.xml',
+                    format: 'android/integers'
+                }
+            ]
+        },
+
+        // Android Compose
+        'compose': {
+            transformGroup: 'compose',
+            buildPath: 'dist/compose/',
+            files: [
+                {
+                    destination: 'StyleDictionaryColor-light.kt',
+                    format: 'compose/object',
+                    options: {
+                        className: 'StyleDictionaryColor',
+                        packageName: 'com.yourapp.tokens'
+                    },
+                    filter: {
+                        type: 'color'
+                    }
+                },
+                {
+                    destination: 'StyleDictionarySize-light.kt',
+                    format: 'compose/object',
+                    options: {
+                        className: 'StyleDictionarySize',
+                        packageName: 'com.yourapp.tokens'
+                    },
+                    filter: (token) => token.type === 'dimension' || token.path.includes('spacing')
+                }
+            ]
+        }
+    }
+};

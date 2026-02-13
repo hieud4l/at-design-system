@@ -1,22 +1,37 @@
 {
     "name": "at-design-system",
     "version": "1.0.0",
-    "description": "Design system using Style Dictionary v5",
+    "private": true,
+    "description": "AT Design System — Monorepo",
     "type": "module",
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
-        "build": "npm run build:light && npm run build:dark",
-        "build:light": "style-dictionary build --config sd.config.light.mjs",
-        "build:dark": "style-dictionary build --config sd.config.dark.mjs",
-        "build:tokens": "npm run build",
-        "clean": "rm -rf build"
+        "build": "npm run build --workspaces --if-present",
+        "build:tokens": "npm run build --workspace=packages/tokens",
+        "test": "npm run test --workspaces --if-present",
+        "clean": "npm run clean --workspaces --if-present",
+        "lint": "npm run lint --workspaces --if-present"
     },
     "keywords": [
+        "design-system",
         "design-tokens",
-        "style-dictionary"
+        "react",
+        "components",
+        "monorepo"
     ],
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "style-dictionary": "^5.0.0"
+        "@storybook/addon-essentials": "^8.6.14",
+        "@storybook/addon-interactions": "^8.6.14",
+        "@storybook/addon-links": "^8.6.14",
+        "@storybook/blocks": "^8.6.14",
+        "@storybook/react": "^8.6.14",
+        "@storybook/react-vite": "^8.6.14",
+        "@storybook/test": "^8.6.14",
+        "storybook": "^8.6.14",
+        "typescript": "^5.3.3"
     }
 }
