@@ -258,5 +258,5 @@ MIT License
 
 **Created:** 2026-02-07  
 **Version:** 1.0.0  
-**Author:** Hieu Tran  
+**Author:** Ta Hieu  
 **Based on:** AT Design System Specification

@@ -28,3 +28,6 @@ Thumbs.db
 # Package lock (use root only)
 packages/*/package-lock.json
 \n# Agent files\n.agent/
+
+# Storybook
+storybook-static

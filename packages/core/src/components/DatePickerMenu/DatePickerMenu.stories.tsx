@@ -8,7 +8,7 @@ const meta = {
     parameters: {
         layout: 'centered',
     },
-    tags: ['autodocs'],
+
     argTypes: {
         defaultStartDate: {
             control: 'date',
@@ -58,16 +58,17 @@ export const Overview: Story = {
  * The date picker opens with a pre-set date range highlighted.
  */
 export const WithPreselectedDates: Story = {
-    render: (args: DatePickerMenuProps) => {
+    render: () => {
         const today = new Date();
         const sevenDaysAgo = new Date(today);
         sevenDaysAgo.setDate(today.getDate() - 7);
 
         return (
             <DatePickerMenu
-                {...args}
                 defaultStartDate={sevenDaysAgo}
                 defaultEndDate={today}
+                onApply={(start, end) => console.log('Applied:', start, end)}
+                onCancel={() => console.log('Cancelled')}
             />
         );
     },
@@ -78,8 +79,12 @@ export const WithPreselectedDates: Story = {
  * Shows only the dual calendar UI.
  */
 export const WithoutQuickSelections: Story = {
-    render: (args: DatePickerMenuProps) => (
-        <DatePickerMenu {...args} isShowQuickSelections={false} />
+    render: () => (
+        <DatePickerMenu
+            isShowQuickSelections={false}
+            onApply={(start, end) => console.log('Applied:', start, end)}
+            onCancel={() => console.log('Cancelled')}
+        />
     ),
 };
 
@@ -88,7 +93,7 @@ export const WithoutQuickSelections: Story = {
  * Disables dates outside the allowed range.
  */
 export const WithMinMaxDates: Story = {
-    render: (args: DatePickerMenuProps) => {
+    render: () => {
         const today = new Date();
         const minDate = new Date(today);
         minDate.setDate(today.getDate() - 30);
@@ -97,9 +102,10 @@ export const WithMinMaxDates: Story = {
 
         return (
             <DatePickerMenu
-                {...args}
                 minDate={minDate}
                 maxDate={maxDate}
+                onApply={(start, end) => console.log('Applied:', start, end)}
+                onCancel={() => console.log('Cancelled')}
             />
         );
     },
@@ -110,7 +116,7 @@ export const WithMinMaxDates: Story = {
  * Shows small dots beneath dates that have events.
  */
 export const WithEventDots: Story = {
-    render: (args: DatePickerMenuProps) => {
+    render: () => {
         const today = new Date();
         const eventDates = [
             new Date(today.getFullYear(), today.getMonth(), 5),
@@ -121,9 +127,10 @@ export const WithEventDots: Story = {
 
         return (
             <DatePickerMenu
-                {...args}
                 isShowDots={true}
                 eventDates={eventDates}
+                onApply={(start, end) => console.log('Applied:', start, end)}
+                onCancel={() => console.log('Cancelled')}
             />
         );
     },
@@ -134,7 +141,11 @@ export const WithEventDots: Story = {
  * Calendar grid starts with Sunday as the first column.
  */
 export const SundayFirstDay: Story = {
-    render: (args: DatePickerMenuProps) => (
-        <DatePickerMenu {...args} firstDayOfWeek={0} />
+    render: () => (
+        <DatePickerMenu
+            firstDayOfWeek={0}
+            onApply={(start, end) => console.log('Applied:', start, end)}
+            onCancel={() => console.log('Cancelled')}
+        />
     ),
 };

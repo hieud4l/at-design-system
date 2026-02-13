@@ -112,9 +112,65 @@ export const ComplexExample = () => {
 };
 ```
 
-## 7. Anti-Patterns
+## 7. MDX Documentation (`ComponentName.mdx`)
+
+An MDX file **MUST** accompany each `ComponentName.stories.tsx` to provide documentation.
+
+### Template
+
+```mdx
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import * as ComponentStories from "./ComponentName.stories";
+import { ComponentName } from "./index";
+
+<Meta of={ComponentStories} />
+
+# ComponentName
+
+Brief description of the component.
+
+## Import
+
+```tsx
+import { ComponentName } from "@at/core";
+```
+
+## Overview
+
+<Canvas of={ComponentStories.Overview} />
+<Controls of={ComponentStories.Overview} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+### When to use
+- Use case 1
+- Use case 2
+
+## Variants
+
+### Variant Name
+Brief description.
+<Canvas of={ComponentStories.VariantName} />
+
+## Do's and Don'ts
+
+| Do | Don't |
+|----|-------|
+| ✅ Do this... | ❌ Don't do this... |
+```
+
+## 8. Story Design & Styling
+
+- **Inline Styles**: PREFERRED for story layout (e.g., `<div style={{ display: 'flex' }}>`).
+- **No External CSS**: Avoid creating `.scss` files just for stories.
+- **Self-Contained**: Stories should be copy-pasteable examples.
+
+## 9. Anti-Patterns
 
 - ❌ Do NOT use `args` property on individual story objects.
 - ❌ Do NOT use `Template.bind({})` pattern (CSF 2.0 legacy).
 - ❌ Do NOT use `storyName` property — use the export name instead.
-- ❌ Do NOT write inline styles for layout in stories — use simple flex/grid containers only for story layout.
