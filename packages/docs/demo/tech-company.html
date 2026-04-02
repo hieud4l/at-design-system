@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaTech - Công nghệ cho tương lai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AT Design System Tokens -->
+    <link rel="stylesheet" href="../build/css/variables-light.css">
+    <link rel="stylesheet" href="../build/css/variables-dark.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--color-background-primary);
+            color: var(--color-text-primary-900);
+            transition: background 0.3s ease, color 0.3s ease;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 24px;
+            background: var(--color-background-primary);
+            border-bottom: 1px solid var(--color-border-secondary);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .nav-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-brand-600-500-90deg);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text-secondary-700);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-brand-600);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--color-border-primary);
+            background: var(--color-background-secondary);
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .theme-btn:hover {
+            background: var(--color-background-tertiary);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--color-brand-600);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-brand-700);
+        }
+
+        .btn-secondary {
+            background: var(--color-background-secondary);
+            color: var(--color-text-primary-900);
+            border: 1px solid var(--color-border-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-background-tertiary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 24px 80px;
+            background: linear-gradient(180deg, var(--color-background-secondary) 0%, var(--color-background-primary) 100%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--color-brand-50);
+            color: var(--color-brand-700);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        [data-theme="dark"] .hero-badge {
+            background: rgba(127, 86, 217, 0.15);
+            color: var(--color-brand-300);
+        }
+
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: var(--gradient-linear-50);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease infinite;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--color-text-tertiary-600);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-buttons .btn {
+            padding: 14px 28px;
+            font-size: 16px;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 64px;
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--color-brand-600);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--color-text-tertiary-600);
+            margin-top: 4px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 24px;
+            background: var(--color-background-primary);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--color-text-tertiary-600);
+            font-size: 18px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            padding: 32px;
+            background: var(--color-background-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--color-border-secondary);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-brand-200);
+        }
+
+        [data-theme="dark"] .service-card:hover {
+            border-color: var(--color-brand-700);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .service-icon.brand {
+            background: var(--color-brand-100);
+        }
+
+        .service-icon.success {
+            background: var(--color-success-100);
+        }
+
+        .service-icon.warning {
+            background: var(--color-warning-100);
+        }
+
+        .service-icon.error {
+            background: var(--color-error-100);
+        }
+
+        [data-theme="dark"] .service-icon.brand {
+            background: rgba(127, 86, 217, 0.2);
+        }
+
+        [data-theme="dark"] .service-icon.success {
+            background: rgba(23, 178, 106, 0.2);
+        }
+
+        [data-theme="dark"] .service-icon.warning {
+            background: rgba(247, 144, 9, 0.2);
+        }
+
+        [data-theme="dark"] .service-icon.error {
+            background: rgba(240, 68, 56, 0.2);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--color-text-tertiary-600);
+            font-size: 15px;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 100px 24px;
+            background: var(--color-background-secondary);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--color-background-primary);
+            border-radius: 16px;
+            border: 1px solid var(--color-border-tertiary);
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--gradient-brand-600-500-90deg);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+        }
+
+        .team-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .team-card .role {
+            color: var(--color-brand-600);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .team-card .bio {
+            color: var(--color-text-tertiary-600);
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 24px;
+            background: var(--gradient-brand-600-500-90deg);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+
+        .cta .btn {
+            background: white;
+            color: var(--color-brand-700);
+        }
+
+        .cta .btn:hover {
+            background: var(--color-brand-50);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 48px 24px;
+            background: var(--color-background-primary);
+            border-top: 1px solid var(--color-border-secondary);
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--color-text-tertiary-600);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .stats {
+                gap: 32px;
+            }
+
+            .stat-value {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="nav-logo-icon">N</div>
+                <span>NexaTech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#team">Đội ngũ</a></li>
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-btn" onclick="toggleTheme()" id="theme-btn">☀️</button>
+                <button class="btn btn-primary">Liên hệ ngay</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <span class="hero-badge">🚀 Tiên phong công nghệ</span>
+            <h1>Xây dựng tương lai<br>bằng công nghệ</h1>
+            <p>NexaTech cung cấp giải pháp công nghệ tiên tiến giúp doanh nghiệp số hóa, tối ưu vận hành và phát triển
+                bền vững.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Khám phá ngay</button>
+                <button class="btn btn-secondary">Xem case study</button>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Dự án thành công</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Chuyên gia công nghệ</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">Khách hàng hài lòng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Dịch vụ của chúng tôi</h2>
+                <p>Các giải pháp công nghệ toàn diện cho mọi nhu cầu của doanh nghiệp</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon brand">💻</div>
+                    <h3>Phát triển phần mềm</h3>
+                    <p>Xây dựng phần mềm tùy chỉnh theo yêu cầu với công nghệ hiện đại nhất.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon success">☁️</div>
+                    <h3>Giải pháp Cloud</h3>
+                    <p>Di chuyển và tối ưu hạ tầng trên AWS, Azure, Google Cloud.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon warning">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Ứng dụng AI để tự động hóa quy trình và tăng hiệu suất kinh doanh.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon error">🔒</div>
+                    <h3>Bảo mật & An ninh</h3>
+                    <p>Bảo vệ dữ liệu và hệ thống khỏi các mối đe dọa an ninh mạng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team" id="team">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Đội ngũ lãnh đạo</h2>
+                <p>Những chuyên gia đứng sau thành công của NexaTech</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💼</div>
+                    <h4>Nguyễn Văn An</h4>
+                    <div class="role">CEO & Founder</div>
+                    <p class="bio">15 năm kinh nghiệm trong lĩnh vực công nghệ và khởi nghiệp.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💻</div>
+                    <h4>Trần Thị Bình</h4>
+                    <div class="role">CTO</div>
+                    <p class="bio">Chuyên gia về kiến trúc hệ thống và phát triển sản phẩm.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👨‍🎨</div>
+                    <h4>Lê Minh Châu</h4>
+                    <div class="role">Head of Design</div>
+                    <p class="bio">Đam mê tạo ra trải nghiệm người dùng xuất sắc.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👩‍🔬</div>
+                    <h4>Phạm Thu Dung</h4>
+                    <div class="role">Head of AI</div>
+                    <p class="bio">Tiến sĩ AI với nhiều công trình nghiên cứu quốc tế.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Sẵn sàng chuyển đổi số?</h2>
+        <p>Hãy để NexaTech đồng hành cùng bạn trong hành trình số hóa doanh nghiệp.</p>
+        <button class="btn">Liên hệ tư vấn miễn phí</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 NexaTech. Tất cả quyền được bảo lưu. | Powered by AT Design System</p>
+    </footer>
+
+    <script>
+        let isDark = false;
+
+        function toggleTheme() {
+            isDark = !isDark;
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+            document.getElementById('theme-btn').textContent = isDark ? '🌙' : '☀️';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        // Auto-detect theme
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) {
+                toggleTheme();
+            }
+        })();
+    </script>
+</body>
+
+</html>

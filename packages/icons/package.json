@@ -1,0 +1,67 @@
+{
+    "name": "@at/icons",
+    "version": "1.0.0",
+    "description": "AT Design System — Icon Library (Untitled UI Icons PRO)",
+    "type": "module",
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": {
+            "import": "./src/index.ts",
+            "types": "./src/index.ts"
+        },
+        "./line": {
+            "import": "./src/line.ts",
+            "types": "./src/line.ts"
+        },
+        "./solid": {
+            "import": "./src/solid.ts",
+            "types": "./src/solid.ts"
+        },
+        "./duocolor": {
+            "import": "./src/duocolor.ts",
+            "types": "./src/duocolor.ts"
+        },
+        "./duotone": {
+            "import": "./src/duotone.ts",
+            "types": "./src/duotone.ts"
+        },
+        "./types": {
+            "import": "./src/types.ts",
+            "types": "./src/types.ts"
+        },
+        "./react": {
+            "import": "./src/react/index.ts",
+            "types": "./src/react/index.ts"
+        }
+    },
+    "files": [
+        "src",
+        "dist"
+    ],
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf dist",
+        "build": "npm run clean && npm run optimize-icons && npm run build:icons && npm run generate-lazy-icons && npm run generate-svg-index",
+        "optimize-icons": "svgo -f src/svg -o src/svg",
+        "build:icons": "svg2react-icon --typescript --keep-colors src/svg/ src/react/ --no-sub-dir",
+        "validate-icons": "node scripts/validate-icons-colors.js",
+        "generate-lazy-icons": "node scripts/generate-lazy-icons.js",
+        "generate-svg-index": "node scripts/generate-svg-index.js"
+    },
+    "dependencies": {
+        "@untitledui-pro/icons": "latest"
+    },
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "chalk": "^5.6.2",
+        "fs-extra": "^11.3.3",
+        "globby": "^16.1.1",
+        "svg2react-icon": "^3.1.178",
+        "svgo": "^4.0.0",
+        "typescript": "^5.3.3"
+    }
+}

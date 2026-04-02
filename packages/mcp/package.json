@@ -1,0 +1,7 @@
+{
+    "name": "@at/mcp",
+    "version": "0.1.0",
+    "private": true,
+    "description": "AT Design System — MCP server for AI-assisted development (future)",
+    "scripts": {}
+}

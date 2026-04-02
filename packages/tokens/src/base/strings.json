@@ -1,0 +1,64 @@
+{
+    "string": {
+        "font-family": {
+            "display": {
+                "value": "Inter",
+                "type": "string"
+            },
+            "display-2": {
+                "value": "Xanh Display 2.0",
+                "type": "string"
+            },
+            "body": {
+                "value": "Inter",
+                "type": "string"
+            },
+            "body-2": {
+                "value": "Xanh Display 2.0",
+                "type": "string"
+            },
+            "display-3": {
+                "value": "Lexend",
+                "type": "string"
+            },
+            "body-3": {
+                "value": "Lexend",
+                "type": "string"
+            }
+        },
+        "font-weight": {
+            "regular": {
+                "value": "Regular",
+                "type": "string"
+            },
+            "regular-italic": {
+                "value": "Regular italic",
+                "type": "string"
+            },
+            "medium": {
+                "value": "Medium",
+                "type": "string"
+            },
+            "medium-italic": {
+                "value": "Medium italic",
+                "type": "string"
+            },
+            "semibold": {
+                "value": "Semibold",
+                "type": "string"
+            },
+            "semibold-italic": {
+                "value": "Semibold italic",
+                "type": "string"
+            },
+            "bold": {
+                "value": "Bold",
+                "type": "string"
+            },
+            "bold-italic": {
+                "value": "Bold italic",
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "@at/tokens",
+    "version": "1.0.0",
+    "description": "AT Design System — Design tokens (multi-platform)",
+    "type": "module",
+    "main": "dist/js/tokens-light.js",
+    "types": "dist/js/tokens-light.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/js/tokens-light.js",
+            "types": "./dist/js/tokens-light.d.ts"
+        },
+        "./css/light": "./dist/css/variables-light.css",
+        "./css/dark": "./dist/css/variables-dark.css",
+        "./scss/light": "./dist/scss/_variables-light.scss",
+        "./scss/dark": "./dist/scss/_variables-dark.scss",
+        "./json/light": "./dist/json/tokens-light.json",
+        "./json/dark": "./dist/json/tokens-dark.json"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "npm run build:light && npm run build:dark",
+        "build:light": "style-dictionary build --config sd.config.light.mjs",
+        "build:dark": "style-dictionary build --config sd.config.dark.mjs",
+        "clean": "rm -rf dist"
+    },
+    "devDependencies": {
+        "style-dictionary": "^5.0.0"
+    }
+}

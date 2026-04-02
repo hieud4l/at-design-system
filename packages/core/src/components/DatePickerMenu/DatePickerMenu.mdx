@@ -1,0 +1,65 @@
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import * as DatePickerMenuStories from "./DatePickerMenu.stories";
+import { DatePickerMenu } from "./index";
+
+<Meta of={DatePickerMenuStories} />
+
+# DatePickerMenu
+
+A comprehensive date picker menu that supports date range selection, quick selection presets, and dual calendar views.
+
+## Import
+
+```tsx
+import { DatePickerMenu } from "@at/core";
+```
+
+## Overview
+
+<Canvas of={DatePickerMenuStories.Overview} />
+<Controls of={DatePickerMenuStories.Overview} />
+
+## Props
+
+<Controls />
+
+## Usage
+
+### When to use
+- When users need to select a date range (start and end date).
+- When quick selection options (e.g., "Last 7 days", "This Month") are beneficial.
+- When a dual-month view is needed for easier range selection across months.
+
+### When not to use
+- For single date selection (use a simple DatePicker instead).
+- When screen space is extremely limited (consider a mobile-optimized picker).
+
+## Variants
+
+### With Preselected Dates
+Opens with a predefined date range selected.
+<Canvas of={DatePickerMenuStories.WithPreselectedDates} />
+
+### Without Quick Selections
+Displays only the calendars without the sidebar for quick options.
+<Canvas of={DatePickerMenuStories.WithoutQuickSelections} />
+
+### With Min/Max Date Constraints
+Restricts selection to a specific date range.
+<Canvas of={DatePickerMenuStories.WithMinMaxDates} />
+
+### With Event Dots
+Displays indicators for days with events.
+<Canvas of={DatePickerMenuStories.WithEventDots} />
+
+### Sunday First Day
+Configures the calendar to start the week on Sunday.
+<Canvas of={DatePickerMenuStories.SundayFirstDay} />
+
+## Do's and Don'ts
+
+| Do | Don't |
+|----|-------|
+| ✅ Use quick selections for common ranges to save user clicks. | ❌ Don't use for single date inputs where a simple calendar suffices. |
+| ✅ Provide visual feedback for selected ranges. | ❌ Don't hide the "Apply" and "Cancel" buttons; they are crucial for confirmation. |
+| ✅ Use event dots to highlight important dates if applicable. | ❌ Don't overwhelm the user with too many quick selection options. |

@@ -1,0 +1,20 @@
+/* eslint-disable */
+/* tslint:disable */
+import * as React from 'react';
+export interface ChartHistory18Props extends React.SVGAttributes<SVGElement> {
+size?: string | number;
+}
+const ChartHistory18: React.FC<ChartHistory18Props> = ({size, ...props}) => (
+  <svg viewBox="0 0 18 18" fill="currentColor" width={ size || "18" } height={ size || "18" } {...props}>
+    <g className="nc-icon-wrapper">
+      <path stroke="var(--color-text-secondary700)" d="M9.75 12.25V8a.75.75 0 0 0-1.5 0v4.25a.75.75 0 0 0 1.5 0m-3.25 0v-2a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0m6.5 0v-6.5a.75.75 0 0 0-1.5 0v6.5a.75.75 0 0 0 1.5 0"
+      />
+      <path d="M9 1C6.538 1 4.241 2.165 2.741 4.051l-.117-.848a.76.76 0 0 0-.846-.641.75.75 0 0 0-.641.846l.407 2.945a.76.76 0 0 0 .29.496.76.76 0 0 0 .556.145l2.944-.407a.75.75 0 0 0 .641-.846.756.756 0 0 0-.846-.641l-1.467.203A6.53 6.53 0 0 1 8.999 2.5c3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5a.75.75 0 0 0-1.5 0c0 4.411 3.589 8 8 8s8-3.589 8-8S13.411 1 9 1"
+      />
+    </g>
+  </svg>
+);
+ChartHistory18.displayName = 'ChartHistory18';
+export default ChartHistory18;
+/* tslint:enable */
+/* eslint-enable */

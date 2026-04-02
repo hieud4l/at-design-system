@@ -1,0 +1,410 @@
+/* ============================================
+   Date Picker Menu — SCSS Module
+   Uses design tokens from @at/tokens
+   ============================================ */
+
+@use '@at/tokens/scss/light' as tokens;
+
+/* ============================================
+   Root Container
+   ============================================ */
+
+.datePickerMenu {
+  display: flex;
+  background: var(--color-background-primary);
+  border-radius: var(--dimension-radius-2xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  width: fit-content;
+  animation: fadeIn 200ms ease-out;
+}
+
+/* ============================================
+   Leading Content (Quick Selections)
+   ============================================ */
+
+.leading {
+  width: 152px;
+  padding: var(--dimension-spacing-semantic-lg);
+  border-inline-end: 1px solid var(--color-border-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--dimension-spacing-semantic-xxs);
+  flex-shrink: 0;
+}
+
+.listItem {
+  padding: var(--dimension-spacing-semantic-md) var(--dimension-spacing-semantic-lg);
+  border-radius: var(--dimension-radius-sm);
+  font: var(--typography-text-sm-medium);
+  color: var(--color-text-secondary-700);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+  width: 100%;
+
+  &:hover {
+    background: var(--color-background-primary-hover);
+  }
+
+  &.active {
+    background: var(--color-background-active);
+    color: var(--color-text-secondary-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-effects-focus-rings-focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================
+   Trailing Content
+   ============================================ */
+
+.trailing {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pickers {
+  display: flex;
+}
+
+/* ============================================
+   Calendar Picker
+   ============================================ */
+
+.calendarPicker {
+  width: 328px;
+  padding: var(--dimension-spacing-semantic-2xl) var(--dimension-spacing-semantic-3xl);
+  flex-shrink: 0;
+
+  &+& {
+    border-inline-start: 1px solid var(--color-border-secondary);
+  }
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: var(--dimension-spacing-semantic-lg);
+}
+
+.monthLabel {
+  font: var(--typography-text-sm-semibold);
+  color: var(--color-foreground-secondary-700);
+  text-align: center;
+}
+
+.navButton {
+  width: 32px;
+  height: 32px;
+  padding: var(--dimension-spacing-semantic-sm);
+  border: none;
+  background: transparent;
+  border-radius: var(--dimension-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-foreground-secondary-700);
+  transition: background-color 200ms ease-in-out;
+
+  &:hover:not(:disabled) {
+    background: var(--color-background-primary-hover);
+  }
+
+  &:disabled {
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.invisible {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-effects-focus-rings-focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================
+   Calendar Grid
+   ============================================ */
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, var(--dimension-spacing-10-40px));
+  gap: var(--dimension-spacing-1-4px) var(--dimension-spacing-0-0px);
+}
+
+/* ============================================
+   Calendar Cell
+   ============================================ */
+
+.cell {
+  width: var(--dimension-spacing-10-40px);
+  height: var(--dimension-spacing-10-40px);
+  border-radius: var(--dimension-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--typography-text-sm-regular);
+  color: var(--color-text-secondary-700);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-effects-focus-rings-focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+.cellHeader {
+  font: var(--typography-text-sm-medium);
+  cursor: default;
+  pointer-events: none;
+}
+
+.cell:not(.cellHeader):not(.cellDisabled):hover {
+  background: var(--color-background-primary-hover);
+  font: var(--typography-text-sm-medium);
+}
+
+.cellInRange {
+  background: var(--color-background-active);
+  font: var(--typography-text-sm-medium);
+}
+
+.cellSelected {
+  background: var(--color-background-brand-solid);
+  color: var(--color-text-white);
+  font: var(--typography-text-sm-medium);
+
+  &:hover {
+    background: var(--color-background-brand-solid-hover);
+  }
+
+  .cellDot {
+    background: var(--color-text-white);
+  }
+}
+
+.cellOutsideMonth {
+  color: var(--color-text-disabled);
+}
+
+.cellDisabled {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.cellToday {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset-block-end: var(--dimension-spacing-1-4px);
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+}
+
+.cellText {
+  position: relative;
+  z-index: 1;
+}
+
+.cellDot {
+  position: absolute;
+  inset-block-end: var(--dimension-spacing-1-4px);
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  z-index: 2;
+}
+
+/* ============================================
+   Bottom Panel
+   ============================================ */
+
+.bottom {
+  border-block-start: 1px solid var(--color-border-secondary);
+  padding: var(--dimension-spacing-semantic-xl);
+  display: flex;
+  gap: var(--dimension-spacing-semantic-lg);
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+  flex: 1;
+  gap: var(--dimension-spacing-semantic-lg);
+  align-items: center;
+}
+
+.dateInput {
+  width: 136px;
+  padding: var(--dimension-spacing-semantic-md) var(--dimension-spacing-semantic-lg);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--dimension-radius-md);
+  font: var(--typography-text-md-regular);
+  color: var(--color-text-primary-900);
+  background: var(--color-background-primary);
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+
+  &::placeholder {
+    color: var(--color-foreground-quaternary-400);
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-effects-focus-rings-focus-ring);
+    outline-offset: 0;
+  }
+}
+
+.separator {
+  font: var(--typography-text-md-regular);
+  color: var(--color-foreground-quaternary-400);
+}
+
+/* ============================================
+   Actions (Buttons)
+   ============================================ */
+
+.actions {
+  display: flex;
+  gap: var(--dimension-spacing-semantic-lg);
+}
+
+.button {
+  padding: var(--dimension-spacing-2-5-10px) var(--dimension-spacing-semantic-lg);
+  border-radius: var(--dimension-radius-md);
+  font: var(--typography-text-sm-semibold);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow:
+      inset 0px 0px 0px 1px var(--color-effects-shadows-shadow-skeumorphic-inner-border),
+      inset 0px -2px 0px 0px var(--color-effects-shadows-shadow-skeumorphic-inner);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-effects-focus-rings-focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+.buttonSecondary {
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-primary);
+  color: var(--color-text-secondary-700);
+  box-shadow: var(--shadow-xs);
+
+  &:hover {
+    background: var(--color-background-primary-hover);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.buttonPrimary {
+  background: var(--color-background-brand-solid);
+  border: 2px solid var(--color-components-alpha-alpha-white-10);
+  color: var(--color-text-white);
+  box-shadow: var(--shadow-xs);
+
+  &:hover:not(:disabled) {
+    background: var(--color-background-brand-solid-hover);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   High Contrast Mode
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  .datePickerMenu {
+    border: 2px solid currentColor;
+  }
+
+  .cellSelected {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+  }
+
+  .button {
+    border-width: 2px;
+  }
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .datePickerMenu,
+  .cell,
+  .listItem,
+  .button {
+    transition: none;
+    animation: none;
+  }
+}

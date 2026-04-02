@@ -1,0 +1,25 @@
+{
+    "name": "@at/shared",
+    "version": "1.0.0",
+    "description": "AT Design System — Shared utilities, types, and helpers",
+    "type": "module",
+    "main": "src/index.ts",
+    "types": "src/index.ts",
+    "exports": {
+        ".": {
+            "import": "./src/index.ts",
+            "types": "./src/index.ts"
+        }
+    },
+    "files": [
+        "src",
+        "dist"
+    ],
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf dist"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.3"
+    }
+}

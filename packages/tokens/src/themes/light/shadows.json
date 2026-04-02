@@ -1,0 +1,108 @@
+{
+    "shadow": {
+        "xs": {
+            "value": "0px 1px 2px 0px #0a0d120d",
+            "type": "shadow",
+            "description": "Shadows allow you to add depth and realism to designs by positioning elements on a z-axis."
+        },
+        "xs-skeuomorphic": {
+            "value": "0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e",
+            "type": "shadow",
+            "description": "Used to create a subtle skeuomorphic effect in components such as buttons and tabs.\n\nThis can be removed or replaced with shadow-xs if you prefer a flat style."
+        },
+        "sm": {
+            "value": "0px 1px 2px -1px #0a0d121a, 0px 1px 3px 0px #0a0d121a",
+            "type": "shadow",
+            "description": "Shadows allow you to add depth and realism to designs by positioning elements on a z-axis."
+        },
+        "md": {
+            "value": "0px 2px 4px -2px #0a0d120f, 0px 4px 6px -1px #0a0d121a",
+            "type": "shadow",
+            "description": "Shadows allow you to add depth and realism to designs by positioning elements on a z-axis."
+        },
+        "lg": {
+            "value": "0px 2px 2px -1px #0a0d120a, 0px 4px 6px -2px #0a0d1208, 0px 12px 16px -4px #0a0d1214",
+            "type": "shadow",
+            "description": "Shadows allow you to add depth and realism to designs by positioning elements on a z-axis."
+        },
+        "xl": {
+            "value": "0px 3px 3px -1.5px #0a0d120a, 0px 8px 8px -4px #0a0d1208, 0px 20px 24px -4px #0a0d1214",
+            "type": "shadow",
+            "description": "Shadows allow you to add depth and realism to designs by positioning elements on a z-axis."
+        },
+        "2xl": {
+            "value": "0px 4px 4px -2px #0a0d120a, 0px 24px 48px -12px #0a0d122e",
+            "type": "shadow",
+            "description": "Shadows allow you to add depth and realism to designs by positioning elements on a z-axis."
+        },
+        "3xl": {
+            "value": "0px 5px 5px -2.5px #0a0d120a, 0px 32px 64px -12px #0a0d1224",
+            "type": "shadow",
+            "description": "Shadows allow you to add depth and realism to designs by positioning elements on a z-axis."
+        },
+        "portfolio-mockups": {
+            "main-centre-md": {
+                "value": "0px 75px 150px 0px #0a0d1224",
+                "type": "shadow",
+                "description": "Used for portfolio mockup layouts."
+            },
+            "main-centre-lg": {
+                "value": "0px 100px 200px 0px #0a0d122e",
+                "type": "shadow",
+                "description": "Used for portfolio mockup layouts."
+            },
+            "overlay-right-lg": {
+                "value": "-40px 40px 72px 0px #0a0d121f",
+                "type": "shadow",
+                "description": "Used for portfolio mockup layouts."
+            },
+            "overlay-left-lg": {
+                "value": "100px 100px 150px 0px #0a0d121f",
+                "type": "shadow",
+                "description": "Used for portfolio mockup layouts."
+            },
+            "grid-md": {
+                "value": "32px 32px 64px 0px #0a0d1214",
+                "type": "shadow",
+                "description": "Used for portfolio mockup layouts."
+            }
+        },
+        "focus-rings": {
+            "standard": {
+                "value": "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff",
+                "type": "shadow",
+                "description": "Used for focus states in components. For example toggles and checkboxes."
+            },
+            "xs": {
+                "value": "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d",
+                "type": "shadow",
+                "description": "Used for focus states in components that also require a shadow. For example, buttons and tabs."
+            },
+            "xs-skeuomorphic": {
+                "value": "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e",
+                "type": "shadow",
+                "description": "Used for focus states in components that also require a shadow and a subtle skeuomorphic effect. For example, buttons and tabs.\n\nThis can be replaced with focus-ring-shadow-xs if you prefer a flat style."
+            },
+            "sm": {
+                "value": "0px 0px 0px 4px #9e77ed, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d121a, 0px 1px 3px 0px #0a0d121a",
+                "type": "shadow",
+                "description": "Used for focus states in components that also require a shadow. For example, buttons and tabs."
+            },
+            "error": {
+                "value": "0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff",
+                "type": "shadow",
+                "description": "Used for destructive or error focus states in components. For example, destructive button links."
+            },
+            "error-xs": {
+                "value": "0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d",
+                "type": "shadow",
+                "description": "Used for destructive or error focus states in components that also require a shadow. For example, destructive buttons."
+            },
+            "error-xs-skeuomorphic": {
+                "value": "0px 0px 0px 4px #f04438, 0px 0px 0px 2px #ffffff, 0px 1px 2px 0px #0a0d120d, inset 0px -2px 0px 0px #0a0d120d, inset 0px 0px 0px 1px #0a0d122e",
+                "type": "shadow",
+                "description": "Used for focus states in destructive or error components that also require a shadow and a subtle skeuomorphic effect. For example, destructive buttons.\n\nThis can be replaced with focus-ring-error-shadow-xs if you prefer a flat style."
+            }
+        }
+    }
+}

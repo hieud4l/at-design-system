@@ -1,0 +1,7 @@
+{
+    "name": "@at/docs",
+    "version": "1.0.0",
+    "private": true,
+    "description": "AT Design System — Documentation, demos, guides, and specifications",
+    "scripts": {}
+}

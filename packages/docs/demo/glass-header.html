@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Header Effect Demo</title>
+    <link rel="stylesheet" href="../build/css/variables-light.css">
+    <link rel="stylesheet" href="../build/css/variables-dark.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--color-background-primary);
+            color: var(--color-text-primary-900);
+            min-height: 300vh;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg,
+                    var(--color-brand-600) 0%,
+                    var(--color-purple-700) 50%,
+                    var(--color-indigo-800) 100%);
+            z-index: -1;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: var(--color-pink-500);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            background: var(--color-cyan-400);
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.4;
+        }
+
+        /* Glass Header - Main Demo */
+        .glass-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--dimension-spacing-4-16px) var(--dimension-spacing-8-32px);
+
+            /* Glass Effect using blur token */
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: var(--blur-backdrop-md-2);
+            -webkit-backdrop-filter: var(--blur-backdrop-md-2);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .glass-header.scrolled {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: var(--blur-backdrop-xl-4);
+            -webkit-backdrop-filter: var(--blur-backdrop-xl-4);
+        }
+
+        .header-content {
+            max-width: var(--dimension-width-3xl);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: var(--dimension-font-size-display-xs);
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--dimension-spacing-6-24px);
+        }
+
+        .nav a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--dimension-font-size-text-sm);
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: white;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: var(--dimension-spacing-2-8px) var(--dimension-spacing-4-16px);
+            border-radius: var(--dimension-radius-lg);
+            cursor: pointer;
+            font-weight: 500;
+            font-size: var(--dimension-font-size-text-sm);
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Hero Content */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--dimension-spacing-20-80px);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font: var(--typography-display-xl-bold);
+            color: white;
+            margin-bottom: var(--dimension-spacing-6-24px);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: var(--dimension-font-size-text-xl);
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto var(--dimension-spacing-8-32px);
+        }
+
+        /* Glass Cards Section */
+        .cards-section {
+            padding: var(--dimension-spacing-20-80px) var(--dimension-spacing-8-32px);
+            background: var(--color-background-primary);
+        }
+
+        .cards-section h2 {
+            text-align: center;
+            font: var(--typography-display-md-semibold);
+            margin-bottom: var(--dimension-spacing-12-48px);
+            color: var(--color-text-primary-900);
+        }
+
+        .cards-grid {
+            max-width: var(--dimension-width-3xl);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--dimension-spacing-6-24px);
+        }
+
+        /* Glass Card Variations */
+        .glass-card {
+            padding: var(--dimension-spacing-6-24px);
+            border-radius: var(--dimension-radius-2xl);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .glass-card h3 {
+            font-size: var(--dimension-font-size-text-lg);
+            font-weight: 600;
+            margin-bottom: var(--dimension-spacing-3-12px);
+        }
+
+        .glass-card p {
+            font-size: var(--dimension-font-size-text-sm);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .glass-card .blur-level {
+            display: inline-block;
+            padding: var(--dimension-spacing-1-4px) var(--dimension-spacing-2-8px);
+            border-radius: var(--dimension-radius-sm);
+            font-size: var(--dimension-font-size-text-xs);
+            font-weight: 600;
+            margin-bottom: var(--dimension-spacing-3-12px);
+        }
+
+        /* Glass SM */
+        .glass-sm {
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.1),
+                    rgba(255, 255, 255, 0.05));
+            backdrop-filter: var(--blur-backdrop-sm);
+            -webkit-backdrop-filter: var(--blur-backdrop-sm);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .glass-sm .blur-level {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        /* Glass MD */
+        .glass-md {
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.15),
+                    rgba(255, 255, 255, 0.08));
+            backdrop-filter: var(--blur-backdrop-md-2);
+            -webkit-backdrop-filter: var(--blur-backdrop-md-2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        .glass-md .blur-level {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        /* Glass LG */
+        .glass-lg {
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.2),
+                    rgba(255, 255, 255, 0.1));
+            backdrop-filter: var(--blur-backdrop-lg-3);
+            -webkit-backdrop-filter: var(--blur-backdrop-lg-3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .glass-lg .blur-level {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        /* Glass XL */
+        .glass-xl {
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.25),
+                    rgba(255, 255, 255, 0.15));
+            backdrop-filter: var(--blur-backdrop-xl-4);
+            -webkit-backdrop-filter: var(--blur-backdrop-xl-4);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            color: white;
+        }
+
+        .glass-xl .blur-level {
+            background: rgba(255, 255, 255, 0.35);
+            color: white;
+        }
+
+        /* Gradient Background for Cards */
+        .gradient-bg {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                    var(--color-brand-500) 0%,
+                    var(--color-purple-600) 50%,
+                    var(--color-pink-500) 100%);
+            padding: var(--dimension-spacing-16-64px) var(--dimension-spacing-8-32px);
+        }
+
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.3;
+            }
+        }
+
+        .gradient-bg h2 {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gradient-bg .cards-grid {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Code Example */
+        .code-section {
+            padding: var(--dimension-spacing-16-64px) var(--dimension-spacing-8-32px);
+            background: var(--color-background-secondary);
+        }
+
+        .code-section h2 {
+            text-align: center;
+            font: var(--typography-display-sm-semibold);
+            margin-bottom: var(--dimension-spacing-8-32px);
+            color: var(--color-text-primary-900);
+        }
+
+        .code-block {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--color-gray-light-mode-950);
+            border-radius: var(--dimension-radius-xl);
+            padding: var(--dimension-spacing-6-24px);
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            color: #e2e8f0;
+            font-family: 'Fira Code', 'Monaco', monospace;
+            font-size: var(--dimension-font-size-text-sm);
+            line-height: 1.7;
+        }
+
+        .code-block .comment {
+            color: #6b7280;
+        }
+
+        .code-block .property {
+            color: #7dd3fc;
+        }
+
+        .code-block .value {
+            color: #a5f3fc;
+        }
+
+        .code-block .function {
+            color: #c4b5fd;
+        }
+
+        /* Footer */
+        footer {
+            padding: var(--dimension-spacing-8-32px);
+            background: var(--color-background-primary);
+            text-align: center;
+            color: var(--color-text-tertiary-600);
+            font-size: var(--dimension-font-size-text-sm);
+        }
+
+        /* Dark mode adjustments */
+        [data-theme="dark"] .glass-header {
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="dark"] .glass-header.scrolled {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Background -->
+    <div class="hero-bg"></div>
+
+    <!-- Glass Header -->
+    <header class="glass-header" id="header">
+        <div class="header-content">
+            <div class="logo">✨ GlassUI</div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#examples">Examples</a>
+                <a href="#docs">Docs</a>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Glass Morphism<br>Made Easy</h1>
+            <p>Create stunning frosted glass effects using our Design System blur tokens. Scroll down to see the header
+                effect!</p>
+        </div>
+    </section>
+
+    <!-- Glass Cards Demo -->
+    <section class="gradient-bg">
+        <h2 style="text-align: center; margin-bottom: 48px;">Blur Level Comparison</h2>
+        <div class="cards-grid">
+            <div class="glass-card glass-sm">
+                <span class="blur-level">SM - 8px</span>
+                <h3>Subtle Blur</h3>
+                <p>Light blur effect, great for subtle depth. Uses <code>--blur-backdrop-sm</code></p>
+            </div>
+            <div class="glass-card glass-md">
+                <span class="blur-level">MD - 16px</span>
+                <h3>Medium Blur</h3>
+                <p>Balanced blur for most UI elements. Uses <code>--blur-backdrop-md-2</code></p>
+            </div>
+            <div class="glass-card glass-lg">
+                <span class="blur-level">LG - 24px</span>
+                <h3>Strong Blur</h3>
+                <p>Prominent glass effect. Uses <code>--blur-backdrop-lg-3</code></p>
+            </div>
+            <div class="glass-card glass-xl">
+                <span class="blur-level">XL - 40px</span>
+                <h3>Maximum Blur</h3>
+                <p>Intense frosted glass look. Uses <code>--blur-backdrop-xl-4</code></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Example -->
+    <section class="code-section">
+        <h2>💻 How to Use</h2>
+        <div class="code-block">
+            <pre><span class="comment">/* Glass Header CSS */</span>
+<span class="property">.glass-header</span> {
+    <span class="comment">/* Semi-transparent background */</span>
+    <span class="property">background</span>: <span class="value">rgba(255, 255, 255, 0.1)</span>;
+    
+    <span class="comment">/* Apply blur using token */</span>
+    <span class="property">backdrop-filter</span>: <span class="function">var</span>(<span class="value">--blur-backdrop-md-2</span>);
+    <span class="property">-webkit-backdrop-filter</span>: <span class="function">var</span>(<span class="value">--blur-backdrop-md-2</span>);
+    
+    <span class="comment">/* Subtle border for depth */</span>
+    <span class="property">border</span>: <span class="value">1px solid rgba(255, 255, 255, 0.2)</span>;
+}</pre>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>AT Design System • Glass Effect Demo • Powered by CSS Backdrop Filter</p>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const btn = document.querySelector('.theme-toggle');
+
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                btn.textContent = '🌙 Dark';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                btn.textContent = '☀️ Light';
+            }
+        }
+    </script>
+</body>
+
+</html>

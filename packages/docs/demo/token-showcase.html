@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Design System - Token Demo</title>
+    <link rel="stylesheet" href="../build/css/variables-light.css">
+    <link rel="stylesheet" href="../build/css/variables-dark.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--color-background-primary);
+            color: var(--color-text-primary-900);
+            transition: background 0.3s, color 0.3s;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--color-background-brand-section);
+            color: var(--color-base-white);
+            padding: var(--dimension-spacing-6-24px) var(--dimension-spacing-8-32px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: var(--dimension-font-size-display-xs);
+            font-weight: 700;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: var(--dimension-spacing-2-8px) var(--dimension-spacing-4-16px);
+            border-radius: var(--dimension-radius-lg);
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: var(--dimension-width-3xl);
+            margin: 0 auto;
+            padding: var(--dimension-spacing-10-40px) var(--dimension-spacing-6-24px);
+        }
+
+        .section {
+            margin-bottom: var(--dimension-spacing-16-64px);
+        }
+
+        .section-title {
+            font-size: var(--dimension-font-size-display-sm);
+            font-weight: 600;
+            margin-bottom: var(--dimension-spacing-6-24px);
+            color: var(--color-text-primary-900);
+        }
+
+        /* Color Palette Grid */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--dimension-spacing-4-16px);
+        }
+
+        .color-group {
+            background: var(--color-background-secondary);
+            border-radius: var(--dimension-radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border-secondary);
+        }
+
+        .color-group-title {
+            padding: var(--dimension-spacing-3-12px) var(--dimension-spacing-4-16px);
+            font-weight: 600;
+            font-size: var(--dimension-font-size-text-sm);
+            background: var(--color-background-tertiary);
+        }
+
+        .color-swatches {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color-swatch {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--dimension-font-size-text-xs);
+            font-weight: 500;
+        }
+
+        /* Semantic Colors */
+        .semantic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--dimension-spacing-4-16px);
+        }
+
+        .semantic-card {
+            background: var(--color-background-secondary);
+            border-radius: var(--dimension-radius-xl);
+            padding: var(--dimension-spacing-5-20px);
+            border: 1px solid var(--color-border-secondary);
+        }
+
+        .semantic-card-title {
+            font-size: var(--dimension-font-size-text-sm);
+            font-weight: 600;
+            margin-bottom: var(--dimension-spacing-3-12px);
+            color: var(--color-text-secondary-700);
+        }
+
+        .semantic-item {
+            display: flex;
+            align-items: center;
+            gap: var(--dimension-spacing-3-12px);
+            padding: var(--dimension-spacing-2-8px) 0;
+        }
+
+        .semantic-preview {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--dimension-radius-md);
+            border: 1px solid var(--color-border-secondary);
+        }
+
+        .semantic-label {
+            font-size: var(--dimension-font-size-text-sm);
+            color: var(--color-text-tertiary-600);
+        }
+
+        /* Typography Demo */
+        .typography-demo {
+            background: var(--color-background-secondary);
+            border-radius: var(--dimension-radius-xl);
+            padding: var(--dimension-spacing-6-24px);
+            border: 1px solid var(--color-border-secondary);
+        }
+
+        .typo-row {
+            padding: var(--dimension-spacing-4-16px) 0;
+            border-bottom: 1px solid var(--color-border-tertiary);
+        }
+
+        .typo-row:last-child {
+            border-bottom: none;
+        }
+
+        .typo-label {
+            font-size: var(--dimension-font-size-text-xs);
+            color: var(--color-text-tertiary-600);
+            margin-bottom: var(--dimension-spacing-2-8px);
+        }
+
+        .display-2xl {
+            font: var(--typography-display-2xl-semibold);
+        }
+
+        .display-xl {
+            font: var(--typography-display-xl-semibold);
+        }
+
+        .display-lg {
+            font: var(--typography-display-lg-semibold);
+        }
+
+        .display-md {
+            font: var(--typography-display-md-semibold);
+        }
+
+        .display-sm {
+            font: var(--typography-display-sm-semibold);
+        }
+
+        .display-xs {
+            font: var(--typography-display-xs-semibold);
+        }
+
+        /* Buttons Demo */
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--dimension-spacing-3-12px);
+        }
+
+        .btn {
+            padding: var(--dimension-spacing-2-8px) var(--dimension-spacing-4-16px);
+            border-radius: var(--dimension-radius-md);
+            font-weight: 500;
+            font-size: var(--dimension-font-size-text-sm);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--color-background-brand-solid);
+            color: var(--color-base-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-background-brand-solid-hover);
+        }
+
+        .btn-secondary {
+            background: var(--color-background-secondary);
+            color: var(--color-text-secondary-700);
+            border: 1px solid var(--color-border-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-background-secondary-hover);
+        }
+
+        .btn-error {
+            background: var(--color-background-error-solid);
+            color: var(--color-base-white);
+        }
+
+        .btn-success {
+            background: var(--color-background-success-solid);
+            color: var(--color-base-white);
+        }
+
+        .btn-warning {
+            background: var(--color-background-warning-solid);
+            color: var(--color-base-white);
+        }
+
+        /* Spacing Demo */
+        .spacing-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--dimension-spacing-4-16px);
+            align-items: flex-end;
+        }
+
+        .spacing-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--dimension-spacing-2-8px);
+        }
+
+        .spacing-box {
+            background: var(--color-brand-500);
+            border-radius: var(--dimension-radius-sm);
+        }
+
+        .spacing-label {
+            font-size: var(--dimension-font-size-text-xs);
+            color: var(--color-text-tertiary-600);
+        }
+
+        /* Border Radius Demo */
+        .radius-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--dimension-spacing-4-16px);
+        }
+
+        .radius-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--dimension-spacing-2-8px);
+        }
+
+        .radius-box {
+            width: 60px;
+            height: 60px;
+            background: var(--color-brand-100);
+            border: 2px solid var(--color-brand-500);
+        }
+
+        /* Shadows Demo */
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: var(--dimension-spacing-6-24px);
+        }
+
+        .shadow-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--dimension-spacing-3-12px);
+        }
+
+        .shadow-box {
+            width: 100px;
+            height: 100px;
+            background: var(--color-background-primary);
+            border-radius: var(--dimension-radius-lg);
+        }
+
+        .shadow-xs {
+            box-shadow: 0px 1px 2px 0px var(--color-effects-shadows-shadow-xs);
+        }
+
+        .shadow-sm {
+            box-shadow: 0px 1px 2px 0px var(--color-effects-shadows-shadow-sm-01), 0px 1px 3px 0px var(--color-effects-shadows-shadow-sm-02);
+        }
+
+        .shadow-md {
+            box-shadow: 0px 2px 4px -2px var(--color-effects-shadows-shadow-md-01), 0px 4px 8px -2px var(--color-effects-shadows-shadow-md-02);
+        }
+
+        .shadow-lg {
+            box-shadow: 0px 4px 6px -2px var(--color-effects-shadows-shadow-lg-01), 0px 12px 16px -4px var(--color-effects-shadows-shadow-lg-02);
+        }
+
+        .shadow-xl {
+            box-shadow: 0px 8px 8px -4px var(--color-effects-shadows-shadow-xl-01), 0px 20px 24px -4px var(--color-effects-shadows-shadow-xl-02);
+        }
+
+        .shadow-2xl {
+            box-shadow: 0px 24px 48px -12px var(--color-effects-shadows-shadow-2xl-01);
+        }
+
+        /* Cards Demo */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--dimension-spacing-6-24px);
+        }
+
+        .demo-card {
+            background: var(--color-background-primary);
+            border-radius: var(--dimension-radius-xl);
+            border: 1px solid var(--color-border-secondary);
+            overflow: hidden;
+        }
+
+        .demo-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .demo-card-content {
+            padding: var(--dimension-spacing-5-20px);
+        }
+
+        .demo-card-title {
+            font-size: var(--dimension-font-size-text-lg);
+            font-weight: 600;
+            margin-bottom: var(--dimension-spacing-2-8px);
+        }
+
+        .demo-card-desc {
+            color: var(--color-text-tertiary-600);
+            font-size: var(--dimension-font-size-text-sm);
+            line-height: var(--dimension-line-height-text-sm);
+        }
+
+        .demo-card-image {
+            height: 160px;
+            background: linear-gradient(135deg, var(--color-brand-400), var(--color-brand-700));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: var(--dimension-font-size-display-xs);
+            font-weight: 600;
+        }
+
+        /* Alert Demo */
+        .alert {
+            padding: var(--dimension-spacing-4-16px);
+            border-radius: var(--dimension-radius-lg);
+            margin-bottom: var(--dimension-spacing-3-12px);
+            display: flex;
+            align-items: center;
+            gap: var(--dimension-spacing-3-12px);
+        }
+
+        .alert-success {
+            background: var(--color-background-success-primary);
+            color: var(--color-foreground-success-primary);
+            border: 1px solid var(--color-success-200);
+        }
+
+        .alert-warning {
+            background: var(--color-background-warning-primary);
+            color: var(--color-foreground-warning-primary);
+            border: 1px solid var(--color-warning-200);
+        }
+
+        .alert-error {
+            background: var(--color-background-error-primary);
+            color: var(--color-foreground-error-primary);
+            border: 1px solid var(--color-error-200);
+        }
+
+        .alert-info {
+            background: var(--color-background-brand-primary);
+            color: var(--color-foreground-brand-primary-600);
+            border: 1px solid var(--color-brand-200);
+        }
+
+        /* Input Demo */
+        .input-demo {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dimension-spacing-4-16px);
+            max-width: 400px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--dimension-spacing-1-5-6px);
+        }
+
+        .input-label {
+            font-size: var(--dimension-font-size-text-sm);
+            font-weight: 500;
+            color: var(--color-text-secondary-700);
+        }
+
+        .input {
+            padding: var(--dimension-spacing-2-8px) var(--dimension-spacing-3-12px);
+            border: 1px solid var(--color-border-primary);
+            border-radius: var(--dimension-radius-md);
+            font-size: var(--dimension-font-size-text-md);
+            background: var(--color-background-primary);
+            color: var(--color-text-primary-900);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: var(--color-border-brand);
+            box-shadow: 0 0 0 4px var(--color-brand-100);
+        }
+
+        .input::placeholder {
+            color: var(--color-text-placeholder);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">AT Design System</div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </header>
+
+    <main class="container">
+        <!-- Color Palette Section -->
+        <section class="section">
+            <h2 class="section-title">🎨 Brand Colors</h2>
+            <div class="color-grid">
+                <div class="color-group">
+                    <div class="color-group-title">Brand</div>
+                    <div class="color-swatches">
+                        <div class="color-swatch"
+                            style="background: var(--color-brand-50); color: var(--color-brand-700)">50</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-brand-100); color: var(--color-brand-700)">100</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-brand-200); color: var(--color-brand-700)">200</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-brand-300); color: var(--color-brand-700)">300</div>
+                        <div class="color-swatch" style="background: var(--color-brand-400); color: white">400</div>
+                        <div class="color-swatch" style="background: var(--color-brand-500); color: white">500</div>
+                        <div class="color-swatch" style="background: var(--color-brand-600); color: white">600</div>
+                        <div class="color-swatch" style="background: var(--color-brand-700); color: white">700</div>
+                        <div class="color-swatch" style="background: var(--color-brand-800); color: white">800</div>
+                        <div class="color-swatch" style="background: var(--color-brand-900); color: white">900</div>
+                    </div>
+                </div>
+
+                <div class="color-group">
+                    <div class="color-group-title">Success</div>
+                    <div class="color-swatches">
+                        <div class="color-swatch"
+                            style="background: var(--color-success-50); color: var(--color-success-700)">50</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-success-100); color: var(--color-success-700)">100</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-success-200); color: var(--color-success-700)">200</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-success-300); color: var(--color-success-700)">300</div>
+                        <div class="color-swatch" style="background: var(--color-success-400); color: white">400</div>
+                        <div class="color-swatch" style="background: var(--color-success-500); color: white">500</div>
+                        <div class="color-swatch" style="background: var(--color-success-600); color: white">600</div>
+                        <div class="color-swatch" style="background: var(--color-success-700); color: white">700</div>
+                    </div>
+                </div>
+
+                <div class="color-group">
+                    <div class="color-group-title">Warning</div>
+                    <div class="color-swatches">
+                        <div class="color-swatch"
+                            style="background: var(--color-warning-50); color: var(--color-warning-700)">50</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-warning-100); color: var(--color-warning-700)">100</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-warning-200); color: var(--color-warning-700)">200</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-warning-300); color: var(--color-warning-700)">300</div>
+                        <div class="color-swatch" style="background: var(--color-warning-400); color: white">400</div>
+                        <div class="color-swatch" style="background: var(--color-warning-500); color: white">500</div>
+                        <div class="color-swatch" style="background: var(--color-warning-600); color: white">600</div>
+                        <div class="color-swatch" style="background: var(--color-warning-700); color: white">700</div>
+                    </div>
+                </div>
+
+                <div class="color-group">
+                    <div class="color-group-title">Error</div>
+                    <div class="color-swatches">
+                        <div class="color-swatch"
+                            style="background: var(--color-error-50); color: var(--color-error-700)">50</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-error-100); color: var(--color-error-700)">100</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-error-200); color: var(--color-error-700)">200</div>
+                        <div class="color-swatch"
+                            style="background: var(--color-error-300); color: var(--color-error-700)">300</div>
+                        <div class="color-swatch" style="background: var(--color-error-400); color: white">400</div>
+                        <div class="color-swatch" style="background: var(--color-error-500); color: white">500</div>
+                        <div class="color-swatch" style="background: var(--color-error-600); color: white">600</div>
+                        <div class="color-swatch" style="background: var(--color-error-700); color: white">700</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Semantic Colors -->
+        <section class="section">
+            <h2 class="section-title">📐 Semantic Colors</h2>
+            <div class="semantic-grid">
+                <div class="semantic-card">
+                    <div class="semantic-card-title">Text Colors</div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview" style="background: var(--color-text-primary-900)"></div>
+                        <span class="semantic-label">Primary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview" style="background: var(--color-text-secondary-700)"></div>
+                        <span class="semantic-label">Secondary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview" style="background: var(--color-text-tertiary-600)"></div>
+                        <span class="semantic-label">Tertiary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview" style="background: var(--color-text-disabled)"></div>
+                        <span class="semantic-label">Disabled</span>
+                    </div>
+                </div>
+
+                <div class="semantic-card">
+                    <div class="semantic-card-title">Background Colors</div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview"
+                            style="background: var(--color-background-primary); border: 1px solid var(--color-border-secondary)">
+                        </div>
+                        <span class="semantic-label">Primary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview" style="background: var(--color-background-secondary)"></div>
+                        <span class="semantic-label">Secondary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview" style="background: var(--color-background-tertiary)"></div>
+                        <span class="semantic-label">Tertiary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview" style="background: var(--color-background-brand-solid)"></div>
+                        <span class="semantic-label">Brand Solid</span>
+                    </div>
+                </div>
+
+                <div class="semantic-card">
+                    <div class="semantic-card-title">Border Colors</div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview"
+                            style="background: white; border: 3px solid var(--color-border-primary)"></div>
+                        <span class="semantic-label">Primary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview"
+                            style="background: white; border: 3px solid var(--color-border-secondary)"></div>
+                        <span class="semantic-label">Secondary</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview"
+                            style="background: white; border: 3px solid var(--color-border-brand)"></div>
+                        <span class="semantic-label">Brand</span>
+                    </div>
+                    <div class="semantic-item">
+                        <div class="semantic-preview"
+                            style="background: white; border: 3px solid var(--color-border-error)"></div>
+                        <span class="semantic-label">Error</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="section">
+            <h2 class="section-title">✍️ Typography</h2>
+            <div class="typography-demo">
+                <div class="typo-row">
+                    <div class="typo-label">Display 2XL</div>
+                    <div class="display-2xl">The quick brown fox</div>
+                </div>
+                <div class="typo-row">
+                    <div class="typo-label">Display XL</div>
+                    <div class="display-xl">The quick brown fox</div>
+                </div>
+                <div class="typo-row">
+                    <div class="typo-label">Display LG</div>
+                    <div class="display-lg">The quick brown fox</div>
+                </div>
+                <div class="typo-row">
+                    <div class="typo-label">Display MD</div>
+                    <div class="display-md">The quick brown fox</div>
+                </div>
+                <div class="typo-row">
+                    <div class="typo-label">Display SM</div>
+                    <div class="display-sm">The quick brown fox</div>
+                </div>
+                <div class="typo-row">
+                    <div class="typo-label">Display XS</div>
+                    <div class="display-xs">The quick brown fox</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="section">
+            <h2 class="section-title">🔘 Buttons</h2>
+            <div class="button-grid">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-success">Success Button</button>
+                <button class="btn btn-warning">Warning Button</button>
+                <button class="btn btn-error">Error Button</button>
+            </div>
+        </section>
+
+        <!-- Alerts -->
+        <section class="section">
+            <h2 class="section-title">⚠️ Alerts</h2>
+            <div class="alert alert-success">
+                <span>✓</span>
+                <span>Success! Your changes have been saved successfully.</span>
+            </div>
+            <div class="alert alert-info">
+                <span>ℹ</span>
+                <span>Info: Please review the changes before submitting.</span>
+            </div>
+            <div class="alert alert-warning">
+                <span>⚠</span>
+                <span>Warning: This action cannot be undone.</span>
+            </div>
+            <div class="alert alert-error">
+                <span>✕</span>
+                <span>Error: Something went wrong. Please try again.</span>
+            </div>
+        </section>
+
+        <!-- Form Inputs -->
+        <section class="section">
+            <h2 class="section-title">📝 Form Inputs</h2>
+            <div class="input-demo">
+                <div class="input-group">
+                    <label class="input-label">Email</label>
+                    <input type="email" class="input" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Password</label>
+                    <input type="password" class="input" placeholder="Enter your password">
+                </div>
+                <button class="btn btn-primary" style="width: 100%">Sign In</button>
+            </div>
+        </section>
+
+        <!-- Spacing -->
+        <section class="section">
+            <h2 class="section-title">📏 Spacing Scale</h2>
+            <div class="spacing-demo">
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 4px; height: 4px;"></div>
+                    <span class="spacing-label">4px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 8px; height: 8px;"></div>
+                    <span class="spacing-label">8px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 12px; height: 12px;"></div>
+                    <span class="spacing-label">12px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 16px; height: 16px;"></div>
+                    <span class="spacing-label">16px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 24px; height: 24px;"></div>
+                    <span class="spacing-label">24px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 32px; height: 32px;"></div>
+                    <span class="spacing-label">32px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 40px; height: 40px;"></div>
+                    <span class="spacing-label">40px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 48px; height: 48px;"></div>
+                    <span class="spacing-label">48px</span>
+                </div>
+                <div class="spacing-item">
+                    <div class="spacing-box" style="width: 64px; height: 64px;"></div>
+                    <span class="spacing-label">64px</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Border Radius -->
+        <section class="section">
+            <h2 class="section-title">⭕ Border Radius</h2>
+            <div class="radius-demo">
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-none);"></div>
+                    <span class="spacing-label">none</span>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-xs);"></div>
+                    <span class="spacing-label">xs (4px)</span>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-sm);"></div>
+                    <span class="spacing-label">sm (6px)</span>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-md);"></div>
+                    <span class="spacing-label">md (8px)</span>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-lg);"></div>
+                    <span class="spacing-label">lg (10px)</span>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-xl);"></div>
+                    <span class="spacing-label">xl (12px)</span>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-2xl);"></div>
+                    <span class="spacing-label">2xl (16px)</span>
+                </div>
+                <div class="radius-item">
+                    <div class="radius-box" style="border-radius: var(--dimension-radius-full);"></div>
+                    <span class="spacing-label">full</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shadows -->
+        <section class="section">
+            <h2 class="section-title">🌑 Shadows</h2>
+            <div class="shadow-grid">
+                <div class="shadow-item">
+                    <div class="shadow-box shadow-xs"></div>
+                    <span class="spacing-label">Shadow XS</span>
+                </div>
+                <div class="shadow-item">
+                    <div class="shadow-box shadow-sm"></div>
+                    <span class="spacing-label">Shadow SM</span>
+                </div>
+                <div class="shadow-item">
+                    <div class="shadow-box shadow-md"></div>
+                    <span class="spacing-label">Shadow MD</span>
+                </div>
+                <div class="shadow-item">
+                    <div class="shadow-box shadow-lg"></div>
+                    <span class="spacing-label">Shadow LG</span>
+                </div>
+                <div class="shadow-item">
+                    <div class="shadow-box shadow-xl"></div>
+                    <span class="spacing-label">Shadow XL</span>
+                </div>
+                <div class="shadow-item">
+                    <div class="shadow-box shadow-2xl"></div>
+                    <span class="spacing-label">Shadow 2XL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="section">
+            <h2 class="section-title">🃏 Cards</h2>
+            <div class="cards-grid">
+                <div class="demo-card shadow-md">
+                    <div class="demo-card-image">🎨 Design</div>
+                    <div class="demo-card-content">
+                        <div class="demo-card-title">Design System</div>
+                        <div class="demo-card-desc">A comprehensive design system with tokens for colors, typography,
+                            spacing, and more.</div>
+                    </div>
+                </div>
+                <div class="demo-card shadow-md">
+                    <div class="demo-card-image"
+                        style="background: linear-gradient(135deg, var(--color-success-400), var(--color-success-700))">
+                        🚀 Launch</div>
+                    <div class="demo-card-content">
+                        <div class="demo-card-title">Ready to Launch</div>
+                        <div class="demo-card-desc">Build consistent, beautiful interfaces with our token-based design
+                            system.</div>
+                    </div>
+                </div>
+                <div class="demo-card shadow-md">
+                    <div class="demo-card-image"
+                        style="background: linear-gradient(135deg, var(--color-blue-400), var(--color-blue-700))">⚙️
+                        Config</div>
+                    <div class="demo-card-content">
+                        <div class="demo-card-title">Easy Configuration</div>
+                        <div class="demo-card-desc">Customize tokens to match your brand and export to any platform.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const btn = document.querySelector('.theme-toggle');
+
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                btn.textContent = '🌙 Dark Mode';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                btn.textContent = '☀️ Light Mode';
+            }
+        }
+    </script>
+</body>
+
+</html>

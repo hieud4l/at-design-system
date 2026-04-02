@@ -1,0 +1,26 @@
+{
+    "blur": {
+        "backdrop": {
+            "sm": {
+                "value": "blur(8px)",
+                "type": "blur",
+                "description": "Backdrop blurs (or background blurs) allow you to add depth and realism to designs by positioning elements on a z-axis."
+            },
+            "md-2": {
+                "value": "blur(16px)",
+                "type": "blur",
+                "description": "Backdrop blurs (or background blurs) allow you to add depth and realism to designs by positioning elements on a z-axis."
+            },
+            "lg-3": {
+                "value": "blur(24px)",
+                "type": "blur",
+                "description": "Backdrop blurs (or background blurs) allow you to add depth and realism to designs by positioning elements on a z-axis."
+            },
+            "xl-4": {
+                "value": "blur(40px)",
+                "type": "blur",
+                "description": "Backdrop blurs (or background blurs) allow you to add depth and realism to designs by positioning elements on a z-axis."
+            }
+        }
+    }
+}

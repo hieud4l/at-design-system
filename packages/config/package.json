@@ -1,0 +1,7 @@
+{
+    "name": "@at/config",
+    "version": "1.0.0",
+    "private": true,
+    "description": "AT Design System — Shared tooling configuration",
+    "scripts": {}
+}

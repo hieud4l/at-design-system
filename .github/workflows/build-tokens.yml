@@ -1,0 +1,58 @@
+name: Build Design Tokens
+
+# Khi nào chạy workflow này?
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tokens/**'          # Chỉ chạy khi thay đổi file trong thư mục tokens/
+      - 'sd.config.mjs'      # Hoặc khi thay đổi config
+  
+  # Cho phép chạy thủ công từ tab Actions trên GitHub
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    # Cấp quyền để workflow có thể push code
+    permissions:
+      contents: write
+    
+    steps:
+      # 1. Checkout code từ repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      # 3. Cài đặt dependencies
+      - name: Install dependencies
+        run: npm ci
+      
+      # 4. Build design tokens
+      - name: Build tokens
+        run: npm run build:tokens
+      
+      # 5. Kiểm tra có thay đổi không
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet build/ || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      # 6. Commit và push nếu có thay đổi
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          git add build/
+          git commit -m "🎨 Auto-build: Update design tokens [skip ci]"
+          git push
